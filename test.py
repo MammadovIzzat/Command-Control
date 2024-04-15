@@ -1,15 +1,13 @@
-import os
 import subprocess
 
-while 1:
-    command = input().split(" ")
-    if command[0] == "cd":
-        try:
-            os.chdir(command[1])
-        except FileNotFoundError as er:
-            print(er)
-    else :
-        command.insert(0,"powershell.exe")
-        output = subprocess.getoutput(command)
-        output = f"{output}\n{os.getcwd()}->"
-        print(output)
+command = ""
+try:
+    if command.split()[0] == "cd":
+        print("sa")
+except:
+    True
+stdout = subprocess.check_output(["powershell", "-Command",command])
+if stdout :
+    print(stdout.decode("utf-8"))
+else :
+    print("as")
