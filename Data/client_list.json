@@ -1,0 +1,11 @@
+{
+    "client_list": [
+        {
+            "IP": "127.0.0.1",
+            "HostName": "izzat",
+            "UserName": "student",
+            "NickName": "izzat",
+            "Status": "True"
+        }
+    ]
+}
