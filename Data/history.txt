@@ -1,0 +1,7 @@
+
+exitconnect izzat
+ls
+connect izzat
+clear
+git add .
+exit

