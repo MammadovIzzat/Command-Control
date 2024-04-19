@@ -268,3 +268,31 @@ ftp VM
 ftp VM
 ftp VM
 ftp VM
+clist
+list
+IP             HostName         UserName    NickName    Status
+-------------  ---------------  ----------  ----------  --------
+192.168.30.52  Izzat            student     izzat       True
+192.168.30.53  DESKTOP-EMB5IFJ  pc          VM          False
+connect izzat
+[*] Connected to izzat !!
+connect izzat
+[*] Connected to izzat !!
+
+
+connect izzat
+[*] Connected to izzat !!
+connect izzat
+[*] Connected to izzat !!
+connect izzat
+[*] Connected to izzat !!
+connect izzat
+[*] Connected to izzat !!
+connect izzat
+[*] Connected to izzat !!
+exit
+[*] Socket sessions closed.
+connect izzat
+[*] Connected to izzat !!
+connect izzat
+[*] Connected to izzat !!

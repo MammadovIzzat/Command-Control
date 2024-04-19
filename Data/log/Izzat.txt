@@ -174,3 +174,123 @@ d-----        17.04.2024     19:23                Data
 close
 [32m[*] Connection closed !!![0m
 
+
+
+ 
+
+
+
+f
+
+close
+
+
+
+c
+
+
+
+c
+[32m[*] Command Not Found[0m
+
+
+
+
+saa
+[32m[*] Command Not Found[0m
+
+
+
+ftp s
+
+
+ftp a
+[32m[*] FTP server created[0m
+
+
+ls
+
+
+    Directory: C:\Users\Student\Command-Control
+
+
+Mode                 LastWriteTime         Length Name           
+----                 -------------         ------ ----           
+d-----        19.04.2024     16:00                Data           
+-a----        19.04.2024     18:53              0 as             
+-a----        19.04.2024     18:53           1241 FTP_client.py  
+-a----        19.04.2024     19:05            931 FTP_server.py  
+-a----        19.04.2024     19:37           2149 party.py       
+-a----        19.04.2024     15:56              2 sa             
+-a----        19.04.2024     19:39          15797 Server.py      
+-a----        18.04.2024     16:54           1209 temp.py        
+
+
+
+ftp download as
+[32m[*] FTP server created[0m
+
+ls
+
+
+    Directory: C:\Users\Student\Command-Control
+
+
+Mode                 LastWriteTime         Length Name           
+----                 -------------         ------ ----           
+d-----        19.04.2024     16:00                Data           
+-a----        19.04.2024     18:53              0 as             
+-a----        19.04.2024     18:53           1241 FTP_client.py  
+-a----        19.04.2024     19:05            931 FTP_server.py  
+-a----        19.04.2024     19:37           2149 party.py       
+-a----        19.04.2024     15:56              2 sa             
+-a----        19.04.2024     19:39          15797 Server.py      
+-a----        18.04.2024     16:54           1209 temp.py        
+
+
+
+close
+[32m[*] Connection closed !!![0m
+
+ls
+
+
+    Directory: C:\Users\Student\Command-Control
+
+
+Mode                 LastWriteTime         Length Name           
+----                 -------------         ------ ----           
+d-----        19.04.2024     16:00                Data           
+-a----        19.04.2024     18:53              0 as             
+-a----        19.04.2024     18:53           1241 FTP_client.py  
+-a----        19.04.2024     19:05            931 FTP_server.py  
+-a----        19.04.2024     19:42           2154 party.py       
+-a----        19.04.2024     15:56              2 sa             
+-a----        19.04.2024     19:39          15797 Server.py      
+-a----        18.04.2024     16:54           1209 temp.py        
+
+
+
+ftp download as
+[32m[*] FTP server created[0m
+
+ls
+
+
+    Directory: C:\Users\Student\Command-Control
+
+
+Mode                 LastWriteTime         Length Name           
+----                 -------------         ------ ----           
+d-----        19.04.2024     16:00                Data           
+-a----        19.04.2024     18:53              0 as             
+-a----        19.04.2024     18:53           1241 FTP_client.py  
+-a----        19.04.2024     19:05            931 FTP_server.py  
+-a----        19.04.2024     19:42           2154 party.py       
+-a----        19.04.2024     15:56              2 sa             
+-a----        19.04.2024     19:44          15799 Server.py      
+-a----        18.04.2024     16:54           1209 temp.py        
+
+
+
+ftp download sa

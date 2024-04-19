@@ -14,7 +14,7 @@ def upload_file(ftp, filename, remote_filename):
         ftp.storbinary('STOR ' + remote_filename, f)
 
 # Replace these with your FTP server details
-ftp_server = '127.0.0.1'
+ftp_server = '192.168.30.53'
 ftp_username = 'izzat'
 ftp_password = 'salam123'
 

