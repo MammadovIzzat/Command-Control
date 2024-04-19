@@ -1,11 +1,18 @@
 {
     "client_list": [
         {
-            "IP": "127.0.0.1",
-            "HostName": "izzat",
+            "IP": "192.168.30.52",
+            "HostName": "Izzat",
             "UserName": "student",
             "NickName": "izzat",
             "Status": "True"
+        },
+        {
+            "IP": "192.168.30.53",
+            "HostName": "DESKTOP-EMB5IFJ",
+            "UserName": "pc",
+            "NickName": "VM",
+            "Status": "False"
         }
     ]
 }

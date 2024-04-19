@@ -5,3 +5,266 @@ connect izzat
 clear
 git add .
 exit
+?
+help
+0po 
+list
+IP         HostName    UserName    NickName    Status
+---------  ----------  ----------  ----------  --------
+127.0.0.1  izzat       student     izzat       True
+nick izzat salam
+[*] izzat's NickName Changed as: salam
+list
+IP         HostName    UserName    NickName    Status
+---------  ----------  ----------  ----------  --------
+127.0.0.1  izzat       student     salam       True
+nick izzat izzat
+[*] izzat's NickName Changed as: izzat
+exit
+[*] Socket sessions closed.
+list
+list
+list
+list
+[*] There is a problem in JSON data.
+list
+exit
+[*] Socket sessions closed.
+list
+exit
+[*] Socket sessions closed.
+list
+sagz
+?
+help
+exit
+[*] Socket sessions closed.
+qasd
+?
+exit
+[*] Socket sessions closed.
+asgovkn 
+?
+exit
+[*] Socket sessions closed.
+exit
+[*] Socket sessions closed.
+list
+IP         HostName    UserName    NickName    Status
+---------  ----------  ----------  ----------  --------
+127.0.0.1  izzat       student     izzat       True
+exit
+[*] Socket sessions closed.
+exit
+[*] Socket sessions closed.
+exit
+[*] Socket sessions closed.
+salam memeo
+sssssaaa
+cascaa
+exit
+[*] Socket sessions closed.
+clist
+exit
+[*] Socket sessions closed.
+rxit
+exit
+[*] Socket sessions closed.
+exit
+[*] Socket sessions closed.
+exit
+[*] Socket sessions closed.
+rxit
+
+exit
+[*] Socket sessions closed.
+clist
+clist
+exit
+[*] Socket sessions closed.
+clist
+clist
+exit
+[*] Socket sessions closed.
+clist
+exit
+[*] Socket sessions closed.
+clist
+list
+IP         HostName    UserName    NickName    Status
+---------  ----------  ----------  ----------  --------
+127.0.0.1  izzat       student     izzat       True
+list
+IP         HostName    UserName    NickName    Status
+---------  ----------  ----------  ----------  --------
+127.0.0.1  izzat       student     izzat       True
+exit
+[*] Socket sessions closed.
+list
+IP             HostName         UserName    NickName         Status
+-------------  ---------------  ----------  ---------------  --------
+127.0.0.1      izzat            student     izzat            True
+192.168.30.53  DESKTOP-EMB5IFJ              DESKTOP-EMB5IFJ  False
+clear
+list
+IP         HostName    UserName    NickName    Status
+---------  ----------  ----------  ----------  --------
+127.0.0.1  izzat       student     izzat       True
+list
+IP             HostName         UserName    NickName         Status
+-------------  ---------------  ----------  ---------------  --------
+127.0.0.1      izzat            student     izzat            True
+192.168.30.53  DESKTOP-EMB5IFJ  pc          DESKTOP-EMB5IFJ  False
+nick DESKTOP-EMB5IFJ VM
+[*] DESKTOP-EMB5IFJ's NickName Changed as: VM
+list
+IP             HostName         UserName    NickName    Status
+-------------  ---------------  ----------  ----------  --------
+127.0.0.1      izzat            student     izzat       True
+192.168.30.53  DESKTOP-EMB5IFJ  pc          VM          False
+list
+IP             HostName         UserName    NickName         Status
+-------------  ---------------  ----------  ---------------  --------
+127.0.0.1      izzat            student     izzat            True
+192.168.30.53  DESKTOP-EMB5IFJ  pc          VM               False
+192.168.30.53  DESKTOP-EMB5IFJ  pc          DESKTOP-EMB5IFJ  False
+192.168.30.53  DESKTOP-EMB5IFJ  pc          DESKTOP-EMB5IFJ  False
+exit
+[*] Socket sessions closed.
+list
+IP             HostName         UserName    NickName         Status
+-------------  ---------------  ----------  ---------------  --------
+127.0.0.1      izzat            student     izzat            True
+192.168.30.53  DESKTOP-EMB5IFJ  pc          VM               False
+192.168.30.53  DESKTOP-EMB5IFJ  pc          DESKTOP-EMB5IFJ  False
+exit
+[*] Socket sessions closed.
+
+list
+IP             HostName         UserName    NickName    Status
+-------------  ---------------  ----------  ----------  --------
+127.0.0.1      izzat            student     izzat       True
+192.168.30.53  DESKTOP-EMB5IFJ  pc          VM          False
+?
+exit
+[*] Socket sessions closed.
+list
+IP             HostName         UserName    NickName    Status
+-------------  ---------------  ----------  ----------  --------
+127.0.0.1      izzat            student     izzat       True
+192.168.30.53  DESKTOP-EMB5IFJ  pc          VM          False
+list
+IP             HostName         UserName    NickName    Status
+-------------  ---------------  ----------  ----------  --------
+127.0.0.1      izzat            student     izzat       True
+192.168.30.53  DESKTOP-EMB5IFJ  pc          VM          False
+clist
+connect izzat
+list
+IP             HostName         UserName    NickName    Status
+-------------  ---------------  ----------  ----------  --------
+192.168.30.52  izzat            student     izzat       True
+192.168.30.53  DESKTOP-EMB5IFJ  pc          VM          False
+clist
+connect izzat
+[*] Connected to izzat !!
+[*] Socket sessions closed.
+connect izzat
+[*] Connected to izzat !!
+list
+IP             HostName         UserName    NickName    Status
+-------------  ---------------  ----------  ----------  --------
+192.168.30.52  izzat            student     izzat       True
+192.168.30.53  DESKTOP-EMB5IFJ  pc          VM          False
+?
+[*] Socket sessions closed.
+
+exit
+list
+IP             HostName         UserName    NickName    Status
+-------------  ---------------  ----------  ----------  --------
+192.168.30.52  izzat            student     izzat       True
+192.168.30.53  DESKTOP-EMB5IFJ  pc          VM          False
+clist
+clist
+
+
+
+
+
+
+exit
+[*] Socket sessions closed.
+clist
+clist
+clist
+list
+IP             HostName         UserName    NickName    Status
+-------------  ---------------  ----------  ----------  --------
+192.168.30.52  izzat            student     izzat       True
+192.168.30.53  DESKTOP-EMB5IFJ  pc          VM          False
+connect VM
+[*] Connected to VM !!
+clist
+list
+IP             HostName         UserName    NickName    Status
+-------------  ---------------  ----------  ----------  --------
+192.168.30.52  izzat            student     izzat       True
+192.168.30.53  DESKTOP-EMB5IFJ  pc          VM          False
+connect VM
+[*] Connected to VM !!
+connect VM
+[*] Connected to VM !!
+exit
+[*] Socket sessions closed.
+[*] Socket sessions closed.
+
+[*] Socket sessions closed.
+
+
+
+clist
+clist
+clist
+clist
+[*] Socket sessions closed.
+
+clist
+connect izzat
+[*] Connected to izzat !!
+[*] Socket sessions closed.
+
+
+
+connect VM
+connect izzat
+[*] Connected to izzat !!
+[*] Socket sessions closed.
+[*] Socket sessions closed.
+[*] Socket sessions closed.
+[*] Socket sessions closed.
+[*] Socket sessions closed.
+connect izza
+connect izzat
+[*] Connected to izzat !!
+list
+IP             HostName         UserName    NickName    Status
+-------------  ---------------  ----------  ----------  --------
+192.168.30.52  Izzat            student     izzat       True
+192.168.30.53  DESKTOP-EMB5IFJ  pc          VM          False
+clist
+connect izzat
+[*] Connected to izzat !!
+exit
+[*] Socket sessions closed.
+ftp Vm
+ftp VM
+ftp VM
+ftp VM
+connect vm
+ftp VM
+ftp VM
+ftp VM
+ftp VM
+ftp VM
+ftp VM

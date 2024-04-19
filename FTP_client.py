@@ -28,8 +28,8 @@ with FTP(ftp_server) as ftp:
         print(file)
 
     # Download a file
-    filename_to_download = 'a.jpg'
-    local_filename = 'b.jpg'
+    filename_to_download = 'sa'
+    local_filename = 'as'
     download_file(ftp, filename_to_download, local_filename)
     print(f"Downloaded file '{filename_to_download}' to '{local_filename}'")
 

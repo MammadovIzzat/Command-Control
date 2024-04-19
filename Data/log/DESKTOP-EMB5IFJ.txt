@@ -1,0 +1,32 @@
+ls
+ls
+
+
+
+
+    Directory: C:\Users\pc\sa
+
+
+
+
+
+Mode                 LastWriteTime         Length Name                 
+
+----                 -------------         ------ ----                 
+
+-a----         4/18/2024   6:17 AM            926 client.py            
+
+-a----         4/19/2024   3:35 AM           1355 party.py             
+
+-a----         4/19/2024   2:35 AM           1009 tmp.py               
+
+-a----         4/19/2024   2:53 AM           1287 tmp2.py              
+
+
+
+
+
+
+close
+[32m[*] Connection closed !!![0m
+
