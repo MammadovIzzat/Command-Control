@@ -22,8 +22,6 @@ def first_connect(client):
     answer = client.recv(1024).decode("utf-8")
     if answer == "whoareyou":
         client.send(getpass.getuser().encode("utf-8"))
-    else :
-        print("hello")
 
 
 def connect():
