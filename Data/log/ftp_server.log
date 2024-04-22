@@ -19,3 +19,10 @@ TypeError: can only concatenate str (not "NoneType") to str
 2024-04-22 13:11:51,767 - INFO - 192.168.30.52:55320-[Necati] USER 'Necati' logged in.
 2024-04-22 13:11:51,769 - INFO - 192.168.30.52:55320-[Necati] RETR C:\Users\Student\Command-Control\Data\ftp\salam.txt completed=1 bytes=2 seconds=0.0
 2024-04-22 13:11:51,770 - INFO - 192.168.30.52:55320-[Necati] FTP session closed (disconnect).
+2024-04-22 13:46:55,792 - INFO - concurrency model: multi-thread
+2024-04-22 13:46:55,792 - INFO - masquerade (NAT) address: None
+2024-04-22 13:46:55,792 - INFO - passive ports: None
+2024-04-22 13:49:34,649 - INFO - 192.168.30.52:55658-[] FTP session opened (connect)
+2024-04-22 13:49:34,649 - INFO - 192.168.30.52:55658-[Necati] USER 'Necati' logged in.
+2024-04-22 13:49:34,663 - INFO - 192.168.30.52:55658-[Necati] RETR C:\Users\Student\Command-Control\Data\ftp\salam.txt completed=1 bytes=2 seconds=0.0
+2024-04-22 13:49:34,664 - INFO - 192.168.30.52:55658-[Necati] FTP session closed (disconnect).

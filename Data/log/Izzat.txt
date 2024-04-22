@@ -1086,3 +1086,10 @@ ftp -u salam.txt
 close
 [32m[*] Connection closed !!![0m
 
+clear
+ftp -u salam.txt
+[32m[*] salam.txt  uploaded successfully.[0m
+
+close
+[32m[*] Connection closed !!![0m
+

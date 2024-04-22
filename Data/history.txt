@@ -408,3 +408,7 @@ connect izzat
 clear
 exit
 [*] Socket sessions closed.
+connect izzat
+[*] Connected to izzat !!
+exit
+[*] Socket sessions closed.
