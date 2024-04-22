@@ -294,3 +294,795 @@ d-----        19.04.2024     16:00                Data
 
 
 ftp download sa
+ls
+
+
+    Directory: C:\Users\Student\Command-Control
+
+
+Mode                 LastWriteTime         Length Name                                             
+----                 -------------         ------ ----                                             
+d-----        19.04.2024     16:00                Data                                             
+-a----        19.04.2024     18:53              0 as                                               
+-a----        19.04.2024     18:53           1241 FTP_client.py                                    
+-a----        19.04.2024     19:05            931 FTP_server.py                                    
+-a----        22.04.2024     09:37           2608 party.py                                         
+-a----        19.04.2024     15:56              2 sa                                               
+-a----        22.04.2024     09:34          15332 Server.py                                        
+-a----        18.04.2024     16:54           1209 temp.py                                          
+
+
+
+cd ..
+
+
+ls
+
+
+    Directory: C:\Users\Student
+
+
+Mode                 LastWriteTime         Length Name                                             
+----                 -------------         ------ ----                                             
+d-----        23.01.2024     11:45                .chocolatey                                      
+d-----        16.04.2024     09:58                .ipython                                         
+d-----        14.01.2024     18:51                .ms-ad                                           
+d-----        26.01.2024     14:47                .poshssh                                         
+d-----        05.04.2024     15:03                .ssh                                             
+d-----        19.04.2024     19:45                .VirtualBox                                      
+d-----        21.02.2024     11:41                .vscode                                          
+d-----        26.01.2024     17:20                Cisco Packet Tracer 7.3.0                        
+d-----        07.04.2024     17:08                Cisco Packet Tracer 8.2.1                        
+d-----        19.04.2024     15:58                Command-Control                                  
+d-r---        11.09.2023     13:10                Contacts                                         
+d-r---        19.04.2024     18:26                Desktop                                          
+d-r---        19.04.2024     10:55                Documents                                        
+d-r---        19.04.2024     14:53                Downloads                                        
+d-r---        11.09.2023     13:10                Favorites                                        
+d-----        23.02.2024     09:31                GNS3                                             
+d-----        15.02.2024     18:39                keylogger                                        
+d-r---        11.09.2023     13:10                Links                                            
+d-r---        11.09.2023     13:10                Music                                            
+d-----        22.01.2024     14:29                notes                                            
+d-r---        13.09.2023     12:00                OneDrive                                         
+d-----        29.01.2024     16:25                OpenVPN                                          
+d-r---        05.02.2024     20:22                Pictures                                         
+d-----        13.09.2023     12:28                PycharmProjects                                  
+d-r---        11.09.2023     13:10                Saved Games                                      
+d-r---        14.01.2024     18:32                Searches                                         
+d-r---        25.01.2024     13:14                Videos                                           
+-a----        15.04.2024     19:33             59 .gitconfig                                       
+-a----        14.02.2024     15:18          45472 .keys.py.un~                                     
+-a----        16.04.2024     17:36             20 .lesshst                                         
+-a----        07.04.2024     16:55            356 .packettracer                                    
+-a----        16.04.2024     17:33            949 .viminfo                                         
+-a----        15.02.2024     18:18             15 advanced_ip_scanner_Aliases.bin                  
+-a----        15.02.2024     18:18             15 advanced_ip_scanner_Comments.bin                 
+-a----        15.02.2024     18:18            306 advanced_ip_scanner_MAC.bin                      
+-a----        13.02.2024     13:09            283 data.txt                                         
+-a----        30.01.2024     10:58           2749 Dboys.ovpn                                       
+-a----        14.02.2024     15:18            371 keys.py                                          
+-a----        14.02.2024     15:07            402 keys.py~                                         
+-a----        01.02.2024     18:09           1695 level17                                          
+-a----        29.03.2024     17:33            147 sa.gpg                                           
+-a----        13.02.2024     11:45            324 send_data.ps1                                    
+-a----        01.02.2024     09:41            674 ssh.ps1                                          
+-a----        18.04.2024     16:00           1082 temp.py                                          
+-a----        26.01.2024     15:08            129 tmp.py                                           
+-a----        14.02.2024     14:19              0 vvvvvv                                           
+-a----        26.02.2024     12:07       40195470 WindowsUpdateClient.exe                          
+-a----        30.01.2024     11:56           2745 ziya.ovpn                                        
+-a----        21.02.2024     20:55           9466 _viminfo                                         
+
+
+
+cd documennt
+[32m[*] Command Not Found.[0m
+C:\Users\Student
+cd ..
+
+
+cd ...
+[32m[*] Command Not Found.[0m
+
+cd d
+[32m[*] not exist[0m
+
+
+ls
+C:\Users\Student
+cd l
+C:\Users\Student
+
+
+
+
+ls
+[32m[*] Command Not Found.[0m
+C:\Users\Student
+
+
+ls
+C:\Users\Student
+clear
+clear
+cd ..
+
+
+c d a
+[32m[*] Command Not Found.[0m
+
+cd a
+[32m[*] not exist[0m
+
+cd ..
+
+
+cd a
+[32m[*] not exist[0m
+C:\Users\Student
+cd ..
+
+
+cd a
+[32m[*] not exist !!![0m
+C:\Users\Student
+cd a
+[32m[*] Command Not Found.[0m
+C:\Users\Student\Command-Control
+cd a
+C:\Users\Student\Command-Control
+cd a
+[32m[*] Command Not Found.[0m
+C:\Users\Student\Command-Control
+cd a
+[32m[*] Command Not Found.[0m
+
+cd ..
+
+
+cd a
+[32m[*] Command Not Found.[0m
+
+cd ..
+
+
+cd document
+[32m[*] Command Not Found.[0m
+
+ls
+
+
+    Directory: C:\Users\Student
+
+
+Mode                 LastWriteTime         Length Name                                             
+----                 -------------         ------ ----                                             
+d-----        23.01.2024     11:45                .chocolatey                                      
+d-----        16.04.2024     09:58                .ipython                                         
+d-----        14.01.2024     18:51                .ms-ad                                           
+d-----        26.01.2024     14:47                .poshssh                                         
+d-----        05.04.2024     15:03                .ssh                                             
+d-----        19.04.2024     19:45                .VirtualBox                                      
+d-----        21.02.2024     11:41                .vscode                                          
+d-----        26.01.2024     17:20                Cisco Packet Tracer 7.3.0                        
+d-----        07.04.2024     17:08                Cisco Packet Tracer 8.2.1                        
+d-----        19.04.2024     15:58                Command-Control                                  
+d-r---        11.09.2023     13:10                Contacts                                         
+d-r---        19.04.2024     18:26                Desktop                                          
+d-r---        19.04.2024     10:55                Documents                                        
+d-r---        19.04.2024     14:53                Downloads                                        
+d-r---        11.09.2023     13:10                Favorites                                        
+d-----        23.02.2024     09:31                GNS3                                             
+d-----        15.02.2024     18:39                keylogger                                        
+d-r---        11.09.2023     13:10                Links                                            
+d-r---        11.09.2023     13:10                Music                                            
+d-----        22.01.2024     14:29                notes                                            
+d-r---        13.09.2023     12:00                OneDrive                                         
+d-----        29.01.2024     16:25                OpenVPN                                          
+d-r---        05.02.2024     20:22                Pictures                                         
+d-----        13.09.2023     12:28                PycharmProjects                                  
+d-r---        11.09.2023     13:10                Saved Games                                      
+d-r---        14.01.2024     18:32                Searches                                         
+d-r---        25.01.2024     13:14                Videos                                           
+-a----        15.04.2024     19:33             59 .gitconfig                                       
+-a----        14.02.2024     15:18          45472 .keys.py.un~                                     
+-a----        16.04.2024     17:36             20 .lesshst                                         
+-a----        07.04.2024     16:55            356 .packettracer                                    
+-a----        16.04.2024     17:33            949 .viminfo                                         
+-a----        15.02.2024     18:18             15 advanced_ip_scanner_Aliases.bin                  
+-a----        15.02.2024     18:18             15 advanced_ip_scanner_Comments.bin                 
+-a----        15.02.2024     18:18            306 advanced_ip_scanner_MAC.bin                      
+-a----        13.02.2024     13:09            283 data.txt                                         
+-a----        30.01.2024     10:58           2749 Dboys.ovpn                                       
+-a----        14.02.2024     15:18            371 keys.py                                          
+-a----        14.02.2024     15:07            402 keys.py~                                         
+-a----        01.02.2024     18:09           1695 level17                                          
+-a----        29.03.2024     17:33            147 sa.gpg                                           
+-a----        13.02.2024     11:45            324 send_data.ps1                                    
+-a----        01.02.2024     09:41            674 ssh.ps1                                          
+-a----        18.04.2024     16:00           1082 temp.py                                          
+-a----        26.01.2024     15:08            129 tmp.py                                           
+-a----        14.02.2024     14:19              0 vvvvvv                                           
+-a----        26.02.2024     12:07       40195470 WindowsUpdateClient.exe                          
+-a----        30.01.2024     11:56           2745 ziya.ovpn                                        
+-a----        21.02.2024     20:55           9466 _viminfo                                         
+
+
+
+cd documents
+[32m[*] Command Not Found.[0m
+
+cd Documents
+[32m[*] Command Not Found.[0m
+
+ls
+
+
+    Directory: C:\Users\Student\documents
+
+
+Mode                 LastWriteTime         Length Name                                             
+----                 -------------         ------ ----                                             
+d-----        15.04.2024     14:12                Command-Control                                  
+d-----        19.04.2024     10:55                Custom Office Templates                          
+d-----        14.02.2024     10:37                FIles                                            
+d-----        08.03.2024     23:21                ISO                                              
+d-----        29.01.2024     14:22                Lightshot                                        
+d-----        26.01.2024     10:33                Linux data                                       
+d-----        19.04.2024     09:03                Obsidian Vault                                   
+d-----        24.01.2024     15:09                Rainmeter                                        
+d-----        05.04.2024     09:57                SoftMaker                                        
+d-----        26.02.2024     08:47                Vm                                               
+d-----        26.01.2024     10:28                WindowsPowerShell                                
+-a----        30.01.2024     14:23        1309733 01-03 PT Network representation.pka              
+-a----        30.01.2024     16:46       25116107 01-04 PT Logical and Physical mode.pka           
+-a----        30.01.2024     14:03          39439 a.pkt                                            
+-a----        29.02.2024     09:56        2444426 a.txt                                            
+-a----        30.01.2024     14:37         465728 b.pkt                                            
+-a----        30.01.2024     14:00      238368968 CiscoPacketTracer_821_Windows_64bit.exe          
+-a----        26.01.2024     17:55              9 data.txt                                         
+-a----        29.02.2024     15:21           1542 def find_line(file_path, target_line_num.py      
+-a----        15.02.2024     18:30              0 key.py                                           
+-a----        06.03.2024     18:39           3775 Obsidian Vault.rar                               
+-a----        15.04.2024     11:16            271 ship.py                                          
+
+
+
+clear
+ls
+
+
+    Directory: C:\Users\Student\documents
+
+
+Mode                 LastWriteTime         Length Name                                             
+----                 -------------         ------ ----                                             
+d-----        15.04.2024     14:12                Command-Control                                  
+d-----        19.04.2024     10:55                Custom Office Templates                          
+d-----        14.02.2024     10:37                FIles                                            
+d-----        08.03.2024     23:21                ISO                                              
+d-----        29.01.2024     14:22                Lightshot                                        
+d-----        26.01.2024     10:33                Linux data                                       
+d-----        19.04.2024     09:03                Obsidian Vault                                   
+d-----        24.01.2024     15:09                Rainmeter                                        
+d-----        05.04.2024     09:57                SoftMaker                                        
+d-----        26.02.2024     08:47                Vm                                               
+d-----        26.01.2024     10:28                WindowsPowerShell                                
+-a----        30.01.2024     14:23        1309733 01-03 PT Network representation.pka              
+-a----        30.01.2024     16:46       25116107 01-04 PT Logical and Physical mode.pka           
+-a----        30.01.2024     14:03          39439 a.pkt                                            
+-a----        29.02.2024     09:56        2444426 a.txt                                            
+-a----        30.01.2024     14:37         465728 b.pkt                                            
+-a----        30.01.2024     14:00      238368968 CiscoPacketTracer_821_Windows_64bit.exe          
+-a----        26.01.2024     17:55              9 data.txt                                         
+-a----        29.02.2024     15:21           1542 def find_line(file_path, target_line_num.py      
+-a----        15.02.2024     18:30              0 key.py                                           
+-a----        06.03.2024     18:39           3775 Obsidian Vault.rar                               
+-a----        15.04.2024     11:16            271 ship.py                                          
+
+
+
+ftp -u salam.txt
+[32mWrong Input !!![0m
+
+ls
+
+
+    Directory: C:\Users\Student\documents
+
+
+Mode                 LastWriteTime         Length Name                                             
+----                 -------------         ------ ----                                             
+d-----        15.04.2024     14:12                Command-Control                                  
+d-----        19.04.2024     10:55                Custom Office Templates                          
+d-----        14.02.2024     10:37                FIles                                            
+d-----        08.03.2024     23:21                ISO                                              
+d-----        29.01.2024     14:22                Lightshot                                        
+d-----        26.01.2024     10:33                Linux data                                       
+d-----        19.04.2024     09:03                Obsidian Vault                                   
+d-----        24.01.2024     15:09                Rainmeter                                        
+d-----        05.04.2024     09:57                SoftMaker                                        
+d-----        26.02.2024     08:47                Vm                                               
+d-----        26.01.2024     10:28                WindowsPowerShell                                
+-a----        30.01.2024     14:23        1309733 01-03 PT Network representation.pka              
+-a----        30.01.2024     16:46       25116107 01-04 PT Logical and Physical mode.pka           
+-a----        30.01.2024     14:03          39439 a.pkt                                            
+-a----        29.02.2024     09:56        2444426 a.txt                                            
+-a----        30.01.2024     14:37         465728 b.pkt                                            
+-a----        30.01.2024     14:00      238368968 CiscoPacketTracer_821_Windows_64bit.exe          
+-a----        26.01.2024     17:55              9 data.txt                                         
+-a----        29.02.2024     15:21           1542 def find_line(file_path, target_line_num.py      
+-a----        15.02.2024     18:30              0 key.py                                           
+-a----        06.03.2024     18:39           3775 Obsidian Vault.rar                               
+-a----        15.04.2024     11:16            271 ship.py                                          
+
+
+
+ftp -d salam.txt
+[32mWrong Input !!![0m
+
+ls
+
+
+    Directory: C:\Users\Student\documents
+
+
+Mode                 LastWriteTime         Length Name                                             
+----                 -------------         ------ ----                                             
+d-----        15.04.2024     14:12                Command-Control                                  
+d-----        19.04.2024     10:55                Custom Office Templates                          
+d-----        14.02.2024     10:37                FIles                                            
+d-----        08.03.2024     23:21                ISO                                              
+d-----        29.01.2024     14:22                Lightshot                                        
+d-----        26.01.2024     10:33                Linux data                                       
+d-----        19.04.2024     09:03                Obsidian Vault                                   
+d-----        24.01.2024     15:09                Rainmeter                                        
+d-----        05.04.2024     09:57                SoftMaker                                        
+d-----        26.02.2024     08:47                Vm                                               
+d-----        26.01.2024     10:28                WindowsPowerShell                                
+-a----        30.01.2024     14:23        1309733 01-03 PT Network representation.pka              
+-a----        30.01.2024     16:46       25116107 01-04 PT Logical and Physical mode.pka           
+-a----        30.01.2024     14:03          39439 a.pkt                                            
+-a----        29.02.2024     09:56        2444426 a.txt                                            
+-a----        30.01.2024     14:37         465728 b.pkt                                            
+-a----        30.01.2024     14:00      238368968 CiscoPacketTracer_821_Windows_64bit.exe          
+-a----        26.01.2024     17:55              9 data.txt                                         
+-a----        29.02.2024     15:21           1542 def find_line(file_path, target_line_num.py      
+-a----        15.02.2024     18:30              0 key.py                                           
+-a----        06.03.2024     18:39           3775 Obsidian Vault.rar                               
+-a----        15.04.2024     11:16            271 ship.py                                          
+
+
+
+close
+[32m[*] Connection closed !!![0m
+
+clear
+ls
+
+
+    Directory: C:\Users\Student\Command-Control
+
+
+Mode                 LastWriteTime         Length Name                             
+----                 -------------         ------ ----                             
+d-----        19.04.2024     16:00                Data                             
+-a----        19.04.2024     18:53              0 as                               
+-a----        22.04.2024     10:06           1252 FTP_client.py                    
+-a----        22.04.2024     10:00            994 FTP_server.py                    
+-a----        22.04.2024     10:09           2793 party.py                         
+-a----        19.04.2024     15:56              2 sa                               
+-a----        22.04.2024     09:39          15332 Server.py                        
+-a----        18.04.2024     16:54           1209 temp.py                          
+
+
+
+cd ..
+
+
+cd document
+[32m[*] Command Not Found.[0m
+
+cd documents
+[32m[*] Command Not Found.[0m
+
+ls
+
+
+    Directory: C:\Users\Student\documents
+
+
+Mode                 LastWriteTime         Length Name                             
+----                 -------------         ------ ----                             
+d-----        15.04.2024     14:12                Command-Control                  
+d-----        19.04.2024     10:55                Custom Office Templates          
+d-----        14.02.2024     10:37                FIles                            
+d-----        08.03.2024     23:21                ISO                              
+d-----        29.01.2024     14:22                Lightshot                        
+d-----        26.01.2024     10:33                Linux data                       
+d-----        19.04.2024     09:03                Obsidian Vault                   
+d-----        24.01.2024     15:09                Rainmeter                        
+d-----        05.04.2024     09:57                SoftMaker                        
+d-----        26.02.2024     08:47                Vm                               
+d-----        26.01.2024     10:28                WindowsPowerShell                
+-a----        30.01.2024     14:23        1309733 01-03 PT Network representation.p
+                                                  ka                               
+-a----        30.01.2024     16:46       25116107 01-04 PT Logical and Physical mod
+                                                  e.pka                            
+-a----        30.01.2024     14:03          39439 a.pkt                            
+-a----        29.02.2024     09:56        2444426 a.txt                            
+-a----        30.01.2024     14:37         465728 b.pkt                            
+-a----        30.01.2024     14:00      238368968 CiscoPacketTracer_821_Windows_64b
+                                                  it.exe                           
+-a----        26.01.2024     17:55              9 data.txt                         
+-a----        29.02.2024     15:21           1542 def find_line(file_path, target_l
+                                                  ine_num.py                       
+-a----        15.02.2024     18:30              0 key.py                           
+-a----        06.03.2024     18:39           3775 Obsidian Vault.rar               
+-a----        15.04.2024     11:16            271 ship.py                          
+
+
+
+ftp -u salam.txt
+[32mWrong Input !!![0m
+
+ls
+
+
+    Directory: C:\Users\Student\documents
+
+
+Mode                 LastWriteTime         Length Name                             
+----                 -------------         ------ ----                             
+d-----        15.04.2024     14:12                Command-Control                  
+d-----        19.04.2024     10:55                Custom Office Templates          
+d-----        14.02.2024     10:37                FIles                            
+d-----        08.03.2024     23:21                ISO                              
+d-----        29.01.2024     14:22                Lightshot                        
+d-----        26.01.2024     10:33                Linux data                       
+d-----        19.04.2024     09:03                Obsidian Vault                   
+d-----        24.01.2024     15:09                Rainmeter                        
+d-----        05.04.2024     09:57                SoftMaker                        
+d-----        26.02.2024     08:47                Vm                               
+d-----        26.01.2024     10:28                WindowsPowerShell                
+-a----        30.01.2024     14:23        1309733 01-03 PT Network representation.p
+                                                  ka                               
+-a----        30.01.2024     16:46       25116107 01-04 PT Logical and Physical mod
+                                                  e.pka                            
+-a----        30.01.2024     14:03          39439 a.pkt                            
+-a----        29.02.2024     09:56        2444426 a.txt                            
+-a----        30.01.2024     14:37         465728 b.pkt                            
+-a----        30.01.2024     14:00      238368968 CiscoPacketTracer_821_Windows_64b
+                                                  it.exe                           
+-a----        26.01.2024     17:55              9 data.txt                         
+-a----        29.02.2024     15:21           1542 def find_line(file_path, target_l
+                                                  ine_num.py                       
+-a----        15.02.2024     18:30              0 key.py                           
+-a----        06.03.2024     18:39           3775 Obsidian Vault.rar               
+-a----        15.04.2024     11:16            271 ship.py                          
+
+
+
+cd ..
+
+
+cd documents
+[32m[*] Command Not Found.[0m
+
+ftp -u salam.txt
+[32m530 Authentication failed.[0m
+
+cd ../documents
+
+
+ls
+
+
+    Directory: C:\Users\Student\documents
+
+
+Mode                 LastWriteTime         Length Name                                                          
+----                 -------------         ------ ----                                                          
+d-----        15.04.2024     14:12                Command-Control                                               
+d-----        19.04.2024     10:55                Custom Office Templates                                       
+d-----        14.02.2024     10:37                FIles                                                         
+d-----        08.03.2024     23:21                ISO                                                           
+d-----        29.01.2024     14:22                Lightshot                                                     
+d-----        26.01.2024     10:33                Linux data                                                    
+d-----        19.04.2024     09:03                Obsidian Vault                                                
+d-----        24.01.2024     15:09                Rainmeter                                                     
+d-----        05.04.2024     09:57                SoftMaker                                                     
+d-----        26.02.2024     08:47                Vm                                                            
+d-----        26.01.2024     10:28                WindowsPowerShell                                             
+-a----        30.01.2024     14:23        1309733 01-03 PT Network representation.pka                           
+-a----        30.01.2024     16:46       25116107 01-04 PT Logical and Physical mode.pka                        
+-a----        30.01.2024     14:03          39439 a.pkt                                                         
+-a----        29.02.2024     09:56        2444426 a.txt                                                         
+-a----        30.01.2024     14:37         465728 b.pkt                                                         
+-a----        30.01.2024     14:00      238368968 CiscoPacketTracer_821_Windows_64bit.exe                       
+-a----        26.01.2024     17:55              9 data.txt                                                      
+-a----        29.02.2024     15:21           1542 def find_line(file_path, target_line_num.py                   
+-a----        15.02.2024     18:30              0 key.py                                                        
+-a----        06.03.2024     18:39           3775 Obsidian Vault.rar                                            
+-a----        15.04.2024     11:16            271 ship.py                                                       
+
+
+
+ftp -u salam.txt
+[32m530 Authentication failed.[0m
+
+cd ../documents
+
+
+ls
+
+
+    Directory: C:\Users\Student\documents
+
+
+Mode                 LastWriteTime         Length Name                                                          
+----                 -------------         ------ ----                                                          
+d-----        15.04.2024     14:12                Command-Control                                               
+d-----        19.04.2024     10:55                Custom Office Templates                                       
+d-----        14.02.2024     10:37                FIles                                                         
+d-----        08.03.2024     23:21                ISO                                                           
+d-----        29.01.2024     14:22                Lightshot                                                     
+d-----        26.01.2024     10:33                Linux data                                                    
+d-----        19.04.2024     09:03                Obsidian Vault                                                
+d-----        24.01.2024     15:09                Rainmeter                                                     
+d-----        05.04.2024     09:57                SoftMaker                                                     
+d-----        26.02.2024     08:47                Vm                                                            
+d-----        26.01.2024     10:28                WindowsPowerShell                                             
+-a----        30.01.2024     14:23        1309733 01-03 PT Network representation.pka                           
+-a----        30.01.2024     16:46       25116107 01-04 PT Logical and Physical mode.pka                        
+-a----        30.01.2024     14:03          39439 a.pkt                                                         
+-a----        29.02.2024     09:56        2444426 a.txt                                                         
+-a----        30.01.2024     14:37         465728 b.pkt                                                         
+-a----        30.01.2024     14:00      238368968 CiscoPacketTracer_821_Windows_64bit.exe                       
+-a----        26.01.2024     17:55              9 data.txt                                                      
+-a----        29.02.2024     15:21           1542 def find_line(file_path, target_line_num.py                   
+-a----        15.02.2024     18:30              0 key.py                                                        
+-a----        06.03.2024     18:39           3775 Obsidian Vault.rar                                            
+-a----        15.04.2024     11:16            271 ship.py                                                       
+
+
+
+ftp -u salam.txt
+[32mError: [WinError 10061] No connection could be made because the target machine actively refused it[0m
+
+cd ../documents
+
+
+ftp -u salam.txt
+[32mError: [WinError 10061] No connection could be made because the target machine actively refused it[0m
+
+cd ../documents
+
+
+ftp -u salam.txt
+[32mError: [WinError 10061] No connection could be made because the target machine actively refused it[0m
+
+cd ../documents
+
+
+ftp -u salam.txt
+cd ../Documents
+
+
+ls
+
+
+    Directory: C:\Users\Student\Documents
+
+
+Mode                 LastWriteTime         Length Name                                                          
+----                 -------------         ------ ----                                                          
+d-----        15.04.2024     14:12                Command-Control                                               
+d-----        19.04.2024     10:55                Custom Office Templates                                       
+d-----        14.02.2024     10:37                FIles                                                         
+d-----        08.03.2024     23:21                ISO                                                           
+d-----        29.01.2024     14:22                Lightshot                                                     
+d-----        26.01.2024     10:33                Linux data                                                    
+d-----        19.04.2024     09:03                Obsidian Vault                                                
+d-----        24.01.2024     15:09                Rainmeter                                                     
+d-----        05.04.2024     09:57                SoftMaker                                                     
+d-----        26.02.2024     08:47                Vm                                                            
+d-----        26.01.2024     10:28                WindowsPowerShell                                             
+-a----        30.01.2024     14:23        1309733 01-03 PT Network representation.pka                           
+-a----        30.01.2024     16:46       25116107 01-04 PT Logical and Physical mode.pka                        
+-a----        30.01.2024     14:03          39439 a.pkt                                                         
+-a----        29.02.2024     09:56        2444426 a.txt                                                         
+-a----        30.01.2024     14:37         465728 b.pkt                                                         
+-a----        30.01.2024     14:00      238368968 CiscoPacketTracer_821_Windows_64bit.exe                       
+-a----        26.01.2024     17:55              9 data.txt                                                      
+-a----        29.02.2024     15:21           1542 def find_line(file_path, target_line_num.py                   
+-a----        15.02.2024     18:30              0 key.py                                                        
+-a----        06.03.2024     18:39           3775 Obsidian Vault.rar                                            
+-a----        15.04.2024     11:16            271 ship.py                                                       
+
+
+
+ftp -u salam.txt
+ftp -u salam.txt
+ftp -u salam.txt
+[32m[*] salam.txt  uploaded successfully.[0m
+
+cd ..
+
+
+ls
+
+
+    Directory: C:\Users\Student
+
+
+Mode                 LastWriteTime         Length Name                                                          
+----                 -------------         ------ ----                                                          
+d-----        23.01.2024     11:45                .chocolatey                                                   
+d-----        16.04.2024     09:58                .ipython                                                      
+d-----        14.01.2024     18:51                .ms-ad                                                        
+d-----        26.01.2024     14:47                .poshssh                                                      
+d-----        05.04.2024     15:03                .ssh                                                          
+d-----        19.04.2024     19:45                .VirtualBox                                                   
+d-----        21.02.2024     11:41                .vscode                                                       
+d-----        26.01.2024     17:20                Cisco Packet Tracer 7.3.0                                     
+d-----        07.04.2024     17:08                Cisco Packet Tracer 8.2.1                                     
+d-----        22.04.2024     11:26                Command-Control                                               
+d-r---        11.09.2023     13:10                Contacts                                                      
+d-r---        19.04.2024     18:26                Desktop                                                       
+d-r---        19.04.2024     10:55                Documents                                                     
+d-r---        19.04.2024     14:53                Downloads                                                     
+d-r---        11.09.2023     13:10                Favorites                                                     
+d-----        23.02.2024     09:31                GNS3                                                          
+d-----        15.02.2024     18:39                keylogger                                                     
+d-r---        11.09.2023     13:10                Links                                                         
+d-r---        11.09.2023     13:10                Music                                                         
+d-----        22.01.2024     14:29                notes                                                         
+d-r---        13.09.2023     12:00                OneDrive                                                      
+d-----        29.01.2024     16:25                OpenVPN                                                       
+d-r---        05.02.2024     20:22                Pictures                                                      
+d-----        13.09.2023     12:28                PycharmProjects                                               
+d-r---        11.09.2023     13:10                Saved Games                                                   
+d-r---        14.01.2024     18:32                Searches                                                      
+d-r---        25.01.2024     13:14                Videos                                                        
+-a----        15.04.2024     19:33             59 .gitconfig                                                    
+-a----        14.02.2024     15:18          45472 .keys.py.un~                                                  
+-a----        16.04.2024     17:36             20 .lesshst                                                      
+-a----        07.04.2024     16:55            356 .packettracer                                                 
+-a----        16.04.2024     17:33            949 .viminfo                                                      
+-a----        15.02.2024     18:18             15 advanced_ip_scanner_Aliases.bin                               
+-a----        15.02.2024     18:18             15 advanced_ip_scanner_Comments.bin                              
+-a----        15.02.2024     18:18            306 advanced_ip_scanner_MAC.bin                                   
+-a----        13.02.2024     13:09            283 data.txt                                                      
+-a----        30.01.2024     10:58           2749 Dboys.ovpn                                                    
+-a----        14.02.2024     15:18            371 keys.py                                                       
+-a----        14.02.2024     15:07            402 keys.py~                                                      
+-a----        01.02.2024     18:09           1695 level17                                                       
+-a----        29.03.2024     17:33            147 sa.gpg                                                        
+-a----        13.02.2024     11:45            324 send_data.ps1                                                 
+-a----        01.02.2024     09:41            674 ssh.ps1                                                       
+-a----        18.04.2024     16:00           1082 temp.py                                                       
+-a----        26.01.2024     15:08            129 tmp.py                                                        
+-a----        14.02.2024     14:19              0 vvvvvv                                                        
+-a----        26.02.2024     12:07       40195470 WindowsUpdateClient.exe                                       
+-a----        30.01.2024     11:56           2745 ziya.ovpn                                                     
+-a----        21.02.2024     20:55           9466 _viminfo                                                      
+
+
+
+ftp -u sa,gpg
+[32mError: 550 No such file or directory.[0m
+
+ftp -u sa.gpg
+[32mError: 550 No such file or directory.[0m
+
+ftp -d sa.gpg
+[32m[*] sa.gpg downloaded successfully.[0m
+
+close
+[32m[*] Connection closed !!![0m
+
+ftp -u salam.txt
+[32m[*] salam.txt  uploaded successfully.[0m
+
+clsoe
+[32m[*] Command Not Found.[0m
+
+close
+[32m[*] Connection closed !!![0m
+
+ftp -u salam.txt
+[32m[*] salam.txt  uploaded successfully.[0m
+
+close
+[32m[*] Connection closed !!![0m
+
+ftp -u salam.txt
+[32m[*] salam.txt  uploaded successfully.[0m
+
+ftp -u salam.txt
+[32m[*] salam.txt  uploaded successfully.[0m
+
+ls
+
+
+    Directory: C:\Users\Student\Command-Control
+
+
+Mode                 LastWriteTime         Length Name                                                          
+----                 -------------         ------ ----                                                          
+d-----        19.04.2024     16:00                Data                                                          
+-a----        22.04.2024     10:28           1254 FTP_client.py                                                 
+-a----        22.04.2024     12:02            938 FTP_server.py                                                 
+-a----        22.04.2024     11:19           2905 party.py                                                      
+-a----        19.04.2024     15:56              2 sa                                                            
+-a----        22.04.2024     12:23          15691 Server.py                                                     
+-a----        18.04.2024     16:54           1209 temp.py                                                       
+
+
+
+ftp -d sa
+[32m[*] sa downloaded successfully.[0m
+
+close
+[32m[*] Connection closed !!![0m
+
+ftp -u salam.txt
+[32m[*] salam.txt  uploaded successfully.[0m
+
+close
+[32m[*] Connection closed !!![0m
+
+ftp -u salam.txt
+[32m[*] salam.txt  uploaded successfully.[0m
+
+ls
+
+
+    Directory: C:\Users\Student\Command-Control
+
+
+Mode                 LastWriteTime         Length Name                                             
+----                 -------------         ------ ----                                             
+d-----        19.04.2024     16:00                Data                                             
+-a----        22.04.2024     10:28           1254 FTP_client.py                                    
+-a----        22.04.2024     12:02            938 FTP_server.py                                    
+-a----        22.04.2024     12:36           2874 party.py                                         
+-a----        19.04.2024     15:56              2 sa                                               
+-a----        22.04.2024     12:51          17025 Server.py                                        
+-a----        18.04.2024     16:54           1209 temp.py                                          
+
+
+
+close
+[32m[*] Connection closed !!![0m
+
+clear
+ls
+
+
+    Directory: C:\Users\Student\Command-Control
+
+
+Mode                 LastWriteTime         Length Name                                             
+----                 -------------         ------ ----                                             
+d-----        19.04.2024     16:00                Data                                             
+-a----        22.04.2024     10:28           1254 FTP_client.py                                    
+-a----        22.04.2024     12:02            938 FTP_server.py                                    
+-a----        22.04.2024     12:36           2874 party.py                                         
+-a----        19.04.2024     15:56              2 sa                                               
+-a----        22.04.2024     12:51          17025 Server.py                                        
+-a----        18.04.2024     16:54           1209 temp.py                                          
+
+
+
+close
+[32m[*] Connection closed !!![0m
+
+ftp -u salam.txt
+[32m[*] salam.txt  uploaded successfully.[0m
+
+close
+[32m[*] Connection closed !!![0m
+

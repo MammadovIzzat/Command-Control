@@ -14,11 +14,12 @@ def upload_file(ftp, filename, remote_filename):
         ftp.storbinary('STOR ' + remote_filename, f)
 
 # Replace these with your FTP server details
-ftp_server = '192.168.30.53'
+ftp_server = '192.168.30.52'
 ftp_username = 'izzat'
 ftp_password = 'salam123'
 
 # Connect to the FTP server
+
 with FTP(ftp_server) as ftp:
     ftp.login(user=ftp_username, passwd=ftp_password)
     
@@ -28,8 +29,8 @@ with FTP(ftp_server) as ftp:
         print(file)
 
     # Download a file
-    filename_to_download = 'sa'
-    local_filename = 'as'
+    filename_to_download = 'salam.txt'
+    local_filename = 'as.txt'
     download_file(ftp, filename_to_download, local_filename)
     print(f"Downloaded file '{filename_to_download}' to '{local_filename}'")
 
