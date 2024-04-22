@@ -188,6 +188,7 @@ def check_hostname(HostName,client):
         data['client_list'].append(new_client)
         with open("./Data/client_list.json","w") as f:
             json.dump(data,f,indent=4)
+    output(colour.info(f"[*] {HostName} connected."))
             
 
 
@@ -220,9 +221,9 @@ def on_release(key):
         return False
 
 def output(hello):
-    sys.stdout.write(colour.info(f"\r\u001b[1000D{hello}\t\t\t\t\n"))
+    sys.stdout.write(colour.info(f"\r\u001b[1000D{hello}                                         \n"))
     if line_buffer != "":
-        print(line_buffer,end="",flush=True)
+        print(f"{colour.CC} {colour.help} {colour.arrow} {line_buffer}",end="",flush=True);print("\033[0m",end='')
     history_saver(hello)
 
 

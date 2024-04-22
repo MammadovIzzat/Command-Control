@@ -412,3 +412,26 @@ connect izzat
 [*] Connected to izzat !!
 exit
 [*] Socket sessions closed.
+clist
+exit
+[*] Socket sessions closed.
+[32m[*]Izzat connected.[0m
+sa
+
+[32m[*]Izzat connected.[0m
+salam
+exit
+[32m[*] Izzat connected.[0m
+list
+IP             HostName         UserName    NickName    Status
+-------------  ---------------  ----------  ----------  --------
+192.168.30.52  Izzat            student     izzat       False
+192.168.30.53  DESKTOP-EMB5IFJ  pc          VM          False
+exit
+[*] Socket sessions closed.
+[32m[*] Izzat connected.[0m
+list
+IP             HostName         UserName    NickName    Status
+-------------  ---------------  ----------  ----------  --------
+192.168.30.52  Izzat            student     izzat       False
+192.168.30.53  DESKTOP-EMB5IFJ  pc          VM          False
