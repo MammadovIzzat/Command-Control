@@ -51,3 +51,19 @@ Traceback (most recent call last):
   File "C:\Users\Student\Command-Control\Server.py", line 212, in on_press
     line_buffer += key_char
 TypeError: can only concatenate str (not "NoneType") to str
+2024-04-23 10:00:52,886 - INFO - concurrency model: multi-thread
+2024-04-23 10:00:52,887 - INFO - masquerade (NAT) address: None
+2024-04-23 10:00:52,887 - INFO - passive ports: None
+2024-04-23 11:03:56,534 - ERROR - Unhandled exception in listener callback
+Traceback (most recent call last):
+  File "C:\Users\Student\AppData\Local\Programs\Python\Python311\Lib\site-packages\pynput\_util\__init__.py", line 228, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Student\AppData\Local\Programs\Python\Python311\Lib\site-packages\pynput\keyboard\_win32.py", line 287, in _process
+    self.on_press(key)
+  File "C:\Users\Student\AppData\Local\Programs\Python\Python311\Lib\site-packages\pynput\_util\__init__.py", line 144, in inner
+    if f(*args) is False:
+       ^^^^^^^^
+  File "C:\Users\Student\Command-Control\Server.py", line 212, in on_press
+    line_buffer += key_char
+TypeError: can only concatenate str (not "NoneType") to str
