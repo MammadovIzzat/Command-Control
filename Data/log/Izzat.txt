@@ -1093,3 +1093,55 @@ ftp -u salam.txt
 close
 [32m[*] Connection closed !!![0m
 
+ls
+
+
+    Directory: C:\Users\Student\Command-Control
+
+
+Mode                 LastWriteTime         Length Name                                           
+----                 -------------         ------ ----                                           
+d-----        19.04.2024     16:00                Data                                           
+-a----        23.04.2024     13:36           1430 encryp_party.py                                
+-a----        22.04.2024     10:28           1254 FTP_client.py                                  
+-a----        22.04.2024     12:02            938 FTP_server.py                                  
+-a----        22.04.2024     14:21           3597 main_party.py                                  
+-a----        24.04.2024     08:59           3385 party.py                                       
+-a----        24.04.2024     08:49           1634 rsa_learn.py                                   
+-a----        19.04.2024     15:56              2 sa                                             
+-a----        22.04.2024     14:23           3482 salam_party                                    
+-a----        24.04.2024     08:56          17992 Server.py                                      
+-a----        18.04.2024     16:54           1209 temp.py                                        
+-a----        22.04.2024     14:33            238 tmp.py                                         
+
+
+
+ls
+
+
+    Directory: C:\Users\Student\Command-Control
+
+
+Mode                 LastWriteTime         Length Name                                           
+----                 -------------         ------ ----                                           
+d-----        19.04.2024     16:00                Data                                           
+-a----        23.04.2024     13:36           1430 encryp_party.py                                
+-a----        22.04.2024     10:28           1254 FTP_client.py                                  
+-a----        22.04.2024     12:02            938 FTP_server.py                                  
+-a----        22.04.2024     14:21           3597 main_party.py                                  
+-a----        24.04.2024     08:59           3385 party.py                                       
+-a----        24.04.2024     08:49           1634 rsa_learn.py                                   
+-a----        19.04.2024     15:56              2 sa                                             
+-a----        22.04.2024     14:23           3482 salam_party                                    
+-a----        24.04.2024     08:56          17992 Server.py                                      
+-a----        18.04.2024     16:54           1209 temp.py                                        
+-a----        22.04.2024     14:33            238 tmp.py                                         
+
+
+
+clodr
+[32m[*] Command Not Found.[0m
+
+close
+[32m[*] Connection closed !!![0m
+

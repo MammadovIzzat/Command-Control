@@ -446,3 +446,124 @@ IP             HostName         UserName    NickName    Status
 clist
 connect izzat
 [*] Connected to izzat !!
+[32m[*] Izzat connected.[0m
+
+connect izzat
+[*] Connected to izzat !!
+exit
+[*] Socket sessions closed.
+[32m[*] Memo connected.[0m
+
+
+
+
+clist
+list
+IP             HostName         UserName    NickName    Status
+-------------  ---------------  ----------  ----------  --------
+192.168.30.52  Izzat            student     izzat       False
+192.168.30.53  DESKTOP-EMB5IFJ  pc          VM          False
+192.168.30.60  Memo             Student     Memo        False
+connect Memo
+[*] Connected to Memo !!
+exit
+[*] Socket sessions closed.
+
+
+list
+IP             HostName         UserName    NickName    Status
+-------------  ---------------  ----------  ----------  --------
+192.168.30.52  Izzat            student     izzat       False
+192.168.30.53  DESKTOP-EMB5IFJ  pc          VM          False
+192.168.30.60  Memo             Student     Memo        False
+clist
+[32m[*] DESKTOP-EMB5IFJ connected.[0m
+
+list
+IP             HostName         UserName    NickName    Status
+-------------  ---------------  ----------  ----------  --------
+192.168.30.52  Izzat            student     izzat       False
+192.168.30.53  DESKTOP-EMB5IFJ  pc          VM          False
+192.168.30.60  Memo             Student     Memo        False
+clist
+exit
+[*] Socket sessions closed.
+[32m[*] DESKTOP-EMB5IFJ connected.[0m
+[32m[*] DESKTOP-EMB5IFJ connected.[0m
+
+clist
+clist
+exit
+[32m[*] DESKTOP-EMB5IFJ connected.[0m
+[32m[*] DESKTOP-EMB5IFJ connected.[0m
+
+clist
+[32m[*] DESKTOP-EMB5IFJ connected.[0m
+
+
+
+clist
+exit
+[*] Socket sessions closed.
+
+
+[32m[*] DESKTOP-EMB5IFJ connected.[0m
+
+clist
+clist
+exit
+start VM
+[*] VM's Status Changed as: True 
+list
+IP             HostName         UserName    NickName    Status
+-------------  ---------------  ----------  ----------  --------
+192.168.30.52  Izzat            student     izzat       False
+192.168.30.53  DESKTOP-EMB5IFJ  pc          VM          True
+192.168.30.60  Memo             Student     Memo        False
+[32m[*] DESKTOP-EMB5IFJ connected.[0m
+
+[32m[*] DESKTOP-EMB5IFJ connected.[0m
+[32m[*] DESKTOP-EMB5IFJ connected.[0m
+
+clist
+list
+IP             HostName         UserName    NickName    Status
+-------------  ---------------  ----------  ----------  --------
+192.168.30.52  Izzat            student     izzat       False
+192.168.30.53  DESKTOP-EMB5IFJ  pc          VM          True
+192.168.30.60  Memo             Student     Memo        False
+?
+stop VM
+[*] VM's Status Changed as: False 
+[*] Connection closed: VM !!
+clist
+exit
+[*] Socket sessions closed.
+list
+IP             HostName         UserName    NickName    Status
+-------------  ---------------  ----------  ----------  --------
+192.168.30.52  Izzat            student     izzat       False
+192.168.30.53  DESKTOP-EMB5IFJ  pc          VM          False
+192.168.30.60  Memo             Student     Memo        False
+start VM
+[*] VM's Status Changed as: True 
+[32m[*] DESKTOP-EMB5IFJ connected.[0m
+
+clist
+stop VM
+[*] VM's Status Changed as: False 
+[*] Connection closed: VM !!
+clist
+start VM
+[*] VM's Status Changed as: True 
+[32m[*] DESKTOP-EMB5IFJ connected.[0m
+
+clist
+connect VM
+[*] Connected to VM !!
+stop VM
+[*] VM's Status Changed as: False 
+[*] Connection closed: VM !!
+clist
+exit
+[*] Socket sessions closed.

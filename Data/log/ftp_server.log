@@ -67,3 +67,46 @@ Traceback (most recent call last):
   File "C:\Users\Student\Command-Control\Server.py", line 212, in on_press
     line_buffer += key_char
 TypeError: can only concatenate str (not "NoneType") to str
+2024-04-24 08:59:15,567 - INFO - concurrency model: multi-thread
+2024-04-24 08:59:15,567 - INFO - masquerade (NAT) address: None
+2024-04-24 08:59:15,567 - INFO - passive ports: None
+2024-04-24 09:02:18,592 - INFO - concurrency model: multi-thread
+2024-04-24 09:02:18,593 - INFO - masquerade (NAT) address: None
+2024-04-24 09:02:18,593 - INFO - passive ports: None
+2024-04-24 09:13:33,543 - ERROR - Unhandled exception in listener callback
+Traceback (most recent call last):
+  File "C:\Users\Student\AppData\Local\Programs\Python\Python311\Lib\site-packages\pynput\_util\__init__.py", line 228, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Student\AppData\Local\Programs\Python\Python311\Lib\site-packages\pynput\keyboard\_win32.py", line 287, in _process
+    self.on_press(key)
+  File "C:\Users\Student\AppData\Local\Programs\Python\Python311\Lib\site-packages\pynput\_util\__init__.py", line 144, in inner
+    if f(*args) is False:
+       ^^^^^^^^
+  File "C:\Users\Student\Command-Control\Server.py", line 227, in on_press
+    line_buffer += key_char
+TypeError: can only concatenate str (not "NoneType") to str
+2024-04-24 10:23:32,171 - INFO - concurrency model: multi-thread
+2024-04-24 10:23:32,172 - INFO - masquerade (NAT) address: None
+2024-04-24 10:23:32,172 - INFO - passive ports: None
+2024-04-24 10:31:19,575 - INFO - concurrency model: multi-thread
+2024-04-24 10:31:19,576 - INFO - masquerade (NAT) address: None
+2024-04-24 10:31:19,576 - INFO - passive ports: None
+2024-04-24 10:35:42,228 - INFO - concurrency model: multi-thread
+2024-04-24 10:35:42,228 - INFO - masquerade (NAT) address: None
+2024-04-24 10:35:42,228 - INFO - passive ports: None
+2024-04-24 10:39:37,978 - INFO - concurrency model: multi-thread
+2024-04-24 10:39:37,978 - INFO - masquerade (NAT) address: None
+2024-04-24 10:39:37,978 - INFO - passive ports: None
+2024-04-24 10:40:46,442 - INFO - concurrency model: multi-thread
+2024-04-24 10:40:46,442 - INFO - masquerade (NAT) address: None
+2024-04-24 10:40:46,442 - INFO - passive ports: None
+2024-04-24 10:54:39,894 - INFO - concurrency model: multi-thread
+2024-04-24 10:54:39,895 - INFO - masquerade (NAT) address: None
+2024-04-24 10:54:39,895 - INFO - passive ports: None
+2024-04-24 10:57:04,169 - INFO - concurrency model: multi-thread
+2024-04-24 10:57:04,169 - INFO - masquerade (NAT) address: None
+2024-04-24 10:57:04,170 - INFO - passive ports: None
+2024-04-24 10:58:32,612 - INFO - concurrency model: multi-thread
+2024-04-24 10:58:32,612 - INFO - masquerade (NAT) address: None
+2024-04-24 10:58:32,612 - INFO - passive ports: None

@@ -1,0 +1,220 @@
+ls
+
+
+    Directory: C:\Users\Student\Downloads
+
+
+Mode                 LastWriteTime         Length Name                                                                                                                 
+----                 -------------         ------ ----                                                                                                                 
+d-----         4/19/2024   1:07 PM                Burp-Suite-Pro                                                                                                       
+d-----         2/12/2024   7:59 PM                change_wallpaper                                                                                                     
+d-----          2/5/2024  10:43 AM                Cyber kill Chain                                                                                                     
+d-----         3/27/2024  10:57 AM                FiraCode                                                                                                             
+d-----          4/3/2024   6:48 PM                Interviewz                                                                                                           
+d-----          2/5/2024   6:10 PM                memo-notion                                                                                                          
+d-----         3/28/2024   7:02 PM                SECONDTRY                                                                                                            
+d-----         3/27/2024   3:22 PM                THIRD                                                                                                                
+-a----         1/30/2024   3:31 PM         817371 01-01 WS installation.pdf                                                                                            
+-a----         1/30/2024   1:58 PM         293770 01-03 PT Network representation.pdf                                                                                  
+-a----         1/30/2024   2:02 PM        1260688 01-03 PT Network representation.pka                                                                                  
+-a----         1/30/2024   3:20 PM       24700885 01-04 PT Logical and Physical mode.pka                                                                               
+-a----          2/2/2024   1:34 PM         569833 02-01 PT Connections types.pka                                                                                       
+-a----          2/2/2024   4:37 PM         764831 02-02 WS Wifi traffic (2).docx                                                                                       
+-a----          2/6/2024   1:10 PM         764831 02-02 WS Wifi traffic.docx                                                                                           
+-a----          2/6/2024   1:57 PM        6562325 03-1-1 Lab Bin to Dec Questions.docx                                                                                 
+-a----          2/6/2024   2:21 PM        6679097 03-1-2 Lab Dec to Bin Questions.docx                                                                                 
+-a----          2/6/2024   3:51 PM        6600736 03-2-1 WS Ethernet Frames.docx                                                                                       
+-a----          2/9/2024   3:01 PM        6563374 03-2-2 Reliability mechanism in IEEE 802.11.docx                                                                     
+-a----          2/9/2024   1:31 PM        6563689 03-2-3 Ethernet error check.docx                                                                                     
+-a----          2/9/2024   3:20 PM         157182 03-3-1 Navigating ios.pka                                                                                            
+-a----          2/9/2024   3:49 PM         170716 03-3-2 PT Switch config Initial.pka                                                                                  
+-a----         2/12/2024  10:13 AM         591489 03-3-3 PT Port security.pka                                                                                          
+-a----         2/16/2024   1:11 PM         648824 03-4-1 PT VLAN building initial (1).pka                                                                              
+-a----         2/12/2024  12:06 PM         711787 03-4-1 PT VLAN building initial.pka                                                                                  
+-a----         2/16/2024   2:22 PM         359226 03-4-2 WS VLAN analysis (1).docx                                                                                     
+-a----         2/16/2024   1:30 PM         334369 03-4-2 WS VLAN analysis.docx                                                                                         
+-a----         2/16/2024   3:38 PM         687929 04-1 WS  Filtering IP (1).docx                                                                                       
+-a----         2/16/2024   2:59 PM         691640 04-1 WS  Filtering IP.docx                                                                                           
+-a----         2/16/2024   2:59 PM       18466564 04-1 WS  Filtering IP.pcapng                                                                                         
+-a----         2/23/2024   2:07 PM         558757 04-1-2 PT basic connection.pka                                                                                       
+-a----         2/23/2024   3:34 PM         381333 04-1-3 PT default gateway issue-original.pka                                                                         
+-a----         2/23/2024   3:52 PM        6563035 04-1-6 DHCP observing (1).docx                                                                                       
+-a----         2/23/2024   3:34 PM        6564510 04-1-6 DHCP observing.docx                                                                                           
+-a----         2/27/2024   2:53 PM        6525208 04-2-1 Subnetting.docx                                                                                               
+-a----         2/27/2024   3:39 PM        6570870 04-2-2 Subnetting creation.docx                                                                                      
+-a----         2/27/2024   3:32 PM         282442 04-2-2 Subnetting creation.pka                                                                                       
+-a----          3/1/2024   3:18 PM         705427 04-3-1 PT Switch ARP table.pka                                                                                       
+-a----          3/1/2024   3:18 PM         308193 04-3-2 WS ARP table Questions.docx                                                                                   
+-a----          3/1/2024   3:18 PM         358993 04-3-4 WS ARP spoof Questions.docx                                                                                   
+-a----          3/1/2024   3:18 PM       15127421 04-3-4 WS ARP spoof.pcap                                                                                             
+-a----          3/5/2024   2:08 PM         775946 04-4-1 Connecting Router.pka                                                                                         
+-a----          3/5/2024   1:30 PM         788940 04-4-2 Basic router config.pka                                                                                       
+-a----          3/5/2024   1:30 PM         115756 04-4-3 Configuring IPv4 Static and Default Routes.pka                                                                
+-a----         3/12/2024   3:43 PM        6783495 05-1 WS TCP Analysis 1.docx                                                                                          
+-a----         3/12/2024   3:44 PM        6653301 05-2 WS UDP Analysis.docx                                                                                            
+-a----         3/12/2024   3:44 PM        6565352 05-3 WS TCP Analysis 2.docx                                                                                          
+-a----          2/2/2024  12:50 PM        1260688 1.5.7-packet-tracer---network-representation.pka                                                                     
+-a----          2/6/2024   1:05 PM        4679082 1228014.png                                                                                                          
+-a----          2/5/2024   6:19 PM        5432886 1cab02af-cd1f-4c5b-90cf-2a3d4d49ee1d_Export-e6028bb0-502f-48e6-a5f6-52ed84f2ec7c.zip                                 
+-a----         2/27/2024   4:42 PM         157182 2.3.7-packet-tracer---navigate-the-ios.pka                                                                           
+-a----         3/13/2024  11:34 AM         305823 2.3.8-packet-tracer---navigate-the-ios-using-a-terminal-client-for-console-connectivity---physical-mode(1).pka       
+-a----         2/27/2024   4:42 PM         305823 2.3.8-packet-tracer---navigate-the-ios-using-a-terminal-client-for-console-connectivity---physical-mode.pka          
+-a----         3/19/2024  12:52 PM         584283 4.6.5-packet-tracer---connect-a-wired-and-wireless-lan.pka                                                           
+-a----         3/27/2024   3:14 PM           4770 41891.rb                                                                                                             
+-a----          4/5/2024   2:09 PM           5995 46516.py                                                                                                             
+-a----          3/5/2024  12:32 PM          12286 98A-fVG3.jpg                                                                                                         
+-a----         3/16/2024   6:04 PM        5216584 AnyDesk.exe                                                                                                          
+-a----          2/1/2024   9:06 AM        1016486 attack_maps.docx                                                                                                     
+-a----          2/6/2024   9:56 AM          35444 azerbaijan_cyber_security_center_cover.jpg                                                                           
+-a----          2/1/2024  10:01 AM            786 bandit.txt                                                                                                           
+-a----         3/15/2024   6:07 PM          49626 black_background.jpg                                                                                                 
+-a----         4/19/2024  12:49 PM      565495361 burpsuite_pro_v2024.2.1.5.jar                                                                                        
+-a----         4/19/2024   1:10 PM            940 cacert(1).der                                                                                                        
+-a----         4/19/2024  12:13 PM            940 cacert.der                                                                                                           
+-a----          2/6/2024   5:38 PM        2894017 Carbanak - The Great Robbery.pptx                                                                                    
+-a----         2/12/2024   7:59 PM       21502005 change_wallpaper.zip                                                                                                 
+-a----         1/30/2024   2:38 PM      238368968 CiscoPacketTracer_821_Windows_64bit.exe                                                                              
+-a----         1/30/2024   1:56 PM         154624 Cisco_Packet_Tracer_Download_and_Installation_Instructions.pdf                                                       
+-a----          2/9/2024   6:02 PM       59839035 Code Final.pptx                                                                                                      
+-a----          4/3/2024   6:48 PM          23895 COHORT 3 - Fundamentals Interview Syllabus.xlsx                                                                      
+-a----         2/15/2024   2:22 PM            986 config (1).seb                                                                                                       
+-a----         2/16/2024  10:02 AM           1032 config (2).seb                                                                                                       
+-a----         2/19/2024   4:27 PM           1026 config (3).seb                                                                                                       
+-a----         2/20/2024   1:06 PM            876 config (4).seb                                                                                                       
+-a----         2/21/2024   4:06 PM            876 config (5).seb                                                                                                       
+-a----         3/11/2024   9:14 AM            876 config(1).seb                                                                                                        
+-a----         3/11/2024   4:11 PM            876 config(2).seb                                                                                                        
+-a----         3/28/2024   4:12 PM            876 config(3).seb                                                                                                        
+-a----         3/29/2024   9:17 AM            986 config(4).seb                                                                                                        
+-a----         3/29/2024   1:11 PM            986 config(5).seb                                                                                                        
+-a----          2/5/2024  10:59 AM            876 config.seb                                                                                                           
+-a----         2/16/2024   1:30 PM         706268 configure-trunks.pka                                                                                                 
+-a----          3/7/2024   3:39 PM        3253861 CVE_Reports_V2.png                                                                                                   
+-a----          2/5/2024  10:43 AM        1174604 Cyber kill Chain.rar                                                                                                 
+-a----          4/8/2024  12:44 PM           9475 desktop.png                                                                                                          
+-a----          2/8/2024   5:54 PM       50433966 Dev-Cpp 5.11 TDM-GCC 4.9.2 Setup.exe                                                                                 
+-a----         3/18/2024   9:35 AM       96200992 DiscordSetup.exe                                                                                                     
+-a----          2/5/2024  12:51 PM          25610 document.png                                                                                                         
+-a----         3/28/2024   9:48 PM          16839 Documentation for CVE.docx                                                                                           
+-a----         2/28/2024   3:49 PM            799 Domain Requirements - FINAL.txt                                                                                      
+-a----         3/27/2024   2:39 PM           2481 exploit.py                                                                                                           
+-a----         2/16/2024   2:22 PM             22 Files.zip                                                                                                            
+-a----          4/6/2024  12:12 PM         466733 Final Project - Command Control.pdf                                                                                  
+-a----         3/29/2024  10:06 AM        6571897 Final_Exam_Bonus_WrittenExam.docx                                                                                    
+-a----         3/27/2024  10:55 AM       22256564 FiraCode.zip                                                                                                         
+-a----         3/19/2024  10:51 AM        4214848 FortiClientOnlineInstaller.exe                                                                                       
+-a----         2/19/2024  10:15 AM          31986 gateway.png                                                                                                          
+-a----          2/5/2024  12:52 PM          49834 global-network.png                                                                                                   
+-a----         2/23/2024   6:53 PM     1087617069 GNS3.VM.VirtualBox.2.2.45.zip                                                                                        
+-a----         4/19/2024   3:33 PM     2146498560 Greenbone-Enterprise-TRIAL-22.04.19-VMware-Workstation.ova                                                           
+-a----          2/5/2024   1:06 PM          53237 hacker.png                                                                                                           
+-a----         3/18/2024   9:31 AM         373210 ILKIN_GURBANLI_7-4_2360_202403140053.conf                                                                            
+-a----          2/9/2024  10:38 AM           7636 images.jpg                                                                                                           
+-a----         4/19/2024  12:43 PM      170979328 jdk-22_windows-x64_bin.msi                                                                                           
+-a----         4/19/2024  12:42 PM       83548808 jre-8u281-windows-x64.exe                                                                                            
+-a----          4/6/2024   4:01 PM           4454 kali-nethunter-dragon-grey-transparent.svg                                                                           
+-a----         1/26/2024   5:06 PM        4814058 Lab 02.01 - Installing Windows 10.docx                                                                               
+-a----         1/30/2024   9:23 AM        4670005 Lab 02.03 - Getting started with CMD.docx                                                                            
+-a----          2/6/2024  12:57 PM        6432341 Lab 03.01 - Installing Windows Server 2019.docx                                                                      
+-a----         2/13/2024   9:35 AM        5472644 Lab 04.01  - Installing Active Directory.docx                                                                        
+-a----         2/13/2024  10:58 AM        4696826 Lab 04.02 - Creating and Managing AD Objects.docx                                                                    
+-a----         2/13/2024  11:42 AM        5655554 Lab 04.03 - Adding Client to the Domain.docx                                                                         
+-a----         2/20/2024   9:27 AM        4677699 Lab 05.01 - Implamenting First Policy.docx                                                                           
+-a----         2/20/2024  11:00 AM        4682706 Lab 05.02 - Configuring Account Policy.docx                                                                          
+-a----         2/23/2024  11:33 AM        5673621 Lab 06.01 - Permissions.docx                                                                                         
+-a----         2/23/2024  11:33 AM        4740274 Lab 06.02 - Share Folder Permissions.docx                                                                            
+-a----         2/27/2024  11:15 AM        5496318 Lab 08.01 - Remote Administration.docx                                                                               
+-a----         1/29/2024   2:17 PM       13439108 Lab 1.3 - Getting to know your Machine.docx                                                                          
+-a----          3/1/2024  11:25 AM          23945 Lab 11.01 - Finding and Running Basics CMDs.docx                                                                     
+-a----          3/1/2024  11:25 AM          22015 Lab 11.02 - Windows Administration.docx                                                                              
+-a----         4/15/2024   1:32 PM          34887 Lab 11.03 - Using Pipeline(1).docx                                                                                   
+-a----          3/1/2024  11:25 AM          34887 Lab 11.03 - Using Pipeline.docx                                                                                      
+-a----          2/5/2024   2:32 PM        1830574 Lab 2.1 - Command Line Basics (1).docx                                                                               
+-a----          2/5/2024   1:43 PM        6700116 Lab 2.1 - Command Line Basics.docx                                                                                   
+-a----         4/16/2024  10:00 AM           7782 Lab 2.1 - The Caesar Cipher.ipynb                                                                                    
+-a----          2/5/2024   3:46 PM        7296983 Lab 2.2 - Getting Help on the Command Line.docx                                                                      
+-a----         4/16/2024  10:12 AM           6924 Lab 2.2 - The Transposition Cipher.ipynb                                                                             
+-a----          2/8/2024   3:10 PM        6698843 Lab 2.3 - Compression and Archiving.docx                                                                             
+-a----         2/19/2024   3:37 PM         418139 Lab 3.1 - Creating User and Groups.pdf                                                                               
+-a----         2/22/2024   1:37 PM         440835 Lab 3.2 - File Ownership and Permissions.pdf                                                                         
+-a----         4/19/2024   9:08 AM         398982 Lab 3.2 - Reporting Template.pdf                                                                                     
+-a----         3/11/2024   2:43 PM         370270 Lab 6.1 - Writing Bash Scripts.pdf                                                                                   
+-a----         1/29/2024   2:33 PM         461137 Lab_1.3-Report.docx.docx                                                                                             
+-a----         4/19/2024   1:07 PM              0 license.txt                                                                                                          
+-a----         2/20/2024   4:20 PM         671824 Linux - Users, Groups task.docx                                                                                      
+-a----          2/5/2024  12:49 PM          51023 linux.png                                                                                                            
+-a----         2/28/2024   4:09 PM         114412 Mahammadali Kazimov - CV.pdf                                                                                         
+-a----         3/14/2024  11:52 AM          72520 Mahammadali_Kazimov_7-4_2360_202403140052.conf                                                                       
+-a----         3/18/2024   1:05 PM         390338 Mahammadali_Kazimov_7-4_2360_202403180205.conf                                                                       
+-a----         2/22/2024   4:44 PM       19463448 MediaCreationTool22H2.exe                                                                                            
+-a----          2/5/2024   6:09 PM         486573 memo-notion.zip                                                                                                      
+-a----          4/6/2024   1:09 PM           8328 memo.kazim(1).ovpn                                                                                                   
+-a----         3/18/2024   4:03 PM           8312 memo.kazim.ovpn                                                                                                      
+-a----          2/8/2024   5:35 PM           1678 Memo.pem                                                                                                             
+-a----          2/5/2024  12:51 PM           2947 microsoft.png                                                                                                        
+-a----         1/25/2024   4:30 PM          20819 Miraculous Ladybug.jpg                                                                                               
+-a----         3/28/2024   2:33 PM         769434 Module 1.2 - Python Libraries.pdf                                                                                    
+-a----         3/28/2024   2:33 PM        1262445 Module 2.1 - Web Automation.pdf                                                                                      
+-a----         4/15/2024  11:48 AM      105270272 Nessus-10.7.2-x64.msi                                                                                                
+-a----         1/30/2024  12:00 PM        8026088 nmap-7.94-1.x86_64.rpm                                                                                               
+-a----          2/8/2024   6:32 PM       32459224 nmap-7.94-setup.exe                                                                                                  
+-a----          2/5/2024   9:09 AM       83292552 Notion Setup 3.1.1.exe                                                                                               
+-a----         1/22/2024   2:40 PM       76508424 Obsidian.1.5.3.exe                                                                                                   
+-a----         3/12/2024  10:13 AM        7724544 OfficeSetup.exe                                                                                                      
+-a----         3/16/2024   6:08 PM        3444216 parsec-windows.exe                                                                                                   
+-a----         4/24/2024   9:03 AM           3385 party.py                                                                                                             
+-a----          4/2/2024   2:00 PM          50607 png-transparent-t-shirt-kali-linux-security-hacker-computer-security-public-domain-logos-linux-operating-systems-publ
+                                                  ic-domain-logos-removebg-preview.png                                                                                 
+-a----         4/15/2024   3:51 PM          31336 powershell.png                                                                                                       
+-a----         1/30/2024   3:31 PM         505181 Practical_Introduction_to_Packet_Tracer.pdf                                                                          
+-a----         2/21/2024  11:31 AM         428534 Project 1 - Turtle Library.pdf                                                                                       
+-a----         3/28/2024   9:58 PM         477821 Project 2 - CVE Reports-1.pdf                                                                                        
+-a----         2/28/2024  12:56 PM         477821 Project 2 - CVE Reports.pdf                                                                                          
+-a----         4/15/2024   3:54 PM          96779 ps3cloud1.jpg                                                                                                        
+-a----         3/27/2024  10:30 AM       29037240 python-3.10.11-amd64.exe                                                                                             
+-a----         2/14/2024  11:30 AM          35805 Python-Labs.zip                                                                                                      
+-a----          2/5/2024  12:52 PM          37415 python.png                                                                                                           
+-a----         1/24/2024  10:58 AM        1834341 Python.pptx                                                                                                          
+-a----         4/24/2024   9:07 AM           2978 reqs.txt                                                                                                             
+-a----         4/24/2024   9:08 AM           3938 request.txt                                                                                                          
+-a----          2/5/2024   1:02 PM         147253 research.jpg                                                                                                         
+-a----         3/11/2024   9:09 AM        5945434 RHELSA.pdf                                                                                                           
+-a----          2/6/2024   6:53 PM        1716488 RSA breach.pptx                                                                                                      
+-a----         3/19/2024  12:02 PM          26470 scrape.ipynb                                                                                                         
+-a----          2/5/2024  10:13 AM      276422208 SEB_3.6.0.633_SetupBundle.exe                                                                                        
+-a----         3/27/2024  10:12 AM           4328 SECOND.py                                                                                                            
+-a----         3/27/2024  11:31 AM           4231 SECONDTRY.zip                                                                                                        
+-a----         3/19/2024  12:08 PM       10118279 Security Gateways Final Exam Project.docx                                                                            
+-a----          4/8/2024  12:43 PM          18050 servers.png                                                                                                          
+-a----         2/23/2024   6:26 PM        2786328 setup-lightshot.exe                                                                                                  
+-a----         2/14/2024   4:19 PM           1386 ssh.ps1                                                                                                              
+-a----         2/12/2024   9:33 AM         607324 stp-loop-prevention.pka                                                                                              
+-a----         1/26/2024  12:28 PM        5064591 Stuxnet.pptx                                                                                                         
+-a----         2/27/2024   8:05 PM         159422 subnetting.png                                                                                                       
+-a----          4/5/2024   4:01 PM       56117578 SY0-601 book.pdf                                                                                                     
+-a----         2/26/2024   8:06 PM           1121 task.txt                                                                                                             
+-a----         3/12/2024   3:43 PM         181283 tcp-ethereal-trace-1.pcap                                                                                            
+-a----         3/27/2024   3:22 PM           8380 THIRD.zip                                                                                                            
+-a----         4/23/2024   9:24 AM       22262568 thonny-4.1.4.exe                                                                                                     
+-a----          3/4/2024   9:50 AM           2453 VIVA Questions - FINAL.txt                                                                                           
+-a----         2/16/2024   1:32 PM       12230060 VLAN PCAP.pcapng                                                                                                     
+-a----         2/16/2024   2:22 PM         724788 vlan.xlsx                                                                                                            
+-a----          2/9/2024   9:59 AM      599532520 VMware-workstation-full-17.5.0-22583795.exe                                                                          
+-a----         2/27/2024  12:57 PM           1678 vpn.pem                                                                                                              
+-a----         1/26/2024   5:00 PM        8294538 Wallpaper.bmp                                                                                                        
+-a----          2/9/2024   3:01 PM         179298 wi-fi traffic 1.pcap                                                                                                 
+-a----          2/9/2024   3:01 PM          45827 wi-fi traffic 2.pcap                                                                                                 
+-a----          2/2/2024   3:20 PM         179298 wifi.pcap                                                                                                            
+-a----          2/9/2024   3:01 PM          36780 Wireshark-Filters-802.11.pdf                                                                                         
+
+
+
+cd ..
+
+
+exit
+
+
+close
+[32m[*] Connection closed !!![0m
+

@@ -1,52 +1,55 @@
 import socket
-import ssl
-import random
-from Crypto.PublicKey import RSA
-from Crypto.Cipher import PKCS1_OAEP
 from Crypto.Cipher import AES
-from Crypto.Util.Padding import pad
+from Crypto.Util.Padding import pad, unpad
 
-def generate_key_pair():
-    key = RSA.generate(2048)
-    private_key = key.export_key()
-    public_key = key.publickey().export_key()
-    return private_key, public_key
+# Provided AES key
+aes_key = b'o\x802\x0ez\xe0\x8f\x8b\xc7>\xbf\x9fce\x85\xd3'
 
-def generate_symmetric_key():
-    # Generating a random 16-byte symmetric key (128 bits)
-    return bytes([random.randint(0, 255) for _ in range(16)])
+# Encrypt data using AES
+def encrypt_data(data):
+    cipher = AES.new(aes_key, AES.MODE_CBC)
+    ciphertext = cipher.encrypt(pad(data, AES.block_size))
+    return cipher.iv + ciphertext
 
+# Decrypt data using AES
+def decrypt_data(encrypted_data):
+    iv = encrypted_data[:AES.block_size]
+    ciphertext = encrypted_data[AES.block_size:]
+    cipher = AES.new(aes_key, AES.MODE_CBC, iv)
+    decrypted_data = unpad(cipher.decrypt(ciphertext), AES.block_size)
+    return decrypted_data
+
+# Server code
 def server():
-    private_key, server_public_key = generate_key_pair()
-    sym_key = None
-    
-    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-        s.bind(('127.0.0.1', 7878))
-        s.listen(1)
-        print("Server listening on port 7878...")
-        
-        conn, addr = s.accept()
-        with conn:
-            print('Connected by', addr)
-            
-            # Send server's public key
-            conn.sendall(server_public_key)
-            
-            # Receive encrypted symmetric key
-            encrypted_sym_key = conn.recv(2048)
-            rsa_private_key = RSA.import_key(private_key)
-            cipher_rsa = PKCS1_OAEP.new(rsa_private_key)
-            sym_key = cipher_rsa.decrypt(encrypted_sym_key)
-            
-            print("Symmetric key received and decrypted by server:", sym_key)
-            
-            # Send encrypted secret data
-            secret_data = b"Hello, client! This is a secret message."
-            cipher_sym = AES.new(sym_key, AES.MODE_CBC)
-            padded_data = pad(secret_data, AES.block_size)
-            ciphertext = cipher_sym.encrypt(padded_data)
-            conn.sendall(ciphertext)
-            print("Secret data sent to client.")
+    server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    server_socket.bind(('localhost', 12345))
+    server_socket.listen(1)
+
+    print("Server listening...")
+    conn, addr = server_socket.accept()
+    print("Connected to", addr)
+
+    # Encrypt and send data
+    data_to_encrypt = b"Hello, client! This is a secret message."
+    encrypted_data = encrypt_data(data_to_encrypt)
+    conn.sendall(encrypted_data)
+
+    conn.close()
+    server_socket.close()
+
+# Client code
+def client():
+    client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    client_socket.connect(('localhost', 12345))
+
+    # Receive encrypted data
+    encrypted_data = client_socket.recv(1024)
+
+    # Decrypt data
+    decrypted_data = decrypt_data(encrypted_data)
+    print("Received message from server:", decrypted_data.decode())
+
+    client_socket.close()
 
 if __name__ == "__main__":
     server()
