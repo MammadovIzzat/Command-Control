@@ -5,7 +5,7 @@ import os
 import time
 import sys
 import logging
-from pynput import keyboard
+# from pynput import keyboard
 from tabulate import tabulate
 from pyftpdlib.authorizers import DummyAuthorizer
 from pyftpdlib.handlers import FTPHandler
@@ -138,8 +138,8 @@ def start_data_read():
     data_collection = True
     data_reloader = threading.Thread(target=data_read)
     data_reloader.start()
-    key_log =threading.Thread(target=keylogs)
-    key_log.start()
+    # key_log =threading.Thread(target=keylogs)
+    # key_log.start()
     ftp_thread = threading.Thread(target=ftp_server,daemon=True,name="FTP")
     ftp_thread.start()
 
@@ -237,8 +237,8 @@ def on_release(key):
 
 def output(hello):
     sys.stdout.write(colour.info(f"\r\u001b[1000D{hello}                                         \n"))
-    if line_buffer != "":
-        print(f"{colour.CC} {colour.help} {colour.arrow} {line_buffer}",end="",flush=True);print("\033[0m",end='')
+    # if line_buffer != "":
+    #     print(f"{colour.CC} {colour.help} {colour.arrow} {line_buffer}",end="",flush=True);print("\033[0m",end='')
     history_saver(hello)
 
 
