@@ -1,0 +1,14 @@
+
+
+ls
+[32m[*] Command Not Found.[0m
+
+cd ..
+[32m[*] Command Not Found.[0m
+
+ls
+[32m[*] Command Not Found.[0m
+
+close
+[32m[*] Connection closed !!![0m
+

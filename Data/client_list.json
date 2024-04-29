@@ -20,6 +20,13 @@
             "UserName": "Student",
             "NickName": "Memo",
             "Status": "False"
+        },
+        {
+            "IP": "192.168.140.65",
+            "HostName": "telnet",
+            "UserName": "izzat",
+            "NickName": "telnet",
+            "Status": "False"
         }
     ]
 }

