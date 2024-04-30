@@ -723,3 +723,18 @@ connect izzat
 [*] Connected to izzat !!
 exit
 [*] Socket sessions closed.
+[32m[*] telnet connected.[0m
+connect telnet
+[*] Connected to telnet !!
+[32m[*] telnet connected.[0m
+connect telnet
+[*] Connected to telnet !!
+[32m[*] telnet connected.[0m
+connect telnet
+[*] Connected to telnet !!
+[32m[*] telnet connected.[0m
+connect telnet
+[*] Connected to telnet !!
+[32m[*] telnet connected.[0m
+connect telnet
+[*] Connected to telnet !!

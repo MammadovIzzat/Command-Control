@@ -12,3 +12,160 @@ ls
 close
 [32m[*] Connection closed !!![0m
 
+ls
+a.jpg
+b.jpg
+Data
+encryp_party.py
+ftp_client.py
+ftp_server.py
+party.py
+readme,txt
+salam.txt
+Server.py
+tmp.py
+
+ls
+a.jpg
+b.jpg
+Data
+encryp_party.py
+ftp_client.py
+ftp_server.py
+party.py
+readme,txt
+salam.txt
+Server.py
+tmp.py
+
+ll
+[32m[*] Command Not Found.[0m
+
+ls -la
+total 320
+drwxrwxr-x 4 izzat izzat   4096 Apr 30 15:27 .
+drwxr-xr-x 5 izzat izzat   4096 Apr 29 18:41 ..
+-rw-rw-r-- 1 izzat izzat 186803 Apr 29 19:57 a.jpg
+-rw-rw-r-- 1 izzat izzat  65536 Apr 29 20:00 b.jpg
+drwxrwxr-x 4 izzat izzat   4096 Apr 30 15:27 Data
+-rw-rw-r-- 1 izzat izzat   1388 Apr 29 18:41 encryp_party.py
+-rw-rw-r-- 1 izzat izzat    438 Apr 29 19:58 ftp_client.py
+-rw-rw-r-- 1 izzat izzat    767 Apr 29 20:00 ftp_server.py
+drwxrwxr-x 8 izzat izzat   4096 Apr 30 15:27 .git
+-rw-rw-r-- 1 izzat izzat   4171 Apr 30 15:28 party.py
+-rw-rw-r-- 1 izzat izzat   1242 Apr 29 18:46 readme,txt
+-rw-rw-r-- 1 izzat izzat      2 Apr 30 15:27 salam.txt
+-rw-rw-r-- 1 izzat izzat  18375 Apr 30 15:29 Server.py
+-rw-rw-r-- 1 izzat izzat   6365 Apr 29 18:41 tmp.py
+
+ls
+a.jpg
+b.jpg
+Data
+encryp_party.py
+ftp_client.py
+ftp_server.py
+party.py
+readme,txt
+salam.txt
+Server.py
+tmp.py
+
+lta
+[32m[*] Command Not Found.[0m
+
+l /Data
+[32m[*] Command Not Found.[0m
+
+ls /Data
+[32m[*] Command Not Found.[0m
+
+ls ./Data
+client_list.json
+ftp
+history.txt
+log
+
+ls ./Data/ftp
+a.jpg
+party.py
+salam.txt
+
+s
+[32m[*] Command Not Found.[0m
+
+ls
+a.jpg
+b.jpg
+Data
+encryp_party.py
+ftp_client.py
+ftp_server.py
+party.py
+readme,txt
+salam.txt
+Server.py
+tmp.py
+
+ftp -d a.jpg
+ls
+a.jpg
+b.jpg
+Data
+encryp_party.py
+ftp_client.py
+ftp_server.py
+party.py
+readme,txt
+salam.txt
+Server.py
+tmp.py
+
+ftp -d a.jpg
+
+ftp -u salam.txt
+[32m[*] Data uploaded successful.[0m
+
+ftp -d a.jpg
+
+ls
+a.jpg
+b.jpg
+Data
+encryp_party.py
+ftp_client.py
+ftp_server.py
+party.py
+readme,txt
+salam.txt
+Server.py
+tmp.py
+
+ftp -u salam.txt
+[32m[*] Data uploaded successful.[0m
+
+ftp -d salam.txt
+[32m[*] Data downloaded successful.[0m
+
+ftp -d a.jpg
+ftp -u a.jpg
+[32m[*] Data uploaded successful.[0m
+
+
+ftp -d a.jpg
+[32m[*] Data downloaded successful.[0m
+
+ftp -d salam.txt
+[32m[*] Data downloaded successful.[0m
+
+clear
+ftp -d a.jpg
+[32m[*] Data downloaded successful.[0m
+
+ftm -u a.jpg
+[32m[*] Command Not Found.[0m
+
+ftp -u a.jpg
+[32m[*] Data uploaded successful.[0m
+
+clear

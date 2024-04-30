@@ -12,7 +12,7 @@ from pyftpdlib.servers import ThreadedFTPServer
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad,unpad
 
-Host = "192.168.30.52"
+Host = "192.168.140.65"
 Port = 6565
 client_list=[]
 address_list = []
