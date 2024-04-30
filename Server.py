@@ -12,7 +12,7 @@ from pyftpdlib.servers import ThreadedFTPServer
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad,unpad
 
-Host = "192.168.140.65"
+Host = "192.168.30.52"
 Port = 6565
 client_list=[]
 address_list = []
@@ -195,7 +195,6 @@ def ftp(command,client):
     tip = command[1]
     file = command[2]
 
-
     def write(file,data):
         with open(file,'wb') as f:
             f.write(data)
@@ -220,6 +219,8 @@ def ftp(command,client):
     def download(file,client):
         size = int(client.recv(4096).decode('utf-8'))
         data = []
+        if size == -1:
+            return 0
         client.send(b"ready")
         for i in range(size):
             chunk = client.recv(409600)
@@ -228,13 +229,17 @@ def ftp(command,client):
         write(f"./Data/ftp/{file}",binary_data)
 
     def upload(file,client):
-        file = read(f"./Data/ftp/{file}")
-        parse_file =parse_chunks(file)
-        client.send(str(len(parse_file)).encode('utf-8'))
-        client.recv(409600)
-        for chunk in parse_file:
-            client.send(chunk)
-
+        try:
+            file = read(f"./Data/ftp/{file}")
+            parse_file =parse_chunks(file)
+            print(parse_file)
+            client.send(str(len(parse_file)).encode('utf-8'))
+            client.recv(409600)
+            for chunk in parse_file:
+                client.send(chunk)
+        except:
+            client.send(b'-1')
+            
 
 
     if tip == "-d":
@@ -266,9 +271,7 @@ def connect(NickName):
                     log_saver(HostName,command)
                     if command == "clear" or command == "cls":
                         os.system('cls' if os.name == 'nt' else 'clear')
-                    elif command != "":
-                        break
-                    elif command[0:3] == "ftp":
+                    elif command.split(" ")[0] == "ftp":
                         ftp_command = command.split()
                         if len(ftp_command) == 3:
                             enc = encrypt_data(command.encode('utf-8'))
@@ -279,12 +282,14 @@ def connect(NickName):
                             log_saver(HostName,output)
                         else:
                             print(colour.info("[*] Wrong command."))
-                        continue
-                enc = encrypt_data(command.encode('utf-8'))
-                client.send(enc)
-                output = f"{decrypt_data(client.recv(4096000)).decode('utf-8')}"
-                print(output,end="")
-                log_saver(HostName,output)
+                        break
+                    elif command != "":
+                        enc = encrypt_data(command.encode('utf-8'))
+                        client.send(enc)
+                        output = f"{decrypt_data(client.recv(4096000)).decode('utf-8')}"
+                        print(output,end="")
+                        log_saver(HostName,output)
+                        break
 
 
 def nick(HostName,NickName):

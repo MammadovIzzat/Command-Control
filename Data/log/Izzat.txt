@@ -1145,3 +1145,429 @@ clodr
 close
 [32m[*] Connection closed !!![0m
 
+clear
+ls
+
+
+    Directory: C:\Users\Student\Command-Control
+
+
+Mode                 LastWriteTime         Length Name            
+----                 -------------         ------ ----            
+d-----        30.04.2024     13:02                Data            
+-a----        30.04.2024     13:02         186803 a.jpg           
+-a----        30.04.2024     13:02          65536 b.jpg           
+-a----        23.04.2024     13:36           1430 encryp_party.py 
+-a----        30.04.2024     13:02            462 ftp_client.py   
+-a----        30.04.2024     13:02            807 ftp_server.py   
+-a----        30.04.2024     13:04           3694 party.py        
+-a----        30.04.2024     13:02           1314 readme,txt      
+-a----        30.04.2024     13:04          18570 Server.py       
+-a----        29.04.2024     10:02           6551 tmp.py          
+
+
+
+ftp -u salam.txt
+[32m[*] Wrong command !!![0m
+
+ls
+
+
+    Directory: C:\Users\Student\Command-Control
+
+
+Mode                 LastWriteTime         Length Name            
+----                 -------------         ------ ----            
+d-----        30.04.2024     13:02                Data            
+-a----        30.04.2024     13:02         186803 a.jpg           
+-a----        30.04.2024     13:02          65536 b.jpg           
+-a----        23.04.2024     13:36           1430 encryp_party.py 
+-a----        30.04.2024     13:02            462 ftp_client.py   
+-a----        30.04.2024     13:02            807 ftp_server.py   
+-a----        30.04.2024     13:04           3694 party.py        
+-a----        30.04.2024     13:02           1314 readme,txt      
+-a----        30.04.2024     13:04          18570 Server.py       
+-a----        29.04.2024     10:02           6551 tmp.py          
+
+
+
+ftp -u salam.txt
+[32m[*] Wrong command !!![0m
+
+ftp -u salam.txt
+[32m[*] Wrong command !!![0m
+
+close
+[32m[*] Connection closed !!![0m
+
+ftp -u salam.txt
+ls
+
+
+    Directory: C:\Users\Student\Command-Control
+
+
+Mode                 LastWriteTime         Length Name            
+----                 -------------         ------ ----            
+d-----        30.04.2024     13:02                Data            
+-a----        30.04.2024     13:02         186803 a.jpg           
+-a----        30.04.2024     13:02          65536 b.jpg           
+-a----        23.04.2024     13:36           1430 encryp_party.py 
+-a----        30.04.2024     13:02            462 ftp_client.py   
+-a----        30.04.2024     13:02            807 ftp_server.py   
+-a----        30.04.2024     13:12           3724 party.py        
+-a----        30.04.2024     13:02           1314 readme,txt      
+-a----        30.04.2024     13:19          18597 Server.py       
+-a----        29.04.2024     10:02           6551 tmp.py          
+
+
+
+ftp -u salam.txt
+ftp -u salam.txt
+ftp -d salam.txt
+[32m[*] Command Not Found.[0m
+
+ls
+
+
+    Directory: C:\Users\Student\Command-Control
+
+
+Mode                 LastWriteTime         Length Name            
+----                 -------------         ------ ----            
+d-----        30.04.2024     13:02                Data            
+-a----        30.04.2024     13:02         186803 a.jpg           
+-a----        30.04.2024     13:02          65536 b.jpg           
+-a----        23.04.2024     13:36           1430 encryp_party.py 
+-a----        30.04.2024     13:02            462 ftp_client.py   
+-a----        30.04.2024     13:02            807 ftp_server.py   
+-a----        30.04.2024     13:12           3724 party.py        
+-a----        30.04.2024     13:02           1314 readme,txt      
+-a----        30.04.2024     13:23          18696 Server.py       
+-a----        29.04.2024     10:02           6551 tmp.py          
+
+
+
+ftp -u salam.txt
+ftp -u salam.txt
+ftp -u salam.txt
+ftp -u salam.txt
+[32mNone[0m
+
+ftp -d a.jpg
+ftp -d a.jpg
+ftp -d a.jpg
+ftp -d a.jpg
+[32mNone[0m
+
+close
+C:\Users\Student\Command-Control
+ftp -u salam.txt
+[32mNone[0m
+
+ftp -d a.jpg
+ftp -u salam.txt
+[32mNone[0m
+
+ftp -d a.jpg
+ftp -u salam.txt
+[32mNone[0m
+
+ls
+C:\Users\Student\Command-Control
+ls
+C:\Users\Student\Command-Control
+exit
+C:\Users\Student\Command-Control
+close
+C:\Users\Student\Command-Control
+ftp -u salam.txt
+[32mNone[0m
+
+ls
+C:\Users\Student\Command-Control
+ls
+C:\Users\Student\Command-Control
+ftp -u salam.txt
+[32mNone[0m
+
+ls
+C:\Users\Student\Command-Control
+clear
+close
+C:\Users\Student\Command-Control
+ls
+[32m[*] Command Not Found.[0m
+
+ls
+[32m[*] Command Not Found.[0m
+
+close
+[32m[*] Connection closed !!![0m
+
+ls
+
+
+    Directory: C:\Users\Student\Command-Control
+
+
+Mode                 LastWriteTime         Length Name            
+----                 -------------         ------ ----            
+d-----        30.04.2024     13:02                Data            
+-a----        30.04.2024     13:02         186803 a.jpg           
+-a----        30.04.2024     13:02          65536 b.jpg           
+-a----        23.04.2024     13:36           1430 encryp_party.py 
+-a----        30.04.2024     13:02            462 ftp_client.py   
+-a----        30.04.2024     13:02            807 ftp_server.py   
+-a----        30.04.2024     14:02           3887 party.py        
+-a----        30.04.2024     13:02           1314 readme,txt      
+-a----        30.04.2024     13:58              2 salam.txt       
+-a----        30.04.2024     13:51          18670 Server.py       
+-a----        29.04.2024     10:02           6551 tmp.py          
+
+
+
+ls
+
+
+    Directory: C:\Users\Student\Command-Control
+
+
+Mode                 LastWriteTime         Length Name            
+----                 -------------         ------ ----            
+d-----        30.04.2024     13:02                Data            
+-a----        30.04.2024     13:02         186803 a.jpg           
+-a----        30.04.2024     13:02          65536 b.jpg           
+-a----        23.04.2024     13:36           1430 encryp_party.py 
+-a----        30.04.2024     13:02            462 ftp_client.py   
+-a----        30.04.2024     13:02            807 ftp_server.py   
+-a----        30.04.2024     14:02           3887 party.py        
+-a----        30.04.2024     13:02           1314 readme,txt      
+-a----        30.04.2024     13:58              2 salam.txt       
+-a----        30.04.2024     13:51          18670 Server.py       
+-a----        29.04.2024     10:02           6551 tmp.py          
+
+
+
+ftp -d a.jpg
+[32mNone[0m
+
+ls
+C:\Users\Student\Command-Control
+close
+C:\Users\Student\Command-Control
+ftp -d a.jpg
+[32mNone[0m
+
+ls
+C:\Users\Student\Command-Control
+exit
+C:\Users\Student\Command-Control
+close
+C:\Users\Student\Command-Control
+ftp -d b.jpg
+[32mNone[0m
+
+C:\Users\Student\Command-Control
+ftp -u salam.txt
+[32mNone[0m
+
+C:\Users\Student\Command-Control
+ftp -u salam.txt
+[32mNone[0m
+
+C:\Users\Student\Command-Control
+ftp -u salam.txt
+[32mNone[0m
+
+C:\Users\Student\Command-Control
+ftp -u salam.txt
+[32m[*] Data uploaded successful.[0m
+
+C:\Users\Student\Command-Control
+fto -u salam.txt
+[32m[*] Command Not Found.[0m
+
+ftp -u salam.txt
+ftp -u salam.txt
+[32m[*] Data uploaded successful.[0m
+
+ls
+
+
+    Directory: C:\Users\Student\Command-Control
+
+
+Mode                 LastWriteTime         Length Name            
+----                 -------------         ------ ----            
+d-----        30.04.2024     13:02                Data            
+-a----        30.04.2024     13:02         186803 a.jpg           
+-a----        30.04.2024     13:02          65536 b.jpg           
+-a----        23.04.2024     13:36           1430 encryp_party.py 
+-a----        30.04.2024     13:02            462 ftp_client.py   
+-a----        30.04.2024     13:02            807 ftp_server.py   
+-a----        30.04.2024     14:28           3899 party.py        
+-a----        30.04.2024     13:02           1314 readme,txt      
+-a----        30.04.2024     14:29              2 salam.txt       
+-a----        30.04.2024     14:24          18631 Server.py       
+-a----        29.04.2024     10:02           6551 tmp.py          
+
+
+
+ftp -d a.jpg
+ftp -d a.jpg
+[32m[*] Data downloaded successful.[0m
+
+ftp -u salam.txt
+[32m[*] Data uploaded successful.[0m
+
+ftp -d a.jpg
+[32m[*] Data downloaded successful.[0m
+
+ls
+
+
+    Directory: C:\Users\Student\Command-Control
+
+
+Mode                 LastWriteTime         Length Name            
+----                 -------------         ------ ----            
+d-----        30.04.2024     13:02                Data            
+-a----        30.04.2024     13:02         186803 a.jpg           
+-a----        30.04.2024     13:02          65536 b.jpg           
+-a----        23.04.2024     13:36           1430 encryp_party.py 
+-a----        30.04.2024     13:02            462 ftp_client.py   
+-a----        30.04.2024     13:02            807 ftp_server.py   
+-a----        30.04.2024     14:28           3899 party.py        
+-a----        30.04.2024     13:02           1314 readme,txt      
+-a----        30.04.2024     14:32              2 salam.txt       
+-a----        30.04.2024     14:24          18631 Server.py       
+-a----        29.04.2024     10:02           6551 tmp.py          
+
+
+
+ftp -d a.jpg
+ls
+
+
+    Directory: C:\Users\Student\Command-Control
+
+
+Mode                 LastWriteTime         Length Name            
+----                 -------------         ------ ----            
+d-----        30.04.2024     13:02                Data            
+-a----        30.04.2024     13:02         186803 a.jpg           
+-a----        30.04.2024     13:02          65536 b.jpg           
+-a----        23.04.2024     13:36           1430 encryp_party.py 
+-a----        30.04.2024     13:02            462 ftp_client.py   
+-a----        30.04.2024     13:02            807 ftp_server.py   
+-a----        30.04.2024     14:28           3899 party.py        
+-a----        30.04.2024     13:02           1314 readme,txt      
+-a----        30.04.2024     14:32              2 salam.txt       
+-a----        30.04.2024     14:24          18631 Server.py       
+-a----        29.04.2024     10:02           6551 tmp.py          
+
+
+
+ls
+C:\Users\Student\Command-Control
+ls
+
+
+    Directory: C:\Users\Student\Command-Control
+
+
+Mode                 LastWriteTime         Length Name            
+----                 -------------         ------ ----            
+d-----        30.04.2024     13:02                Data            
+-a----        30.04.2024     13:02         186803 a.jpg           
+-a----        30.04.2024     13:02          65536 b.jpg           
+-a----        23.04.2024     13:36           1430 encryp_party.py 
+-a----        30.04.2024     13:02            462 ftp_client.py   
+-a----        30.04.2024     13:02            807 ftp_server.py   
+-a----        30.04.2024     14:28           3899 party.py        
+-a----        30.04.2024     13:02           1314 readme,txt      
+-a----        30.04.2024     14:32              2 salam.txt       
+-a----        30.04.2024     14:34          18662 Server.py       
+-a----        29.04.2024     10:02           6551 tmp.py          
+
+
+
+ls
+
+
+    Directory: C:\Users\Student\Command-Control
+
+
+Mode                 LastWriteTime         Length Name            
+----                 -------------         ------ ----            
+d-----        30.04.2024     13:02                Data            
+-a----        30.04.2024     13:02         186803 a.jpg           
+-a----        30.04.2024     13:02          65536 b.jpg           
+-a----        23.04.2024     13:36           1430 encryp_party.py 
+-a----        30.04.2024     13:02            462 ftp_client.py   
+-a----        30.04.2024     13:02            807 ftp_server.py   
+-a----        30.04.2024     14:28           3899 party.py        
+-a----        30.04.2024     13:02           1314 readme,txt      
+-a----        30.04.2024     14:32              2 salam.txt       
+-a----        30.04.2024     14:34          18662 Server.py       
+-a----        29.04.2024     10:02           6551 tmp.py          
+
+
+
+clear
+ftp -u salam.txt
+[32m[*] Data uploaded successful.[0m
+
+ftp -d salam.txt
+[32m[*] Data downloaded successful.[0m
+
+clear
+ftp -d ssaa
+ftp -u asgvb
+ftp -u adsfgfh
+ftp -u awr
+[32m[*] Not found !!![0m
+
+ftp -u awr
+[32m[*] Not found !!![0m
+
+ftp -d erfgj
+ftp -d fghng
+[32m[*] Not found !!![0m
+
+ftp -u fghng
+[32m[*] Not found !!![0m
+
+ls
+
+
+    Directory: C:\Users\Student\Command-Control
+
+
+Mode                 LastWriteTime         Length Name        
+----                 -------------         ------ ----        
+d-----        30.04.2024     13:02                Data        
+-a----        30.04.2024     13:02         186803 a.jpg       
+-a----        30.04.2024     13:02          65536 b.jpg       
+-a----        23.04.2024     13:36           1430 encryp_party
+                                                  .py         
+-a----        30.04.2024     13:02            462 ftp_client.p
+                                                  y           
+-a----        30.04.2024     13:02            807 ftp_server.p
+                                                  y           
+-a----        30.04.2024     14:43           4102 party.py    
+-a----        30.04.2024     13:02           1314 readme,txt  
+-a----        30.04.2024     14:34              2 salam.txt   
+-a----        30.04.2024     14:44          18811 Server.py   
+-a----        29.04.2024     10:02           6551 tmp.py      
+
+
+
+clear
+ftp -u fghng
+[32m[*] Not found !!![0m
+
+close
+[32m[*] Connection closed !!![0m
+
