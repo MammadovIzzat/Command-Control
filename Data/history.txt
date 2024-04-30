@@ -723,3 +723,25 @@ connect izzat
 [*] Connected to izzat !!
 exit
 [*] Socket sessions closed.
+[32m[*] Izzat connected.[0m
+connect izzat
+[*] Connected to izzat !!
+exit
+[*] Socket sessions closed.
+[32m[*] Izzat connected.[0m
+
+connect izzat
+[*] Connected to izzat !!
+
+clear
+?
+connect izzat
+[*] Connected to izzat !!
+?
+history
+exit
+[*] Socket sessions closed.
+[32m[*] Izzat connected.[0m
+
+connect izzat
+[*] Connected to izzat !!
