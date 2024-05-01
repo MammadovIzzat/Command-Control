@@ -98,14 +98,14 @@ def ftp(command,client):
     
 
     def download(file,client):
-        size = int(client.recv(4096).decode('utf-8'))
+        size = int(decrypt_data(client.recv(4096)).decode('utf-8'))
         if size == -1:
             return "[*] Not found !!!"
         data = []
         client.send(b"ready")
         for i in range(size):
             chunk = client.recv(409600)
-            data.append(chunk)
+            data.append(decrypt_data(chunk))
         binary_data = b''.join(data)  
         write(f"{file}",binary_data)
         return "[*] Data uploaded successful."
@@ -114,13 +114,13 @@ def ftp(command,client):
         try:
             file = read(f"./{file}")
             parse_file =parse_chunks(file)
-            client.send(str(len(parse_file)).encode('utf-8'))
+            client.send(encrypt_data(str(len(parse_file)).encode('utf-8')))
             client.recv(409600)
             for chunk in parse_file:
-                client.send(chunk)
+                client.send(encrypt_data(chunk))
             return "[*] Data downloaded successful."
         except:
-            client.send(b'-1')
+            client.send(encrypt_data(b'-1'))
             return "[*] Not found !!!"
             
     if tip == "-u":
