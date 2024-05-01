@@ -4,16 +4,12 @@ import json
 import os
 import time
 import sys
-import logging
 from tabulate import tabulate
-from pyftpdlib.authorizers import DummyAuthorizer
-from pyftpdlib.handlers import FTPHandler
-from pyftpdlib.servers import ThreadedFTPServer
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad,unpad
 
 Host = "192.168.140.65"
-Port = 6565
+Port = 6566
 client_list=[]
 address_list = []
 aes_key = b'o\x802\x0ez\xe0\x8f\x8b\xc7>\xbf\x9fce\x85\xd3'
@@ -150,34 +146,38 @@ def client_connected(server):
             sam_client, sam_address = server.accept()
             client_list.append(sam_client)
             address_list.append(sam_address)
-            check_hostname(decrypt_data(sam_client.recv(1024)).decode("utf-8"),sam_client)
+            check_hostname(decrypt_data(sam_client.recv(1024)).decode("utf-8"),sam_client,sam_address)
     except:
         print(colour.info("[*] Socket sessions closed."))
         history_saver("[*] Socket sessions closed.")
 
 
-def check_hostname(HostName,client):
+def check_hostname(HostName,client,address):
     userAdd = True
     for each in data['client_list']:
         if each['HostName'] == HostName:
             userAdd = False
+            each["IP"] = address[0]
+            each["Port"] = address[1]
             enc = encrypt_data(b"hello")
             client.send(enc)
     if userAdd :
         enc = encrypt_data(b"whoareyou")
         client.send(enc)
-        IP = client.getpeername()[0]
+        IP = address[0]
+        Port = address[1]
         UserName = decrypt_data(client.recv(1024)).decode("utf-8")
         new_client = {
             "IP" : IP,
+            "Port" : Port,
             "HostName" : HostName,
             "UserName" : UserName,
             "NickName" : HostName,
             "Status" : "False"
         }
         data['client_list'].append(new_client)
-        with open("./Data/client_list.json","w") as f:
-            json.dump(data,f,indent=4)
+    with open("./Data/client_list.json","w") as f:
+        json.dump(data,f,indent=4)
     output(colour.info(f"[*] {HostName} connected."))
             
 
@@ -195,48 +195,34 @@ def ftp(command,client):
     tip = command[1]
     file = command[2]
 
-    def write(file,data):
-        with open(file,'wb') as f:
-            f.write(data)
-
-
-
-    def read(file):
-        with open(file,'rb') as f:
-            return f.read() 
-        
-
-    def parse_chunks(data, chunk_size=409600):
-        chunks = []
-        for i in range(0, len(data), chunk_size):
-            if i+ chunk_size < len(data):
-                chunks.append(data[i:i + chunk_size])
-            else : 
-                chunks.append(data[i:len(data)])
-        return chunks
-    
+   
 
     def download(file,client):
         size = int(decrypt_data(client.recv(4096)).decode('utf-8'))
-        data = []
         if size == -1:
             return 0
-        client.send(b"ready")
-        for i in range(size):
-            chunk = client.recv(409600)
-            data.append(decrypt_data(chunk))
-        binary_data = b''.join(data)  
-        write(f"./Data/ftp/{file}",binary_data)
+        client.send(b"Naber Aslan")
+        chunk = decrypt_data(client.recv(4096))
+        while os.path.exists(f"./Data/ftp/{file}") : 
+            file +='(new)'
+        with open(f"./Data/ftp/{file}",'ab') as f:
+            while chunk != b"\n\r":
+                f.write(chunk)
+                chunk = decrypt_data(client.recv(4096))
+          
 
     def upload(file,client):
         try:
-            file = read(f"./Data/ftp/{file}")
-            parse_file =parse_chunks(file)
-            client.send(encrypt_data(str(len(parse_file)).encode('utf-8')))
-            client.recv(409600)
-            for chunk in parse_file:
-                client.send(encrypt_data(chunk))
-        except:
+            with open(f"./Data/ftp/{file}",'rb') as f:
+                client.send(encrypt_data(b'1'))
+                client.recv(4096)
+                chunk = f.read(4096)
+                while chunk :
+                    client.send(encrypt_data(chunk))
+                    chunk = f.read(4096)
+                client.send(encrypt_data(b"\n\r"))
+
+        except :
             client.send(encrypt_data(b'-1'))
             
 
@@ -251,13 +237,16 @@ def ftp(command,client):
 
 def connect(NickName):
     IP = ''
+    Port = ''
     for each in data['client_list']:
         if each['NickName'] == NickName:
             IP = each["IP"]
+            Port = each['Port']
             HostName = each["HostName"]
     for client in client_list : 
         raddr = client.getpeername()[0] if client else None
-        if raddr == IP :
+        rport = client.getpeername()[1] if client else None
+        if raddr == IP and rport == Port:
             print(colour.info(f"[*] Connected to {NickName} !!"))
             history_saver(f"[*] Connected to {NickName} !!")
             command = ''
@@ -410,6 +399,7 @@ if __name__ == "__main__":
                 
             case "stop":
                 stop(command[1])
+                
                 
             case _ :
                 print(colour.info('[*] Command not Found'))

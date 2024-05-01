@@ -7,7 +7,7 @@ from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad,unpad
 
 HOST = "192.168.140.65"
-PORT = 6565
+PORT = 6566
 aes_key = b'o\x802\x0ez\xe0\x8f\x8b\xc7>\xbf\x9fce\x85\xd3'
 
 
@@ -76,48 +76,32 @@ def ftp(command,client):
     tip = command[1]
     file = command[2]
 
-    def write(file,data):
-        with open(file,'wb') as f:
-            f.write(data)
-
-
-
-    def read(file):
-        with open(file,'rb') as f:
-            return f.read() 
-        
-
-    def parse_chunks(data, chunk_size=409600):
-        chunks = []
-        for i in range(0, len(data), chunk_size):
-            if i+ chunk_size < len(data):
-                chunks.append(data[i:i + chunk_size])
-            else : 
-                chunks.append(data[i:len(data)])
-        return chunks
     
 
     def download(file,client):
         size = int(decrypt_data(client.recv(4096)).decode('utf-8'))
         if size == -1:
             return "[*] Not found !!!"
-        data = []
         client.send(b"ready")
-        for i in range(size):
-            chunk = client.recv(409600)
-            data.append(decrypt_data(chunk))
-        binary_data = b''.join(data)  
-        write(f"{file}",binary_data)
+        chunk = decrypt_data(client.recv(4096))
+        while os.path.exists(file) : 
+            file += '(new)'
+        with open(file,'ab') as f:
+            while chunk != b"\n\r":
+                f.write(chunk)
+                chunk = decrypt_data(client.recv(4096))
         return "[*] Data uploaded successful."
 
     def upload(file,client):
         try:
-            file = read(f"./{file}")
-            parse_file =parse_chunks(file)
-            client.send(encrypt_data(str(len(parse_file)).encode('utf-8')))
-            client.recv(409600)
-            for chunk in parse_file:
-                client.send(encrypt_data(chunk))
+            with open(f"./{file}",'rb') as f:
+                client.send(encrypt_data(b'1'))
+                client.recv(4096)
+                chunk = f.read(4096)
+                while chunk :
+                    client.send(encrypt_data(chunk))
+                    chunk = f.read(4096)
+                client.send(encrypt_data(b"\n\r"))
             return "[*] Data downloaded successful."
         except:
             client.send(encrypt_data(b'-1'))

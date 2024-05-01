@@ -1,0 +1,207 @@
+[32m[*] telnet connected.[0m
+
+list
+IP              HostName         UserName    NickName    Status
+--------------  ---------------  ----------  ----------  --------
+192.168.30.52   Izzat            student     izzat       False
+192.168.30.53   DESKTOP-EMB5IFJ  pc          VM          False
+192.168.30.60   Memo             Student     Memo        False
+192.168.140.65  telnet           izzat       telnet      False
+clear
+exit
+[32m[*] telnet connected.[0m
+
+exit
+[*] Socket sessions closed.
+
+clist
+clist
+wzit
+exit
+[32m[*] telnet connected.[0m
+
+list
+IP              HostName    UserName    NickName    Status
+--------------  ----------  ----------  ----------  --------
+192.168.30.52   Izzat       student     izzat       False
+192.168.140.65  telnet      izzat       telnet      False
+exit
+[32m[*] telnet connected.[0m
+
+exit
+[32m[*] telnet connected.[0m
+exit
+[32m[*] telnet connected.[0m
+
+list
+IP              HostName    UserName    NickName    Status
+--------------  ----------  ----------  ----------  --------
+192.168.30.52   Izzat       student     izzat       False
+192.168.140.65  telnet      izzat       telnet      False
+exit
+[32m[*] telnet connected.[0m
+
+list
+IP                Port  HostName    UserName    NickName    Status
+--------------  ------  ----------  ----------  ----------  --------
+192.168.140.65   56254  telnet      izzat       telnet      False
+connect telnet
+exit
+[32m[*] telnet connected.[0m
+list
+IP                Port  HostName    UserName    NickName    Status
+--------------  ------  ----------  ----------  ----------  --------
+192.168.140.65   44918  telnet      izzat       telnet      False
+connect telnet
+exi
+exit
+[32m[*] telnet connected.[0m
+list
+IP                Port  HostName    UserName    NickName    Status
+--------------  ------  ----------  ----------  ----------  --------
+192.168.140.65   57000  telnet      izzat       telnet      False
+connect telnet
+[*] Connected to telnet !!
+exit
+[32m[*] telnet connected.[0m
+
+CLEAR
+clear
+ls
+list
+IP                Port  HostName    UserName    NickName    Status
+--------------  ------  ----------  ----------  ----------  --------
+192.168.140.65   59596  telnet      izzat       telnet      False
+connect telnet
+[*] Connected to telnet !!
+clear
+list
+IP                Port  HostName    UserName    NickName    Status
+--------------  ------  ----------  ----------  ----------  --------
+192.168.140.65   59596  telnet      izzat       telnet      False
+?
+history
+clear
+list
+IP                Port  HostName    UserName    NickName    Status
+--------------  ------  ----------  ----------  ----------  --------
+192.168.140.65   59596  telnet      izzat       telnet      False
+?
+exit
+?
+[32m[*] telnet connected.[0m
+
+list
+IP                Port  HostName    UserName    NickName    Status
+--------------  ------  ----------  ----------  ----------  --------
+192.168.140.65   52712  telnet      izzat       telnet      False
+connect telnet
+[*] Connected to telnet !!
+list
+IP                Port  HostName    UserName    NickName    Status
+--------------  ------  ----------  ----------  ----------  --------
+192.168.140.65   52712  telnet      izzat       telnet      False
+?
+nick telnet salam
+[*] telnet's NickName Changed as: salam
+lis
+list
+IP                Port  HostName    UserName    NickName    Status
+--------------  ------  ----------  ----------  ----------  --------
+192.168.140.65   52712  telnet      izzat       salam       False
+nick telnet telnet
+[*] telnet's NickName Changed as: telnet
+cls
+clear
+?
+clear
+exit
+[32m[*] telnet connected.[0m
+
+list
+IP                Port  HostName    UserName    NickName    Status
+--------------  ------  ----------  ----------  ----------  --------
+192.168.140.65   44392  telnet      izzat       telnet      False
+connect telnet
+[*] Connected to telnet !!
+[32m[*] telnet connected.[0m
+
+connect telnet
+[*] Connected to telnet !!
+[32m[*] telnet connected.[0m
+connect telnet
+[*] Connected to telnet !!
+[32m[*] telnet connected.[0m
+connect telnet
+[*] Connected to telnet !!
+[32m[*] telnet connected.[0m
+connect tulpan
+connect telnet
+[*] Connected to telnet !!
+[32m[*] telnet connected.[0m
+
+connect telnet
+[*] Connected to telnet !!
+[32m[*] telnet connected.[0m
+connect telnet
+[*] Connected to telnet !!
+[32m[*] telnet connected.[0m
+connect telnet
+[*] Connected to telnet !!
+exit
+[32m[*] telnet connected.[0m
+connect telnet
+[*] Connected to telnet !!
+exit
+[32m[*] telnet connected.[0m
+
+connect telnet
+[*] Connected to telnet !!
+exit
+[32m[*] telnet connected.[0m
+connect telnet
+[*] Connected to telnet !!
+[32m[*] telnet connected.[0m
+connect telnet
+[*] Connected to telnet !!
+[32m[*] telnet connected.[0m
+connect telnet
+[*] Connected to telnet !!
+exit
+[32m[*] telnet connected.[0m
+connect telnet
+[*] Connected to telnet !!
+exit
+[32m[*] telnet connected.[0m
+connect telnet
+[*] Connected to telnet !!
+connect telnet
+[*] Connected to telnet !!
+exit
+[32m[*] telnet connected.[0m
+connect telnet
+[*] Connected to telnet !!
+exit
+[32m[*] telnet connected.[0m
+connect telnet
+[*] Connected to telnet !!
+exit
+[32m[*] telnet connected.[0m
+connect telnet
+[*] Connected to telnet !!
+exit
+[32m[*] telnet connected.[0m
+connect telnet
+[*] Connected to telnet !!
+[32m[*] telnet connected.[0m
+connect telnet
+[*] Connected to telnet !!
+[32m[*] telnet connected.[0m
+
+connect telnet
+[*] Connected to telnet !!
+[32m[*] telnet connected.[0m
+
+connect telnet
+[*] Connected to telnet !!
+[32m[*] telnet connected.[0m
