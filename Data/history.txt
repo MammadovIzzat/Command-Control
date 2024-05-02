@@ -745,3 +745,7 @@ exit
 
 connect izzat
 [*] Connected to izzat !!
+[32m[*] Izzat connected.[0m
+
+exit
+[*] Socket sessions closed.

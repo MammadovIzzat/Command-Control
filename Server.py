@@ -6,9 +6,6 @@ import time
 import sys
 import logging
 from tabulate import tabulate
-from pyftpdlib.authorizers import DummyAuthorizer
-from pyftpdlib.handlers import FTPHandler
-from pyftpdlib.servers import ThreadedFTPServer
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad,unpad
 
