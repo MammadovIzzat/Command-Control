@@ -1,31 +1,19 @@
 {
     "client_list": [
         {
-            "IP": "192.168.30.52",
-            "HostName": "Izzat",
-            "UserName": "student",
-            "NickName": "izzat",
-            "Status": "False"
-        },
-        {
-            "IP": "192.168.30.53",
-            "HostName": "DESKTOP-EMB5IFJ",
-            "UserName": "pc",
-            "NickName": "VM",
-            "Status": "False"
-        },
-        {
-            "IP": "192.168.30.60",
-            "HostName": "Memo",
-            "UserName": "Student",
-            "NickName": "Memo",
-            "Status": "False"
-        },
-        {
             "IP": "192.168.140.65",
+            "Port": 46894,
             "HostName": "telnet",
             "UserName": "izzat",
             "NickName": "telnet",
+            "Status": "False"
+        },
+        {
+            "IP": "192.168.30.52",
+            "Port": 55272,
+            "HostName": "Izzat",
+            "UserName": "Student",
+            "NickName": "Izzat",
             "Status": "False"
         }
     ]

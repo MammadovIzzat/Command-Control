@@ -1768,3 +1768,211 @@ d-----        30.04.2024     15:26                Data
 
 
                  ftp
+ls
+
+
+    Directory: C:\Users\Student\Command-Control
+
+
+Mode                 LastWriteTime         Length Name                                            
+----                 -------------         ------ ----                                            
+d-----        02.05.2024     09:08                Data                                            
+-a----        30.04.2024     15:26          65536 b.jpg                                           
+-a----        23.04.2024     13:36           1430 encryp_party.py                                 
+-a----        30.04.2024     15:26            462 ftp_client.py                                   
+-a----        30.04.2024     15:26            807 ftp_server.py                                   
+-a----        02.05.2024     09:07           4014 party.py                                        
+-a----        30.04.2024     15:26           1314 readme,txt                                      
+-a----        30.04.2024     18:20              2 salam.txt                                       
+-a----        02.05.2024     09:08          18609 Server.py                                       
+-a----        29.04.2024     10:02           6551 tmp.py                                          
+
+
+
+ftp -d salam.txt
+[32m[*] Data downloaded successful.[0m
+
+ftp -d b.jpg
+ls
+
+
+    Directory: C:\Users\Student\Command-Control
+
+
+Mode                 LastWriteTime         Length Name                                            
+----                 -------------         ------ ----                                            
+d-----        02.05.2024     09:08                Data                                            
+-a----        30.04.2024     15:26          65536 b.jpg                                           
+-a----        23.04.2024     13:36           1430 encryp_party.py                                 
+-a----        30.04.2024     15:26            462 ftp_client.py                                   
+-a----        30.04.2024     15:26            807 ftp_server.py                                   
+-a----        02.05.2024     09:07           4014 party.py                                        
+-a----        30.04.2024     15:26           1314 readme,txt                                      
+-a----        30.04.2024     18:20              2 salam.txt                                       
+-a----        02.05.2024     09:08          18609 Server.py                                       
+-a----        29.04.2024     10:02           6551 tmp.py                                          
+
+
+
+ftp -d salam.txt
+[32m[*] Data downloaded successful.[0m
+
+ftp -d b.jpg
+ftp -d party.py
+[32m[*] Data downloaded successful.[0m
+
+ls
+
+
+    Directory: C:\Users\Student\Command-Control
+
+
+Mode                 LastWriteTime         Length Name                                            
+----                 -------------         ------ ----                                            
+d-----        02.05.2024     09:08                Data                                            
+-a----        30.04.2024     15:26          65536 b.jpg                                           
+-a----        23.04.2024     13:36           1430 encryp_party.py                                 
+-a----        30.04.2024     15:26            462 ftp_client.py                                   
+-a----        30.04.2024     15:26            807 ftp_server.py                                   
+-a----        02.05.2024     09:07           4014 party.py                                        
+-a----        30.04.2024     15:26           1314 readme,txt                                      
+-a----        30.04.2024     18:20              2 salam.txt                                       
+-a----        02.05.2024     09:08          18609 Server.py                                       
+-a----        29.04.2024     10:02           6551 tmp.py                                          
+
+
+
+cd ..
+
+
+ls
+
+
+    Directory: C:\Users\Student
+
+
+Mode                 LastWriteTime         Length Name                                            
+----                 -------------         ------ ----                                            
+d-----        23.01.2024     11:45                .chocolatey                                     
+d-----        16.04.2024     09:58                .ipython                                        
+d-----        14.01.2024     18:51                .ms-ad                                          
+d-----        26.01.2024     14:47                .poshssh                                        
+d-----        29.04.2024     11:06                .ssh                                            
+d-----        01.05.2024     13:34                .VirtualBox                                     
+d-----        21.02.2024     11:41                .vscode                                         
+d-----        26.01.2024     17:20                Cisco Packet Tracer 7.3.0                       
+d-----        07.04.2024     17:08                Cisco Packet Tracer 8.2.1                       
+d-----        02.05.2024     09:06                Command-Control                                 
+d-r---        11.09.2023     13:10                Contacts                                        
+d-r---        29.04.2024     10:44                Desktop                                         
+d-r---        29.04.2024     10:04                Documents                                       
+d-r---        01.05.2024     13:37                Downloads                                       
+d-r---        11.09.2023     13:10                Favorites                                       
+d-----        23.02.2024     09:31                GNS3                                            
+d-----        28.04.2024     11:31                go                                              
+d-----        15.02.2024     18:39                keylogger                                       
+d-r---        11.09.2023     13:10                Links                                           
+d-r---        11.09.2023     13:10                Music                                           
+d-----        22.01.2024     14:29                notes                                           
+dar--l        29.04.2024     10:43                OneDrive                                        
+d-----        29.01.2024     16:25                OpenVPN                                         
+d-r---        05.02.2024     20:22                Pictures                                        
+d-----        13.09.2023     12:28                PycharmProjects                                 
+d-r---        11.09.2023     13:10                Saved Games                                     
+d-r---        14.01.2024     18:32                Searches                                        
+d-----        29.04.2024     15:32                tmp                                             
+d-r---        25.01.2024     13:14                Videos                                          
+-a----        22.04.2024     13:26            118 .bash_history                                   
+-a----        29.04.2024     09:55            185 .gitconfig                                      
+-a----        14.02.2024     15:18          45472 .keys.py.un~                                    
+-a----        30.04.2024     13:02             20 .lesshst                                        
+-a----        07.04.2024     16:55            356 .packettracer                                   
+-a----        16.04.2024     17:33            949 .viminfo                                        
+-a----        15.02.2024     18:18             15 advanced_ip_scanner_Aliases.bin                 
+-a----        15.02.2024     18:18             15 advanced_ip_scanner_Comments.bin                
+-a----        15.02.2024     18:18            306 advanced_ip_scanner_MAC.bin                     
+-a----        22.04.2024     18:04          31988 battery-report.html                             
+-a----        13.02.2024     13:09            283 data.txt                                        
+-a----        30.01.2024     10:58           2749 Dboys.ovpn                                      
+-a----        14.02.2024     15:18            371 keys.py                                         
+-a----        14.02.2024     15:07            402 keys.py~                                        
+-a----        01.02.2024     18:09           1695 level17                                         
+-a----        22.04.2024     11:26              0 sa,gpg                                          
+-a----        22.04.2024     11:26              0 sa.gpg                                          
+-a----        13.02.2024     11:45            324 send_data.ps1                                   
+-a----        01.02.2024     09:41            674 ssh.ps1                                         
+-a----        23.04.2024     11:09            745 temp.py                                         
+-a----        26.01.2024     15:08            129 tmp.py                                          
+-a----        23.04.2024     11:09           1106 tmp2.py                                         
+-a----        14.02.2024     14:19              0 vvvvvv                                          
+-a----        26.02.2024     12:07       40195470 WindowsUpdateClient.exe                         
+-a----        30.01.2024     11:56           2745 ziya.ovpn                                       
+-a----        21.02.2024     20:55           9466 _viminfo                                        
+
+
+
+ftp -d _viminfo
+ls
+
+
+    Directory: C:\Users\Student\Command-Control
+
+
+Mode                 LastWriteTime         Length Name                                            
+----                 -------------         ------ ----                                            
+d-----        02.05.2024     09:08                Data                                            
+-a----        30.04.2024     15:26          65536 b.jpg                                           
+-a----        23.04.2024     13:36           1430 encryp_party.py                                 
+-a----        30.04.2024     15:26            462 ftp_client.py                                   
+-a----        30.04.2024     15:26            807 ftp_server.py                                   
+-a----        02.05.2024     09:07           4014 party.py                                        
+-a----        30.04.2024     15:26           1314 readme,txt                                      
+-a----        30.04.2024     18:20              2 salam.txt                                       
+-a----        02.05.2024     09:34          18595 Server.py                                       
+-a----        29.04.2024     10:02           6551 tmp.py                                          
+
+
+
+ftp -d b.jpg
+ls
+
+
+    Directory: C:\Users\Student\Command-Control
+
+
+Mode                 LastWriteTime         Length Name                                            
+----                 -------------         ------ ----                                            
+d-----        02.05.2024     09:08                Data                                            
+-a----        30.04.2024     15:26          65536 b.jpg                                           
+-a----        23.04.2024     13:36           1430 encryp_party.py                                 
+-a----        30.04.2024     15:26            462 ftp_client.py                                   
+-a----        30.04.2024     15:26            807 ftp_server.py                                   
+-a----        02.05.2024     09:37           4047 party.py                                        
+-a----        30.04.2024     15:26           1314 readme,txt                                      
+-a----        30.04.2024     18:20              2 salam.txt                                       
+-a----        02.05.2024     09:37          18642 Server.py                                       
+-a----        29.04.2024     10:02           6551 tmp.py                                          
+
+
+
+ftp -d b.jpg
+ftp -d b.jpg
+ftp -d b.jpg
+ftp -d b.jpg
+ftp -d b.jpg
+ftp -d b.jpg
+ftp -d b.jpg
+ftp -d b.jpg
+ftp -d b.jpg
+ftp -d b.jpg
+[32m[*] Data downloaded successful.[0m
+
+ftp -d b.jpg
+[32m[*] Data downloaded successful.[0m
+
+git add .
+
+
+close
+[32m[*] Connection closed !!![0m
+

