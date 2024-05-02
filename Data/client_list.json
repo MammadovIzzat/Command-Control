@@ -1,19 +1,13 @@
 {
     "client_list": [
-         {
+        {
             "IP": "192.168.140.65",
-            "Port": 40266,
+            "Port": 41050,
             "HostName": "telnet",
             "UserName": "izzat",
+            "System": "Linux",
+            "Loc": "AZ/Baku",
             "NickName": "telnet",
-            "Status": "False"
-        },
-        {
-            "IP": "192.168.30.52",
-            "Port": 55272,
-            "HostName": "Izzat",
-            "UserName": "Student",
-            "NickName": "Izzat",
             "Status": "False"
         }
     ]

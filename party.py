@@ -12,25 +12,33 @@ import threading
 
 HOST = "192.168.140.65"
 PORT = 6565
+test_PORT = 2121
 aes_key = b'o\x802\x0ez\xe0\x8f\x8b\xc7>\xbf\x9fce\x85\xd3'
 running =False
 
 
 
 def check_status():
-    hostname = socket.gethostname()
-    url = "http://192.168.140.65/client_list.json"
 
+    
     try:
-        response = requests.get(url)
-        response_data = response.json()
-        client_ist = response_data.get("client_list",[])
+        hostname = socket.gethostname()
+        test = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+        test.connect((HOST,test_PORT))
+        chunk = decrypt_data(test.recv(4128))
+        response = b''
+        while chunk != b"\n\r":
+            response+=chunk
+            chunk = decrypt_data(test.recv(4128))
+        response = json.loads(response.decode('utf-8'))
+        test.close()
+        client_ist = response["client_list"]
         for each in client_ist:
-            if each.get("HostName") == hostname:
-                return each.get("Status", "Unknown")
+            if each["HostName"] == hostname:
+                return each["Status"]
         return "-1"
-    except :
-        return "0"  
+    except Exception as e:
+        return e
 
 
 

@@ -172,3 +172,44 @@ clear
 ls
 exi
 exit
+exit
+exit
+exit
+exit
+exit
+[32m[*] telnet connected.[0m
+[32m[*] telnet connected.[0m
+[32m[*] telnet connected.[0m
+[32m[*] telnet connected.[0m
+[32m[*] telnet connected.[0m
+
+
+
+
+
+clist
+exit
+[32m[*] telnet connected.[0m
+
+list
+IP                Port  HostName    UserName    System    Loc      NickName    Status
+--------------  ------  ----------  ----------  --------  -------  ----------  --------
+192.168.140.65   54036  telnet      izzat       Linux     AZ/Baku  telnet      True
+close telnet
+stop telnet
+[*] telnet's Status Changed as: False 
+[*] Connection closed: telnet !!
+start telnet
+[*] telnet's Status Changed as: True 
+[32m[*] telnet connected.[0m
+
+clear
+list
+IP                Port  HostName    UserName    System    Loc      NickName    Status
+--------------  ------  ----------  ----------  --------  -------  ----------  --------
+192.168.140.65   41050  telnet      izzat       Linux     AZ/Baku  telnet      True
+stop telnet
+[*] telnet's Status Changed as: False 
+[*] Connection closed: telnet !!
+clear
+exit

