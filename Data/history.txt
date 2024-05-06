@@ -213,3 +213,402 @@ stop telnet
 [*] Connection closed: telnet !!
 clear
 exit
+[32m[*] Izzat connected.[0m
+
+list
+IP                Port  HostName    UserName    System    Loc      NickName    Status
+--------------  ------  ----------  ----------  --------  -------  ----------  --------
+192.168.140.65   41050  telnet      izzat       Linux     AZ/Baku  telnet      False
+192.168.30.52    56634  Izzat       Student     Windows   AZ/Baku  Izzat       True
+stop Izzat
+[*] Izzat's Status Changed as: False 
+[*] Connection closed: Izzat !!
+nick Izzat izzat
+[*] Izzat's NickName Changed as: izzat
+clear
+start telnet
+[*] telnet's Status Changed as: True 
+clist
+[32m[*] telnet connected.[0m
+
+clear
+list
+IP                 Port  HostName    UserName    System    Loc      NickName    Status
+---------------  ------  ----------  ----------  --------  -------  ----------  --------
+192.168.110.151   51386  telnet      izzat       Linux     AZ/Baku  telnet      True
+192.168.30.52     56634  Izzat       Student     Windows   AZ/Baku  izzat       False
+ls
+connect telnet
+[*] Connected to telnet !!
+clear
+clist
+list
+IP                 Port  HostName    UserName    System    Loc      NickName    Status
+---------------  ------  ----------  ----------  --------  -------  ----------  --------
+192.168.110.151   51386  telnet      izzat       Linux     AZ/Baku  telnet      True
+192.168.30.52     56634  Izzat       Student     Windows   AZ/Baku  izzat       False
+connect telnet
+[*] Connected to telnet !!
+list
+IP                 Port  HostName    UserName    System    Loc      NickName    Status
+---------------  ------  ----------  ----------  --------  -------  ----------  --------
+192.168.110.151   51386  telnet      izzat       Linux     AZ/Baku  telnet      True
+192.168.30.52     56634  Izzat       Student     Windows   AZ/Baku  izzat       False
+connect telnet
+[*] Connected to telnet !!
+list
+IP                 Port  HostName    UserName    System    Loc      NickName    Status
+---------------  ------  ----------  ----------  --------  -------  ----------  --------
+192.168.110.151   51386  telnet      izzat       Linux     AZ/Baku  telnet      True
+192.168.30.52     56634  Izzat       Student     Windows   AZ/Baku  izzat       False
+stop telnet
+[*] telnet's Status Changed as: False 
+start telnet
+[*] telnet's Status Changed as: True 
+[32m[*] telnet connected.[0m
+
+connect telnet
+[*] Connected to telnet !!
+ls
+list
+IP                 Port  HostName    UserName    System    Loc      NickName    Status
+---------------  ------  ----------  ----------  --------  -------  ----------  --------
+192.168.110.151   36266  telnet      izzat       Linux     AZ/Baku  telnet      True
+192.168.30.52     56634  Izzat       Student     Windows   AZ/Baku  izzat       False
+stop telnet
+[*] telnet's Status Changed as: False 
+start telnet
+[*] telnet's Status Changed as: True 
+[32m[*] telnet connected.[0m
+
+connect telnet
+[*] Connected to telnet !!
+list
+IP                 Port  HostName    UserName    System    Loc      NickName    Status
+---------------  ------  ----------  ----------  --------  -------  ----------  --------
+192.168.110.151   45332  telnet      izzat       Linux     AZ/Baku  telnet      True
+192.168.30.52     56634  Izzat       Student     Windows   AZ/Baku  izzat       False
+stop telnet
+[*] telnet's Status Changed as: False 
+start telnet
+[*] telnet's Status Changed as: True 
+stop telnet
+[*] telnet's Status Changed as: False 
+start telnet
+[*] telnet's Status Changed as: True 
+clear
+clist
+[32m[*] telnet connected.[0m
+
+clear
+list
+IP                 Port  HostName    UserName    System    Loc      NickName    Status
+---------------  ------  ----------  ----------  --------  -------  ----------  --------
+192.168.110.151   39510  telnet      izzat       Linux     AZ/Baku  telnet      True
+192.168.30.52     56634  Izzat       Student     Windows   AZ/Baku  izzat       False
+start izzat
+[*] izzat's Status Changed as: True 
+[32m[*] Izzat connected.[0m
+
+clear
+list
+IP                 Port  HostName    UserName    System    Loc      NickName    Status
+---------------  ------  ----------  ----------  --------  -------  ----------  --------
+192.168.110.151   39510  telnet      izzat       Linux     AZ/Baku  telnet      True
+192.168.30.52     56940  Izzat       Student     Windows   AZ/Baku  izzat       True
+connect izzat
+[*] Connected to izzat !!
+list
+IP                 Port  HostName    UserName    System    Loc      NickName    Status
+---------------  ------  ----------  ----------  --------  -------  ----------  --------
+192.168.110.151   39510  telnet      izzat       Linux     AZ/Baku  telnet      True
+192.168.30.52     56940  Izzat       Student     Windows   AZ/Baku  izzat       True
+connect telnet
+[*] Connected to telnet !!
+stop telnet
+[*] telnet's Status Changed as: False 
+[*] Connection closed: telnet !!
+list
+IP                 Port  HostName    UserName    System    Loc      NickName    Status
+---------------  ------  ----------  ----------  --------  -------  ----------  --------
+192.168.110.151   39510  telnet      izzat       Linux     AZ/Baku  telnet      False
+192.168.30.52     56940  Izzat       Student     Windows   AZ/Baku  izzat       True
+clist
+start telnet
+[*] telnet's Status Changed as: True 
+[32m[*] telnet connected.[0m
+
+list
+IP                 Port  HostName    UserName    System    Loc      NickName    Status
+---------------  ------  ----------  ----------  --------  -------  ----------  --------
+192.168.110.151   51000  telnet      izzat       Linux     AZ/Baku  telnet      True
+192.168.30.52     56940  Izzat       Student     Windows   AZ/Baku  izzat       True
+connect telnet
+[*] Connected to telnet !!
+trastop telnet
+stop telnet
+[*] telnet's Status Changed as: False 
+start telnet
+[*] telnet's Status Changed as: True 
+stop telnet
+[*] telnet's Status Changed as: False 
+[*] Connection closed: telnet !!
+list
+IP                 Port  HostName    UserName    System    Loc      NickName    Status
+---------------  ------  ----------  ----------  --------  -------  ----------  --------
+192.168.110.151   51000  telnet      izzat       Linux     AZ/Baku  telnet      False
+192.168.30.52     56940  Izzat       Student     Windows   AZ/Baku  izzat       True
+start telnet
+[*] telnet's Status Changed as: True 
+[32m[*] telnet connected.[0m
+
+list
+IP                 Port  HostName    UserName    System    Loc      NickName    Status
+---------------  ------  ----------  ----------  --------  -------  ----------  --------
+192.168.110.151   57620  telnet      izzat       Linux     AZ/Baku  telnet      True
+192.168.30.52     56940  Izzat       Student     Windows   AZ/Baku  izzat       True
+connect telnet
+[*] Connected to telnet !!
+list
+IP                 Port  HostName    UserName    System    Loc      NickName    Status
+---------------  ------  ----------  ----------  --------  -------  ----------  --------
+192.168.110.151   57620  telnet      izzat       Linux     AZ/Baku  telnet      True
+192.168.30.52     56940  Izzat       Student     Windows   AZ/Baku  izzat       True
+stop izzat
+[*] izzat's Status Changed as: False 
+stop telnet
+[*] telnet's Status Changed as: False 
+start izzat
+[*] izzat's Status Changed as: True 
+clear
+[32m[*] Izzat connected.[0m
+
+list
+IP                 Port  HostName    UserName    System    Loc      NickName    Status
+---------------  ------  ----------  ----------  --------  -------  ----------  --------
+192.168.110.151   57620  telnet      izzat       Linux     AZ/Baku  telnet      False
+192.168.30.52     58367  Izzat       Student     Windows   AZ/Baku  izzat       True
+?
+
+[32m[*] kali connected.[0m
+
+clear
+list
+IP                 Port  HostName    UserName    System    Loc      NickName    Status
+---------------  ------  ----------  ----------  --------  -------  ----------  --------
+192.168.110.151   57620  telnet      izzat       Linux     AZ/Baku  telnet      False
+192.168.30.52     58367  Izzat       Student     Windows   AZ/Baku  izzat       True
+192.168.30.103    50316  kali        kali        Linux     AZ/Baku  kali        True
+stop izzat
+[*] izzat's Status Changed as: False 
+clear
+ls
+clear
+list
+IP                 Port  HostName    UserName    System    Loc      NickName    Status
+---------------  ------  ----------  ----------  --------  -------  ----------  --------
+192.168.110.151   57620  telnet      izzat       Linux     AZ/Baku  telnet      False
+192.168.30.52     58367  Izzat       Student     Windows   AZ/Baku  izzat       False
+192.168.30.103    50316  kali        kali        Linux     AZ/Baku  kali        True
+connect kali
+clist
+stop kali
+[*] kali's Status Changed as: False 
+start kali
+[*] kali's Status Changed as: True 
+[32m[*] kali connected.[0m
+
+clist
+connect kali
+[*] Connected to kali !!
+list
+IP                 Port  HostName    UserName    System    Loc      NickName    Status
+---------------  ------  ----------  ----------  --------  -------  ----------  --------
+192.168.110.151   57620  telnet      izzat       Linux     AZ/Baku  telnet      False
+192.168.30.52     58367  Izzat       Student     Windows   AZ/Baku  izzat       False
+192.168.30.103    49422  kali        kali        Linux     AZ/Baku  kali        True
+stop kali
+[*] kali's Status Changed as: False 
+start kali
+[*] kali's Status Changed as: True 
+[32m[*] kali connected.[0m
+
+connect izzat
+connect kali
+[*] Connected to kali !!
+list
+IP                 Port  HostName    UserName    System    Loc      NickName    Status
+---------------  ------  ----------  ----------  --------  -------  ----------  --------
+192.168.110.151   57620  telnet      izzat       Linux     AZ/Baku  telnet      False
+192.168.30.52     58367  Izzat       Student     Windows   AZ/Baku  izzat       False
+192.168.30.103    52892  kali        kali        Linux     AZ/Baku  kali        True
+stop kali
+[*] kali's Status Changed as: False 
+start kali
+[*] kali's Status Changed as: True 
+stop kali
+[*] kali's Status Changed as: False 
+stop kali
+[*] kali's Status Changed as: False 
+start kali
+[*] kali's Status Changed as: True 
+clear
+[32m[*] kali connected.[0m
+
+connect kali
+[*] Connected to kali !!
+stop kali
+[*] kali's Status Changed as: False 
+start kali
+[*] kali's Status Changed as: True 
+[32m[*] kali connected.[0m
+
+connect kali
+[*] Connected to kali !!
+list
+IP                 Port  HostName    UserName    System    Loc      NickName    Status
+---------------  ------  ----------  ----------  --------  -------  ----------  --------
+192.168.110.151   57620  telnet      izzat       Linux     AZ/Baku  telnet      False
+192.168.30.52     58367  Izzat       Student     Windows   AZ/Baku  izzat       False
+192.168.30.103    33926  kali        kali        Linux     AZ/Baku  kali        True
+stop kali
+[*] kali's Status Changed as: False 
+start kali
+[*] kali's Status Changed as: True 
+[32m[*] kali connected.[0m
+
+
+clear
+ls
+clear
+connect kali
+[*] Connected to kali !!
+list
+IP                 Port  HostName    UserName    System    Loc      NickName    Status
+---------------  ------  ----------  ----------  --------  -------  ----------  --------
+192.168.110.151   57620  telnet      izzat       Linux     AZ/Baku  telnet      False
+192.168.30.52     58367  Izzat       Student     Windows   AZ/Baku  izzat       False
+192.168.30.103    34748  kali        kali        Linux     AZ/Baku  kali        True
+clist
+exit
+list
+IP                 Port  HostName    UserName    System    Loc      NickName    Status
+---------------  ------  ----------  ----------  --------  -------  ----------  --------
+192.168.110.151   57620  telnet      izzat       Linux     AZ/Baku  telnet      False
+192.168.30.52     58367  Izzat       Student     Windows   AZ/Baku  izzat       False
+192.168.30.103    34748  kali        kali        Linux     AZ/Baku  kali        True
+[32m[*] kali connected.[0m
+start kali
+[*] kali's Status Changed as: True 
+start kali
+[*] kali's Status Changed as: True 
+stop kali
+[*] kali's Status Changed as: False 
+[*] Connection closed: kali !!
+start kali
+[*] kali's Status Changed as: True 
+[32m[*] kali connected.[0m
+
+
+clear
+connect kali
+[*] Connected to kali !!
+[*] kali's Status Changed as: False 
+[*] Connection closed: kali !!
+list
+IP                 Port  HostName    UserName    System    Loc      NickName    Status
+---------------  ------  ----------  ----------  --------  -------  ----------  --------
+192.168.110.151   57620  telnet      izzat       Linux     AZ/Baku  telnet      False
+192.168.30.52     58367  Izzat       Student     Windows   AZ/Baku  izzat       False
+192.168.30.103    39084  kali        kali        Linux     AZ/Baku  kali        False
+clear
+clist
+start kali
+[*] kali's Status Changed as: True 
+[32m[*] kali connected.[0m
+
+connect kali
+[*] Connected to kali !!
+
+list
+IP                 Port  HostName    UserName    System    Loc      NickName    Status
+---------------  ------  ----------  ----------  --------  -------  ----------  --------
+192.168.110.151   57620  telnet      izzat       Linux     AZ/Baku  telnet      False
+192.168.30.52     58367  Izzat       Student     Windows   AZ/Baku  izzat       False
+192.168.30.103    49186  kali        kali        Linux     AZ/Baku  kali        True
+stop kali
+[*] kali's Status Changed as: False 
+clear
+list
+IP                 Port  HostName    UserName    System    Loc      NickName    Status
+---------------  ------  ----------  ----------  --------  -------  ----------  --------
+192.168.110.151   57620  telnet      izzat       Linux     AZ/Baku  telnet      False
+192.168.30.52     58367  Izzat       Student     Windows   AZ/Baku  izzat       False
+192.168.30.103    49186  kali        kali        Linux     AZ/Baku  kali        False
+clist
+clist
+[*] Socket sessions closed.
+
+clist
+clist
+list
+IP                 Port  HostName    UserName    System    Loc      NickName    Status
+---------------  ------  ----------  ----------  --------  -------  ----------  --------
+192.168.110.151   57620  telnet      izzat       Linux     AZ/Baku  telnet      False
+192.168.30.52     58367  Izzat       Student     Windows   AZ/Baku  izzat       False
+192.168.30.103    49186  kali        kali        Linux     AZ/Baku  kali        False
+clist
+exit
+[*] Socket sessions closed.
+
+exit
+list
+IP                 Port  HostName    UserName    System    Loc      NickName    Status
+---------------  ------  ----------  ----------  --------  -------  ----------  --------
+192.168.110.151   57620  telnet      izzat       Linux     AZ/Baku  telnet      False
+192.168.30.52     58367  Izzat       Student     Windows   AZ/Baku  izzat       False
+192.168.30.103    49186  kali        kali        Linux     AZ/Baku  kali        False
+exit
+[*] Socket sessions closed.
+[*] Socket sessions closed.
+[*] Socket sessions closed.
+[*] Socket sessions closed.
+[*] Socket sessions closed.
+[*] Socket sessions closed.
+[32m[*] Izzat connected.[0m
+
+stop Izzat
+[*] Izzat's Status Changed as: False 
+[*] Connection closed: Izzat !!
+clear
+[32m[*] kali connected.[0m
+[32m[*] kali connected.[0m
+
+connect kali
+[*] Connected to kali !!
+list
+IP                 Port  HostName    UserName    System    Loc      NickName    Status
+---------------  ------  ----------  ----------  --------  -------  ----------  --------
+192.168.110.151   57620  telnet      izzat       Linux     AZ/Baku  telnet      False
+192.168.30.52     49934  Izzat       Student     Windows   AZ/Baku  Izzat       False
+192.168.30.103    55640  kali        kali        Linux     AZ/Baku  kali        True
+exit
+[*] Socket sessions closed.
+list
+IP                 Port  HostName    UserName    System    Loc      NickName    Status
+---------------  ------  ----------  ----------  --------  -------  ----------  --------
+192.168.110.151   57620  telnet      izzat       Linux     AZ/Baku  telnet      False
+192.168.30.52     49934  Izzat       Student     Windows   AZ/Baku  Izzat       False
+192.168.30.103    55640  kali        kali        Linux     AZ/Baku  kali        False
+start Izzat
+[*] Izzat's Status Changed as: True 
+[32m[*] Izzat connected.[0m
+
+list
+IP                 Port  HostName    UserName    System    Loc      NickName    Status
+---------------  ------  ----------  ----------  --------  -------  ----------  --------
+192.168.110.151   57620  telnet      izzat       Linux     AZ/Baku  telnet      False
+192.168.30.52     50583  Izzat       Student     Windows   AZ/Baku  Izzat       True
+192.168.30.103    55640  kali        kali        Linux     AZ/Baku  kali        False
+clist
+stop izzat

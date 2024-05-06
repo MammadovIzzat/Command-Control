@@ -10,10 +10,10 @@ import requests
 import platform
 import threading
 
-HOST = "192.168.140.65"
+HOST = "192.168.30.52"
 PORT = 6565
 test_PORT = 2121
-aes_key = b'o\x802\x0ez\xe0\x8f\x8b\xc7>\xbf\x9fce\x85\xd3'
+aes_key = b'\x87\xc1\x1aYH\xcc\xd77\x12bs\x89V\xe3\x89\xdf'
 running =False
 
 
@@ -49,11 +49,14 @@ def encrypt_data(data):
     return cipher.iv + ciphertext
 
 def decrypt_data(encrypted_data):
-    iv = encrypted_data[:AES.block_size]
-    ciphertext = encrypted_data[AES.block_size:]
-    cipher = AES.new(aes_key, AES.MODE_CBC, iv)
-    decrypted_data = unpad(cipher.decrypt(ciphertext), AES.block_size)
-    return decrypted_data
+    try:
+        iv = encrypted_data[:AES.block_size]
+        ciphertext = encrypted_data[AES.block_size:]
+        cipher = AES.new(aes_key, AES.MODE_CBC, iv)
+        decrypted_data = unpad(cipher.decrypt(ciphertext), AES.block_size)
+        return decrypted_data
+    except Exception as e:
+        print(e)
 
 def info(f,client):
     ff = f"\033[32m{f}\033[0m\n"

