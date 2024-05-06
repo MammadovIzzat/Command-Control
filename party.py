@@ -10,7 +10,7 @@ import requests
 import platform
 import threading
 
-HOST = "192.168.140.65"
+HOST = "192.168.30.52"
 PORT = 6565
 test_PORT = 2121
 aes_key = b'o\x802\x0ez\xe0\x8f\x8b\xc7>\xbf\x9fce\x85\xd3'

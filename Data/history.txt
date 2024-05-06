@@ -213,3 +213,4 @@ stop telnet
 [*] Connection closed: telnet !!
 clear
 exit
+exit
