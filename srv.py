@@ -94,9 +94,12 @@ class Data:
 ###################################################################################################
 
 def help(command):
-    header = Data.json_help[0].keys()
-    table = f"{tabulate([list(d.values()) for d in Data.json_help], headers=header)}"
-    print(table)
+    match command:
+        case "help":
+            header = Data.json_help[0].keys()
+            table = f"{tabulate([list(d.values()) for d in Data.json_help], headers=header)}"
+            print(table)
+        
 
 
 
