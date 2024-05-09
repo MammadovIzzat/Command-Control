@@ -1976,3 +1976,30 @@ git add .
 close
 [32m[*] Connection closed !!![0m
 
+ls
+
+
+    Directory: C:\Users\Student\Command-Control
+
+
+Mode                 LastWriteTime         Length Name                                           
+----                 -------------         ------ ----                                           
+d-----        02.05.2024     15:15                Data                                           
+-a----        30.04.2024     15:26          65536 b.jpg                                          
+-a----        02.05.2024     15:17           5795 party.py                                       
+-a----        30.04.2024     15:26           1314 readme,txt                                     
+-a----        30.04.2024     18:20              2 salam.txt                                      
+-a----        02.05.2024     15:16          19671 Server.py                                      
+-a----        29.04.2024     10:02           6551 tmp.py                                         
+
+
+
+ftp -d b.jpg
+[32m[*] Data downloaded successful.[0m
+
+list
+[32m[*] Command Not Found.[0m
+
+close
+[32m[*] Connection closed !!![0m
+
