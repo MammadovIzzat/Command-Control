@@ -668,3 +668,171 @@ parsec-linux.deb
 WhatsApp Image 2024-04-27 at 12.46.17.jpeg
 
 close
+cd ../../Downloads
+[32m[*] Command Not Found.[0m
+
+ls
+burpsuite_community_linux_v2024_2_1_5.sh
+cacert.der
+discord-0.0.51.deb
+go1.22.2.linux-amd64.tar.gz
+izzat.mammadov.ovpn
+Notion-3.5.0-universal.dmg
+notion-desktop_2.0.6_amd64.deb
+parsec-linux.deb
+rce.py
+thc-hydra
+thm_nmap
+WhatsApp Image 2024-04-27 at 12.46.17.jpeg
+
+ll
+[32m[*] Command Not Found.[0m
+
+ls -l
+total 728764
+-rwxrwxr-x 1 izzat izzat 313914881 Apr 26 09:22 burpsuite_community_linux_v2024_2_1_5.sh
+-rw-rw-r-- 1 izzat izzat       940 Apr 26 13:36 cacert.der
+-rw-rw-r-- 1 izzat izzat 101044644 Apr 26 20:30 discord-0.0.51.deb
+-rw-rw-r-- 1 izzat izzat  68958123 Apr 27 19:18 go1.22.2.linux-amd64.tar.gz
+-rw-rw-r-- 1 izzat izzat      8331 Apr 26 13:39 izzat.mammadov.ovpn
+-rw-rw-r-- 1 izzat izzat 176536819 Apr 27 19:51 Notion-3.5.0-universal.dmg
+-rw-rw-r-- 1 izzat izzat  84286832 Apr 27 19:55 notion-desktop_2.0.6_amd64.deb
+-rw-rw-r-- 1 izzat izzat   1352016 Apr 26 12:38 parsec-linux.deb
+-rw-rw-r-- 1 izzat izzat      1854 May  5 13:55 rce.py
+drwxrwxr-x 5 izzat izzat      4096 May  4 20:04 thc-hydra
+-rw-r--r-- 1 root  root        587 May  5 13:35 thm_nmap
+-rw-rw-r-- 1 izzat izzat    117494 Apr 27 12:47 WhatsApp Image 2024-04-27 at 12.46.17.jpeg
+
+ftp -d parsec-linux.deb
+ls
+burpsuite_community_linux_v2024_2_1_5.sh
+cacert.der
+discord-0.0.51.deb
+go1.22.2.linux-amd64.tar.gz
+izzat.mammadov.ovpn
+Notion-3.5.0-universal.dmg
+notion-desktop_2.0.6_amd64.deb
+parsec-linux.deb
+rce.py
+thc-hydra
+thm_nmap
+WhatsApp Image 2024-04-27 at 12.46.17.jpeg
+
+ls -l
+total 728764
+-rwxrwxr-x 1 izzat izzat 313914881 Apr 26 09:22 burpsuite_community_linux_v2024_2_1_5.sh
+-rw-rw-r-- 1 izzat izzat       940 Apr 26 13:36 cacert.der
+-rw-rw-r-- 1 izzat izzat 101044644 Apr 26 20:30 discord-0.0.51.deb
+-rw-rw-r-- 1 izzat izzat  68958123 Apr 27 19:18 go1.22.2.linux-amd64.tar.gz
+-rw-rw-r-- 1 izzat izzat      8331 Apr 26 13:39 izzat.mammadov.ovpn
+-rw-rw-r-- 1 izzat izzat 176536819 Apr 27 19:51 Notion-3.5.0-universal.dmg
+-rw-rw-r-- 1 izzat izzat  84286832 Apr 27 19:55 notion-desktop_2.0.6_amd64.deb
+-rw-rw-r-- 1 izzat izzat   1352016 Apr 26 12:38 parsec-linux.deb
+-rw-rw-r-- 1 izzat izzat      1854 May  5 13:55 rce.py
+drwxrwxr-x 5 izzat izzat      4096 May  4 20:04 thc-hydra
+-rw-r--r-- 1 root  root        587 May  5 13:35 thm_nmap
+-rw-rw-r-- 1 izzat izzat    117494 Apr 27 12:47 WhatsApp Image 2024-04-27 at 12.46.17.jpeg
+
+ftp -d izzat.mammadov.ovpn
+cd ../../Downloads
+[32m[*] Command Not Found.[0m
+
+clear
+ls
+burpsuite_community_linux_v2024_2_1_5.sh
+cacert.der
+discord-0.0.51.deb
+go1.22.2.linux-amd64.tar.gz
+izzat.mammadov.ovpn
+Notion-3.5.0-universal.dmg
+notion-desktop_2.0.6_amd64.deb
+parsec-linux.deb
+rce.py
+thc-hydra
+thm_nmap
+WhatsApp Image 2024-04-27 at 12.46.17.jpeg
+
+ls -
+[32m[*] Command Not Found.[0m
+
+ls- l
+[32m[*] Command Not Found.[0m
+
+ls -l
+total 728764
+-rwxrwxr-x 1 izzat izzat 313914881 Apr 26 09:22 burpsuite_community_linux_v2024_2_1_5.sh
+-rw-rw-r-- 1 izzat izzat       940 Apr 26 13:36 cacert.der
+-rw-rw-r-- 1 izzat izzat 101044644 Apr 26 20:30 discord-0.0.51.deb
+-rw-rw-r-- 1 izzat izzat  68958123 Apr 27 19:18 go1.22.2.linux-amd64.tar.gz
+-rw-rw-r-- 1 izzat izzat      8331 Apr 26 13:39 izzat.mammadov.ovpn
+-rw-rw-r-- 1 izzat izzat 176536819 Apr 27 19:51 Notion-3.5.0-universal.dmg
+-rw-rw-r-- 1 izzat izzat  84286832 Apr 27 19:55 notion-desktop_2.0.6_amd64.deb
+-rw-rw-r-- 1 izzat izzat   1352016 Apr 26 12:38 parsec-linux.deb
+-rw-rw-r-- 1 izzat izzat      1854 May  5 13:55 rce.py
+drwxrwxr-x 5 izzat izzat      4096 May  4 20:04 thc-hydra
+-rw-r--r-- 1 root  root        587 May  5 13:35 thm_nmap
+-rw-rw-r-- 1 izzat izzat    117494 Apr 27 12:47 WhatsApp Image 2024-04-27 at 12.46.17.jpeg
+
+ftp -d izzat.mammadov.ovpn
+cd ../../Downloads
+[32m[*] Command Not Found.[0m
+
+ls -l
+total 728764
+-rwxrwxr-x 1 izzat izzat 313914881 Apr 26 09:22 burpsuite_community_linux_v2024_2_1_5.sh
+-rw-rw-r-- 1 izzat izzat       940 Apr 26 13:36 cacert.der
+-rw-rw-r-- 1 izzat izzat 101044644 Apr 26 20:30 discord-0.0.51.deb
+-rw-rw-r-- 1 izzat izzat  68958123 Apr 27 19:18 go1.22.2.linux-amd64.tar.gz
+-rw-rw-r-- 1 izzat izzat      8331 Apr 26 13:39 izzat.mammadov.ovpn
+-rw-rw-r-- 1 izzat izzat 176536819 Apr 27 19:51 Notion-3.5.0-universal.dmg
+-rw-rw-r-- 1 izzat izzat  84286832 Apr 27 19:55 notion-desktop_2.0.6_amd64.deb
+-rw-rw-r-- 1 izzat izzat   1352016 Apr 26 12:38 parsec-linux.deb
+-rw-rw-r-- 1 izzat izzat      1854 May  5 13:55 rce.py
+drwxrwxr-x 5 izzat izzat      4096 May  4 20:04 thc-hydra
+-rw-r--r-- 1 root  root        587 May  5 13:35 thm_nmap
+-rw-rw-r-- 1 izzat izzat    117494 Apr 27 12:47 WhatsApp Image 2024-04-27 at 12.46.17.jpeg
+
+ftp -d izzat.mammadov.ovpn
+clear
+ls -l
+total 728764
+-rwxrwxr-x 1 izzat izzat 313914881 Apr 26 09:22 burpsuite_community_linux_v2024_2_1_5.sh
+-rw-rw-r-- 1 izzat izzat       940 Apr 26 13:36 cacert.der
+-rw-rw-r-- 1 izzat izzat 101044644 Apr 26 20:30 discord-0.0.51.deb
+-rw-rw-r-- 1 izzat izzat  68958123 Apr 27 19:18 go1.22.2.linux-amd64.tar.gz
+-rw-rw-r-- 1 izzat izzat      8331 Apr 26 13:39 izzat.mammadov.ovpn
+-rw-rw-r-- 1 izzat izzat 176536819 Apr 27 19:51 Notion-3.5.0-universal.dmg
+-rw-rw-r-- 1 izzat izzat  84286832 Apr 27 19:55 notion-desktop_2.0.6_amd64.deb
+-rw-rw-r-- 1 izzat izzat   1352016 Apr 26 12:38 parsec-linux.deb
+-rw-rw-r-- 1 izzat izzat      1854 May  5 13:55 rce.py
+drwxrwxr-x 5 izzat izzat      4096 May  4 20:04 thc-hydra
+-rw-r--r-- 1 root  root        587 May  5 13:35 thm_nmap
+-rw-rw-r-- 1 izzat izzat    117494 Apr 27 12:47 WhatsApp Image 2024-04-27 at 12.46.17.jpeg
+
+ftp -d parsec-linux.deb
+cd ..
+
+
+cd downloads
+[32m[*] Command Not Found.[0m
+
+cd Downloads
+[32m[*] Command Not Found.[0m
+
+clear
+ls -l
+total 728764
+-rwxrwxr-x 1 izzat izzat 313914881 Apr 26 09:22 burpsuite_community_linux_v2024_2_1_5.sh
+-rw-rw-r-- 1 izzat izzat       940 Apr 26 13:36 cacert.der
+-rw-rw-r-- 1 izzat izzat 101044644 Apr 26 20:30 discord-0.0.51.deb
+-rw-rw-r-- 1 izzat izzat  68958123 Apr 27 19:18 go1.22.2.linux-amd64.tar.gz
+-rw-rw-r-- 1 izzat izzat      8331 Apr 26 13:39 izzat.mammadov.ovpn
+-rw-rw-r-- 1 izzat izzat 176536819 Apr 27 19:51 Notion-3.5.0-universal.dmg
+-rw-rw-r-- 1 izzat izzat  84286832 Apr 27 19:55 notion-desktop_2.0.6_amd64.deb
+-rw-rw-r-- 1 izzat izzat   1352016 Apr 26 12:38 parsec-linux.deb
+-rw-rw-r-- 1 izzat izzat      1854 May  5 13:55 rce.py
+drwxrwxr-x 5 izzat izzat      4096 May  4 20:04 thc-hydra
+-rw-r--r-- 1 root  root        587 May  5 13:35 thm_nmap
+-rw-rw-r-- 1 izzat izzat    117494 Apr 27 12:47 WhatsApp Image 2024-04-27 at 12.46.17.jpeg
+
+ftp -d parsec-linux.deb

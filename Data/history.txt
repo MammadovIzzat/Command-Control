@@ -612,3 +612,69 @@ IP                 Port  HostName    UserName    System    Loc      NickName    
 192.168.30.103    55640  kali        kali        Linux     AZ/Baku  kali        False
 clist
 stop izzat
+list
+IP                 Port  HostName    UserName    System    Loc      NickName    Status
+---------------  ------  ----------  ----------  --------  -------  ----------  --------
+192.168.110.151   57620  telnet      izzat       Linux     AZ/Baku  telnet      False
+192.168.30.52     50583  Izzat       Student     Windows   AZ/Baku  Izzat       True
+192.168.30.103    55640  kali        kali        Linux     AZ/Baku  kali        False
+stop Izzat
+list
+IP                 Port  HostName    UserName    System    Loc      NickName    Status
+---------------  ------  ----------  ----------  --------  -------  ----------  --------
+192.168.110.151   57620  telnet      izzat       Linux     AZ/Baku  telnet      False
+192.168.30.103    55640  kali        kali        Linux     AZ/Baku  kali        False
+start telnet
+[*] telnet's Status Changed as: True 
+[32m[*] telnet connected.[0m
+
+connect telnet
+[*] Connected to telnet !!
+[*] telnet's Status Changed as: False 
+start telnet
+[*] telnet's Status Changed as: True 
+[32m[*] telnet connected.[0m
+
+connect telnet
+[*] Connected to telnet !!
+[*] telnet's Status Changed as: False 
+start telnet
+[*] telnet's Status Changed as: True 
+[32m[*] telnet connected.[0m
+
+
+clear
+connect telnet]
+connect telnet
+[*] Connected to telnet !!
+[*] telnet's Status Changed as: False 
+clear
+connect telnet
+start telnet
+[*] telnet's Status Changed as: True 
+[32m[*] telnet connected.[0m
+connect telnet
+[*] Connected to telnet !!
+[*] telnet's Status Changed as: False 
+start telnet
+[*] telnet's Status Changed as: True 
+[32m[*] telnet connected.[0m
+connect telnet
+[*] Connected to telnet !!
+[*] telnet's Status Changed as: False 
+exit
+[*] Socket sessions closed.
+start telnet
+[*] telnet's Status Changed as: True 
+[32m[*] telnet connected.[0m
+
+connect telnet
+[*] Connected to telnet !!
+[*] telnet's Status Changed as: False 
+clear
+exit
+[*] Socket sessions closed.
+[32m[*] Izzat connected.[0m
+
+connect Izzat
+[*] Connected to Izzat !!

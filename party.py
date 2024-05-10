@@ -129,28 +129,24 @@ def ftp(command,client):
     def download(file,client):
         size = int(decrypt_data(client.recv(4128)).decode('utf-8'))
         if size == -1:
-            return "[*] Not found !!!"
+            return 0
         client.send(b"Naber Aslan")
-        while os.path.exists(file) : 
-            file += '(new)'
-        chunk = decrypt_data(client.recv(4128))
-        with open(file,'ab') as f:
-            while chunk != b"\n\r":
-                f.write(chunk)
+        while os.path.exists(f"./Data/ftp/{file}") : 
+            file +='(new)'
+        resv_data = b''
+        with open(file,'wb') as f:
+            while len(resv_data) < size:
                 chunk = decrypt_data(client.recv(4128))
+                resv_data += chunk
+            f.write(resv_data)
         return "[*] Data uploaded successful."
 
     def upload(file,client):
         try:
             with open(f"./{file}",'rb') as f:
-                client.send(encrypt_data(b'1'))
+                client.send(encrypt_data(str(len(f)).decode('utf-8')))
                 client.recv(4096)
-                chunk = f.read(4096)
-                while chunk :
-                    client.send(encrypt_data(chunk))
-                    chunk = f.read(4096)
-                time.sleep(0.3)
-                client.send(encrypt_data(b"\n\r"))
+                client.sendall(encrypt_data(f.read()))
             return "[*] Data downloaded successful."
         except:
             client.send(encrypt_data(b'-1'))
