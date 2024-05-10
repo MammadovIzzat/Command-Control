@@ -18,7 +18,7 @@
             "System": "Windows",
             "Loc": "AZ/Baku",
             "NickName": "Izzat",
-            "Status": "True"
+            "Status": "False"
         },
         {
             "IP": "192.168.30.103",
@@ -29,6 +29,16 @@
             "Loc": "AZ/Baku",
             "NickName": "kali",
             "Status": "False"
+        },
+        {
+            "IP": "192.168.0.104",
+            "Port": 58101,
+            "HostName": "DESKTOP-CQHP3FS",
+            "UserName": "Izzat",
+            "System": "Windows",
+            "Loc": "AZ/Baku",
+            "NickName": "s",
+            "Status": "True"
         }
     ]
 }
