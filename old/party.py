@@ -146,7 +146,17 @@ def ftp(command,client):
             with open(f"./{file}",'rb') as f:
                 client.send(encrypt_data(str(len(f)).decode('utf-8')))
                 client.recv(4096)
+<<<<<<< HEAD:party.py
                 client.sendall(encrypt_data(f.read()))
+=======
+                chunk = f.read(4096)
+                while chunk :
+                    client.send(encrypt_data(chunk))
+                    print(len(encrypt_data(chunk)))
+                    chunk = f.read(4096)
+                time.sleep(0.3)
+                client.send(encrypt_data(b"\n\r"))
+>>>>>>> 3676bedc7b617084f7b7cfaf373fd0617884e9f9:old/party.py
             return "[*] Data downloaded successful."
         except:
             client.send(encrypt_data(b'-1'))

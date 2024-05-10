@@ -1,34 +1,15 @@
 {
     "client_list": [
         {
-            "IP": "192.168.110.151",
-            "Port": 47342,
-            "HostName": "telnet",
-            "UserName": "izzat",
-            "System": "Linux",
-            "Loc": "AZ/Baku",
-            "NickName": "telnet",
-            "Status": "False"
-        },
-        {
-            "IP": "192.168.30.103",
-            "Port": 55640,
-            "HostName": "kali",
-            "UserName": "kali",
-            "System": "Linux",
-            "Loc": "AZ/Baku",
-            "NickName": "kali",
-            "Status": "False"
-        },
-        {
             "IP": "192.168.30.52",
-            "Port": 50549,
+            "Port": 63958,
             "HostName": "Izzat",
             "UserName": "Student",
             "System": "Windows",
             "Loc": "AZ/Baku",
-            "NickName": "Izzat",
-            "Status": "True"
+            "NickName": "salam",
+            "Status": "True",
+            "Key": "5bf347c873649fbfa0510ab26d7b719e"
         }
     ]
 }
