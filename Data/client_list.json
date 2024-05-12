@@ -1,15 +1,4 @@
 {
     "client_list": [
-        {
-            "IP": "192.168.30.52",
-            "Port": 63958,
-            "HostName": "Izzat",
-            "UserName": "Student",
-            "System": "Windows",
-            "Loc": "AZ/Baku",
-            "NickName": "salam",
-            "Status": "True",
-            "Key": "5bf347c873649fbfa0510ab26d7b719e"
-        }
     ]
 }
