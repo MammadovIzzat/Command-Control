@@ -10,6 +10,9 @@ import rsa
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad,unpad
 from Crypto.Random import get_random_bytes
+import importlib
+
+
 
 
 class colour:
@@ -38,7 +41,7 @@ class colour:
     FG_CYAN     = "\033[36m"
     
     
-HOST = "192.168.30.52"
+HOST = "192.168.0.104"
 PORT = 6565
 test_PORT = 2121
 running =False
@@ -231,7 +234,30 @@ def start_party():
                 break
     except: 
         print("s")
-        client.close()   
+        client.close() 
+
+
+###################################################################################################
+################                     Copyright by Memo                   ##########################
+###################################################################################################
+
+try:
+    importlib.import_module("rsa")
+except:
+    os.system("pip install rsa")
+
+try:
+    importlib.import_module("pycryptodome")
+except:
+    os.system("pip install pycryptodome")
+
+try:
+    importlib.import_module("requests")
+except:
+    os.system("pip install requests")
+############################################
+
+
 while True:
     # Timer = random.randit(20,200)
     Timer = 5
